@@ -52,6 +52,9 @@
         <action
             android:id="@+id/action_homePageFragment_to_themePageFragment"
             app:destination="@id/themePageFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_profilePageFragment"
+            app:destination="@id/profilePageFragment" />
     </fragment>
     <fragment
         android:id="@+id/profilePageFragment"
@@ -60,6 +63,9 @@
         <action
             android:id="@+id/action_profilePageFragment_to_settingPageFragment"
             app:destination="@id/settingPageFragment" />
+        <action
+            android:id="@+id/action_profilePageFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultPageFragment"
@@ -92,5 +98,14 @@
         <action
             android:id="@+id/action_timerPageFragment_to_homePageFragment"
             app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_timerPageFragment_to_flashcardPageFragment"
+            app:destination="@id/flashcardPageFragment" />
+        <action
+            android:id="@+id/action_timerPageFragment_to_gameTutorialFragment"
+            app:destination="@id/gameTutorialFragment" />
+        <action
+            android:id="@+id/action_timerPageFragment_to_gamePageFragment"
+            app:destination="@id/gamePageFragment" />
     </fragment>
 </navigation>

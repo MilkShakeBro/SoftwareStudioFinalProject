@@ -29,7 +29,7 @@ class ArticlePageFragment: Fragment()  {
                 val action = ArticlePageFragmentDirections.actionArticlePageFragmentToHomePageFragment()
                 findNavController().navigate(action)
             }
-            button1.text = "HomePageFragment"
+            button1.text = "Home"
 
             fragmentDescription.text = "This is ArticlePageFragment."
         }

@@ -29,21 +29,25 @@ class HomePageFragment: Fragment()  {
                 val action = HomePageFragmentDirections.actionHomePageFragmentToArticlePageFragment()
                 findNavController().navigate(action)
             }
-            button1.text = "To ArticleFragment"
+            button1.text = "Article"
 
             button2.setOnClickListener {
                 val action = HomePageFragmentDirections.actionHomePageFragmentToTimerPageFragment()
                 findNavController().navigate(action)
             }
-            button2.text = "To TimerFragment"
+            button2.text = "Timer"
 
             button3.setOnClickListener {
                 val action = HomePageFragmentDirections.actionHomePageFragmentToThemePageFragment()
                 findNavController().navigate(action)
             }
-            button3.text = "To ThemeFragment"
+            button3.text = "Theme"
 
-            button4.text = "(No)"
+            button4.setOnClickListener {
+                val action = HomePageFragmentDirections.actionHomePageFragmentToProfilePageFragment()
+                findNavController().navigate(action)
+            }
+            button4.text = "Profile"
 
             fragmentDescription.text = "This is HomePageFragment"
         }
