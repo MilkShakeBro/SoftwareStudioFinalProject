@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TetrisView">
+        <attr name="horizontalBlocksCount" format="integer" />
+        <attr name="verticalBlocksCount" format="integer"/>
+        <!--        <attr name="prefixTextSize" format="float"/>-->
+        <attr name="android:textSize"/>
+        <attr name="android:fontFamily"/>
+    </declare-styleable>
+
+    <string-array name="tetris">
+        <item>11000000000</item>
+        <item>11111000000</item>
+        <item>11110000000</item>
+        <item>11100000000</item>
+        <item>11111000000</item>
+        <item>11111000000</item>
+        <item>11110000000</item>
+        <item>11100000000</item>
+        <item>11111000000</item>
+        <item>11100000000</item>
+        <item>11110000000</item>
+        <item>11100000000</item>
+        <item>11110000000</item>
+        <item>11110000000</item>
+        <item>11110000000</item>
+        <item>11110000000</item>
+        <item>11111000000</item>
+        <item>11111100000</item>
+        <item>11111000000</item>
+        <item>11110000000</item>
+        <item>10000000000</item>
+        <item>11100000000</item>
+        <item>11110000000</item>
+        <item>11111000000</item>
+        <item>11100000000</item>
+    </string-array>
+
+    <!--16x9 array-->
+    <string-array name="vocabulary_tetris">
+        <item>accompl***************</item>
+        <item>aqui******************</item>
+        <item>ac********************</item>
+        <item>asynchron*************</item>
+        <item>actu******************</item>
+        <item>acron*****************</item>
+        <item>audien****************</item>
+        <item>astro*****************</item>
+        <item>arithme***************</item>
+        <item>appoint***************</item>
+        <item>align*****************</item>
+        <item>aquar*****************</item>
+        <item>asymmetr**************</item>
+        <item>advertise*************</item>
+        <item>annivers**************</item>
+        <item>ana*******************</item>
+        <item>ambi******************</item>
+        <item>ar********************</item>
+    </string-array>
+
+    <string-array name="vocabularies_suffix">
+        <item>ish</item>
+        <item>fer</item>
+        <item>curate</item>
+        <item>ous</item>
+        <item>al</item>
+        <item>ym</item>
+        <item>ce</item>
+        <item>naut</item>
+        <item>tic</item>
+        <item>ment</item>
+        <item>ment</item>
+        <item>ium</item>
+        <item>ic</item>
+        <item>ment</item>
+        <item>ary</item>
+        <item>log</item>
+        <item>tious</item>
+        <item>ea</item>
+    </string-array>
+
+    <string-array name="vocabularies">
+        <item>accomplish************</item>
+        <item>aquifer***************</item>
+        <item>accurate**************</item>
+        <item>asynchronous**********</item>
+        <item>actual****************</item>
+        <item>acronym***************</item>
+        <item>audience**************</item>
+        <item>astronaut*************</item>
+        <item>arithmetic************</item>
+        <item>appointment***********</item>
+        <item>alignment*************</item>
+        <item>aquarium**************</item>
+        <item>asymmetric************</item>
+        <item>advertisement*********</item>
+        <item>anniversary***********</item>
+        <item>analog****************</item>
+        <item>ambitious*************</item>
+        <item>area******************</item>
+    </string-array>
+
+    <string-array name="chinese_meaning">
+        <item>完成</item>
+        <item>含水層</item>
+        <item>精確</item>
+        <item>非同步</item>
+        <item>確實</item>
+        <item>縮寫</item>
+        <item>觀眾</item>
+        <item>太空人</item>
+        <item>算數</item>
+        <item>任命</item>
+        <item>對齊</item>
+        <item>水族館</item>
+        <item>不對稱</item>
+        <item>廣告</item>
+        <item>紀念日</item>
+        <item>類比</item>
+        <item>野心</item>
+        <item>區域</item>
+    </string-array>
+
+</resources>

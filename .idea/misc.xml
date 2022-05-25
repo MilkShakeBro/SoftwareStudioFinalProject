@@ -3,9 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/drawable-v21/ripple_ic_left_arrow.xml" value="0.102" />
+        <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/drawable-v21/ripple_ic_up_arrow.xml" value="0.102" />
+        <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/drawable-v21/ripple_skip_button.xml" value="0.102" />
+        <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/drawable/ic_screenshot.xml" value="0.102" />
+        <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/drawable/ic_share.xml" value="0.102" />
+        <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/drawable/ripple_ic_left_arrow.xml" value="0.102" />
+        <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/drawable/ripple_ic_up_arrow.xml" value="0.102" />
+        <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/drawable/ripple_skip_button.xml" value="0.102" />
         <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/layout/game_page_fragment.xml" value="0.22435897435897437" />
         <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/layout/home_page_fragment.xml" value="0.17180616740088106" />
         <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/layout/home_page_item_layout.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/layout/result_page_fragment.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/layout/result_page_screenshot_layout.xml" value="0.152" />
+        <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/layout/template_layout.xml" value="0.22826086956521738" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.182518115942029" />
         <entry key="app/src/main/res/layout/template_layout.xml" value="0.10457516339869281" />
       </map>
