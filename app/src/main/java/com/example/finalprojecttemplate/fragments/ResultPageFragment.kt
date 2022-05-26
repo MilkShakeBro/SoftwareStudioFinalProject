@@ -1,10 +1,13 @@
 package com.example.finalprojecttemplate.fragments
 
+import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.os.StrictMode
 import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
@@ -15,12 +18,14 @@ import androidx.activity.OnBackPressedCallback
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.example.finalprojecttemplate.BuildConfig
 import com.example.finalprojecttemplate.ResultPageViewModel
 import com.example.finalprojecttemplate.databinding.ResultPageFragmentBinding
 import com.example.finalprojecttemplate.databinding.ResultPageScreenshotLayoutBinding
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
+import java.util.*
 
 
 class ResultPageFragment: Fragment()  {
@@ -99,14 +104,35 @@ class ResultPageFragment: Fragment()  {
     private fun shareBitmap(bitmap: Bitmap?) {
         if (bitmap == null) return
 
-        val shareIntent = Intent(Intent.ACTION_SEND)
-        val bitmapPath =
-            MediaStore.Images.Media.insertImage(context?.contentResolver, bitmap, "temp", null)
-                ?: return
+        val sharingIntent = Intent(Intent.ACTION_SEND)
+        sharingIntent.type = "image/*"
+        sharingIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        sharingIntent.putExtra(Intent.EXTRA_STREAM, saveImage(bitmap, requireContext()))
+        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Game2Mem")
+        startActivity(Intent.createChooser(sharingIntent, "Share Image"))
+    }
 
-        shareIntent.putExtra(Intent.EXTRA_STREAM, bitmapPath)
-        shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        shareIntent.type = "image/bitmap";
-        startActivity(shareIntent)
+    private fun saveImage(bitmap: Bitmap, context: Context) : Uri? {
+        val imageFolder = File(context.cacheDir, "images")
+        var imageUri : Uri? = null
+
+        try {
+            imageFolder.mkdir()
+            val file = File(imageFolder, "shared_image.jpg")
+
+            val outputStream = FileOutputStream(file)
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+            outputStream.flush()
+            outputStream.close()
+
+            imageUri = FileProvider.getUriForFile(
+                Objects.requireNonNull(context.applicationContext),
+                "com.example.finalprojecttemplate" + ".provider",
+                file
+            )
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return imageUri
     }
 }

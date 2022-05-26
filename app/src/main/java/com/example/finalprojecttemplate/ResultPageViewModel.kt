@@ -1,11 +1,15 @@
 package com.example.finalprojecttemplate
 
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.net.Uri
 import android.view.View
 import android.widget.FrameLayout
 import androidx.lifecycle.ViewModel
 import com.example.finalprojecttemplate.databinding.ResultPageScreenshotLayoutBinding
+import java.io.File
+import java.io.FileOutputStream
 
 class ResultPageViewModel: ViewModel() {
 
@@ -35,5 +39,20 @@ class ResultPageViewModel: ViewModel() {
         frameLayout.draw(canvas)
 
         _resultBitmap = bitmap
+    }
+
+    private fun createTempFileInCache(context: Context, fileName: String, subFileName: String): File {
+        val outputDir = context.cacheDir
+        return File.createTempFile(fileName, subFileName, outputDir)
+    }
+
+    fun storeBitmapAsTempFile(context: Context, fileName: String, subFileName: String): Uri? {
+        if (resultBitmap == null) return null
+
+        val tempFile = createTempFileInCache(context, fileName, subFileName)
+        val fileOuputStream = FileOutputStream(tempFile)
+        resultBitmap!!.compress(Bitmap.CompressFormat.PNG, 100, fileOuputStream)
+
+        return Uri.parse(tempFile.path)
     }
 }
