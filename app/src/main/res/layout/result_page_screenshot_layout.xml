@@ -7,112 +7,203 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/screenshot_layout"-->
+<!--        android:layout_width="1023px"-->
+<!--        android:layout_height="2133px">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/screenshot_image"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/screehshot_background"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/trophy_image"-->
+<!--            android:layout_width="250dp"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:layout_margin="24dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/trophy_image"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:text="CHAMPION"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/game_gold"-->
+<!--            android:textSize="28sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/trophy_image" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/player_name"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:text="Chris Chen"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/game_gold"-->
+<!--            android:textSize="28sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/title" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/score_title"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:text="SCORE"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/game_gold"-->
+<!--            android:textSize="24sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/player_name" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/score"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="726"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textSize="90sp"-->
+<!--            android:textColor="@color/game_gold"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/score_title" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tag_text"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="#sdfsdf #sekrpowerpw\n#sdfsdf #eowrwwe\n#sewerwe #pwerwer\n#erokork"-->
+<!--            android:textAlignment="viewStart"-->
+<!--            android:textAppearance="?attr/textAppearanceBody1"-->
+<!--            android:textColor="@color/game_gold"-->
+<!--            android:textStyle="normal"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/trademark_image"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/score" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/trademark_image"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/trademark_image"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            android:layout_margin="16dp"/>-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <RelativeLayout
         android:id="@+id/screenshot_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="1023px"
+        android:layout_height="2133px"
+        android:layout_marginBottom="100px">
 
         <ImageView
             android:id="@+id/screenshot_image"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="1023px"
+            android:layout_height="2133px"
+            android:layout_marginLeft="0px"
+            android:layout_marginTop="0px"
             android:scaleType="centerCrop"
-            android:src="@drawable/screehshot_background"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:src="@drawable/screehshot_background" />
 
         <ImageView
             android:id="@+id/trophy_image"
-            android:layout_width="250dp"
-            android:layout_height="200dp"
-            android:layout_margin="24dp"
+            android:layout_width="839px"
+            android:layout_height="611px"
+            android:layout_marginLeft="93px"
+            android:layout_marginTop="130px"
             android:scaleType="centerCrop"
-            android:src="@drawable/trophy_image"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:src="@drawable/trophy_image" />
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_width="1023px"
+            android:layout_height="173px"
+            android:layout_marginTop="842px"
+            android:gravity="center"
             android:text="CHAMPION"
-            android:textAlignment="center"
             android:textColor="@color/game_gold"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/trophy_image" />
+            android:textSize="96px"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/player_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_width="1023px"
+            android:layout_height="173px"
+            android:layout_marginTop="1015px"
+            android:gravity="center"
             android:text="Chris Chen"
-            android:textAlignment="center"
             android:textColor="@color/game_gold"
-            android:textSize="28sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title" />
+            android:textSize="96px" />
 
         <TextView
             android:id="@+id/score_title"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_width="1023px"
+            android:layout_height="87px"
+            android:layout_marginTop="1240px"
+            android:gravity="center"
             android:text="SCORE"
-            android:textAlignment="center"
             android:textColor="@color/game_gold"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/player_name" />
+            android:textSize="72px"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/score"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="1023px"
+            android:layout_height="350px"
+            android:layout_marginTop="1275px"
+            android:gravity="center"
             android:text="726"
-            android:textAlignment="center"
-            android:textSize="90sp"
             android:textColor="@color/game_gold"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/score_title" />
+            android:textSize="264px"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tag_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="#sdfsdf #sekrpowerpw\n#sdfsdf #eowrwwe\n#sewerwe #pwerwer\n#erokork"
-            android:textAlignment="viewStart"
-            android:textAppearance="?attr/textAppearanceBody1"
+            android:layout_width="839px"
+            android:layout_height="270px"
+            android:layout_marginTop="1625px"
+            android:layout_marginLeft="92px"
+            android:text="#King of monograms #King of speed #King of vocabularies #Game2Mem #Defeat all the players"
+            android:textSize="52px"
             android:textColor="@color/game_gold"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toTopOf="@+id/trademark_image"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/score" />
+            android:textStyle="normal" />
 
         <ImageView
             android:id="@+id/trademark_image"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="1023px"
+            android:layout_height="150px"
             android:scaleType="fitCenter"
             android:src="@drawable/trademark_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_margin="16dp"/>
+            android:layout_marginTop="1923px"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 </layout>

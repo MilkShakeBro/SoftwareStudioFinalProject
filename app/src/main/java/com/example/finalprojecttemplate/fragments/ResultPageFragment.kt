@@ -1,17 +1,26 @@
 package com.example.finalprojecttemplate.fragments
 
 import android.content.Context
+import android.content.Intent
+import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
+import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.finalprojecttemplate.ResultPageViewModel
 import com.example.finalprojecttemplate.databinding.ResultPageFragmentBinding
 import com.example.finalprojecttemplate.databinding.ResultPageScreenshotLayoutBinding
+import java.io.File
+import java.io.FileOutputStream
+import java.io.IOException
 
 
 class ResultPageFragment: Fragment()  {
@@ -51,12 +60,12 @@ class ResultPageFragment: Fragment()  {
             }
 
             shareButton.setOnClickListener {
-
+                shareBitmap(viewModel.resultBitmap)
             }
 
             screenshotButton.setOnClickListener {
                 screenshotCheckWindowLayout.visibility = View.VISIBLE
-                screenshotImage.setImageBitmap(viewModel.getLayoutScreenShot(resources.displayMetrics.density))
+                screenshotImage.setImageBitmap(viewModel.resultBitmap)
             }
 
             cancelScreenshotButton.setOnClickListener {
@@ -85,5 +94,19 @@ class ResultPageFragment: Fragment()  {
         // TODO: Add the direction from result page to game page
 //        val action = ResultPageFragmentDirections.actionResultPageFragmentToGamePageFragment()
 //        findNavController().navigate(action)
+    }
+
+    private fun shareBitmap(bitmap: Bitmap?) {
+        if (bitmap == null) return
+
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        val bitmapPath =
+            MediaStore.Images.Media.insertImage(context?.contentResolver, bitmap, "temp", null)
+                ?: return
+
+        shareIntent.putExtra(Intent.EXTRA_STREAM, bitmapPath)
+        shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        shareIntent.type = "image/bitmap";
+        startActivity(shareIntent)
     }
 }

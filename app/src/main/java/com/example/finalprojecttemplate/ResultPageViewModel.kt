@@ -11,14 +11,22 @@ class ResultPageViewModel: ViewModel() {
 
     var screenshotLayoutBinding: ResultPageScreenshotLayoutBinding? = null
 
-    fun getLayoutScreenShot(scaleDp: Float): Bitmap? {
-        if (screenshotLayoutBinding == null) return null
+    private var _resultBitmap : Bitmap? = null
+    val resultBitmap: Bitmap?
+        get() =
+            if (_resultBitmap == null) {
+                getLayoutScreenShot()
+                _resultBitmap
+            } else _resultBitmap
+
+    private fun getLayoutScreenShot() {
+        if (screenshotLayoutBinding == null) return
 
         val frameLayout = screenshotLayoutBinding!!.screenshotLayout
 
         frameLayout.measure(
-            View.MeasureSpec.makeMeasureSpec((300 * scaleDp).toInt(), View.MeasureSpec.EXACTLY),
-            View.MeasureSpec.makeMeasureSpec((630 * scaleDp).toInt(), View.MeasureSpec.EXACTLY)
+            View.MeasureSpec.makeMeasureSpec(1023, View.MeasureSpec.EXACTLY),
+            View.MeasureSpec.makeMeasureSpec(2133, View.MeasureSpec.EXACTLY)
         )
         frameLayout.layout(0, 0, frameLayout.measuredWidth, frameLayout.measuredHeight)
 
@@ -26,6 +34,6 @@ class ResultPageViewModel: ViewModel() {
         val canvas = Canvas(bitmap)
         frameLayout.draw(canvas)
 
-        return bitmap
+        _resultBitmap = bitmap
     }
 }
