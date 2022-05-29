@@ -40,7 +40,7 @@ class GamePageFragment: Fragment()  {
         val fragmentBinding = GamePageFragmentBinding.inflate(inflater, container, false)
         binding = fragmentBinding
 
-        activity?.window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+//        activity?.window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         activity?.actionBar?.hide()
 
         return fragmentBinding.root
@@ -95,10 +95,10 @@ class GamePageFragment: Fragment()  {
 
     fun goToResultPage() {
         // TODO: add argument to result page in nav graph
-//        val action = GamePageFragmentDirections.actionGamePageFragmentToResultPageFragment(
-//            score = tetrisGameViewModel.tetrisState.score.value!!
-//        )
-        val action = GamePageFragmentDirections.actionGamePageFragmentToResultPageFragment()
+        val action = GamePageFragmentDirections.actionGamePageFragmentToResultPageFragment(
+            score = tetrisGameViewModel.tetrisState.score.value!!
+        )
+//        val action = GamePageFragmentDirections.actionGamePageFragmentToResultPageFragment()
         findNavController().navigate(action)
     }
 }

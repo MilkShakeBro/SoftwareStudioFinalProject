@@ -104,73 +104,73 @@
             android:text="AGAIN"
             android:textAppearance="?attr/textAppearanceHeadline5" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/screenshot_check_window_layout"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:background="#D9000000"
-            android:elevation="2dp">
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/screenshot_check_window_layout"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            android:background="#D9000000"-->
+<!--            android:elevation="2dp">-->
+
+<!--&lt;!&ndash;            <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/screenshot_image"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="300dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="500dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                tools:src="@drawable/ic_launcher_background"&ndash;&gt;-->
+<!--&lt;!&ndash;                tools:scaleType="centerCrop"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_margin="60dp"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <FrameLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/screenshot_image_layout"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="300dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="630dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                tools:src="@drawable/ic_launcher_background"&ndash;&gt;-->
+<!--&lt;!&ndash;                tools:scaleType="centerCrop"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_margin="8dp" />&ndash;&gt;-->
 
 <!--            <ImageView-->
 <!--                android:id="@+id/screenshot_image"-->
-<!--                android:layout_width="300dp"-->
-<!--                android:layout_height="500dp"-->
-<!--                tools:src="@drawable/ic_launcher_background"-->
-<!--                tools:scaleType="centerCrop"-->
+<!--                android:layout_height="525dp"-->
+<!--                android:layout_width="250dp"-->
 <!--                app:layout_constraintStart_toStartOf="parent"-->
 <!--                app:layout_constraintEnd_toEndOf="parent"-->
 <!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                android:layout_margin="60dp"/>-->
+<!--                app:layout_constraintBottom_toTopOf="@id/save_screenshot_button" />-->
 
-<!--            <FrameLayout-->
-<!--                android:id="@+id/screenshot_image_layout"-->
-<!--                android:layout_width="300dp"-->
-<!--                android:layout_height="630dp"-->
-<!--                tools:src="@drawable/ic_launcher_background"-->
-<!--                tools:scaleType="centerCrop"-->
+<!--            <Button-->
+<!--                android:id="@+id/save_screenshot_button"-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:text="SAVE"-->
+<!--                android:textAppearance="?attr/textAppearanceHeadline6"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/screenshot_image"-->
 <!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/cancel_screenshot_button"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                android:layout_margin="24dp"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/cancel_screenshot_button"-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:text="CANCEL"-->
+<!--                android:textAppearance="?attr/textAppearanceHeadline6"-->
+<!--                app:layout_constraintTop_toTopOf="@id/save_screenshot_button"-->
+<!--                app:layout_constraintBottom_toBottomOf="@id/save_screenshot_button"-->
+<!--                app:layout_constraintStart_toEndOf="@id/save_screenshot_button"-->
 <!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                android:layout_margin="8dp" />-->
+<!--                android:layout_margin="24dp"/>-->
 
-            <ImageView
-                android:id="@+id/screenshot_image"
-                android:layout_height="525dp"
-                android:layout_width="250dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/save_screenshot_button" />
-
-            <Button
-                android:id="@+id/save_screenshot_button"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
-                android:text="SAVE"
-                android:textAppearance="?attr/textAppearanceHeadline6"
-                app:layout_constraintTop_toBottomOf="@id/screenshot_image"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/cancel_screenshot_button"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_margin="24dp"/>
-
-            <Button
-                android:id="@+id/cancel_screenshot_button"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
-                android:text="CANCEL"
-                android:textAppearance="?attr/textAppearanceHeadline6"
-                app:layout_constraintTop_toTopOf="@id/save_screenshot_button"
-                app:layout_constraintBottom_toBottomOf="@id/save_screenshot_button"
-                app:layout_constraintStart_toEndOf="@id/save_screenshot_button"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_margin="24dp"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

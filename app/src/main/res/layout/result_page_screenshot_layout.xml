@@ -187,11 +187,11 @@
             android:id="@+id/tag_text"
             android:layout_width="839px"
             android:layout_height="270px"
-            android:layout_marginTop="1625px"
             android:layout_marginLeft="92px"
+            android:layout_marginTop="1625px"
             android:text="#King of monograms #King of speed #King of vocabularies #Game2Mem #Defeat all the players"
-            android:textSize="52px"
             android:textColor="@color/game_gold"
+            android:textSize="48px"
             android:textStyle="normal" />
 
         <ImageView
