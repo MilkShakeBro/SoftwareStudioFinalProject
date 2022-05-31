@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <gradient
+        android:angle="90"
+        android:type="radial"
+        android:gradientRadius="700dp"
+        android:startColor="@color/game_plum"
+        android:endColor="#000000"
+        android:centerX="0.8"
+        android:centerY="0.7"/>
+
+</shape>

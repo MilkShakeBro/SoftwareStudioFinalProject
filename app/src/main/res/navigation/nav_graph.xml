@@ -73,7 +73,15 @@
         android:label="ResultPageFragment" >
         <action
             android:id="@+id/action_resultPageFragment_to_homePageFragment"
-            app:destination="@id/homePageFragment" />
+            app:destination="@id/homePageFragment"
+            app:popUpTo="@id/homePageFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_resultPageFragment_to_gamePageFragment"
+            app:destination="@id/gamePageFragment" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/settingPageFragment"
