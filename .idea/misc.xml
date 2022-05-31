@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/article.xml" value="0.1" />
 =======
@@ -25,6 +26,20 @@
         <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/layout/screenshot_popup_window_layout.xml" value="0.2" />
         <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/layout/template_layout.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/xml/provider_paths.xml" value="0.22826086956521738" />
+=======
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2185" />
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/drawable/card.xml" value="0.219" />
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2185" />
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/drawable/poopooman1.xml" value="0.2185" />
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/layout/card_back.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/layout/card_front.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/layout/flashcard_page_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/layout/template_layout.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/luna9/AndroidStudioProjects/SoftwareStudioFinalProject/app/src/main/res/layout/article_page.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/luna9/AndroidStudioProjects/SoftwareStudioFinalProject/app/src/main/res/layout/article_page_answer.xml" value="0.13632246376811594" />
+        <entry key="..\:/Users/luna9/AndroidStudioProjects/SoftwareStudioFinalProject/app/src/main/res/layout/flashcard_page_fragment.xml" value="0.13632246376811594" />
+>>>>>>> bf4f32db965238adbdc66228e91d540187c41d4c
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.182518115942029" />
 >>>>>>> f52e074442f3b85004720ae50b6f49f5b3e8cfa4
         <entry key="app/src/main/res/layout/template_layout.xml" value="0.10457516339869281" />
