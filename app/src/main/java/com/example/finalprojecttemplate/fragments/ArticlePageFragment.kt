@@ -6,18 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.finalprojecttemplate.databinding.ArticlePageBinding
 import com.example.finalprojecttemplate.databinding.TemplateLayoutBinding
 
 class ArticlePageFragment: Fragment()  {
 
-    private var binding: TemplateLayoutBinding? = null
+    private var binding: ArticlePageBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val fragmentBinding = TemplateLayoutBinding.inflate(inflater, container, false)
+        val fragmentBinding = ArticlePageBinding.inflate(inflater, container, false)
         binding = fragmentBinding
         return fragmentBinding.root
     }
@@ -25,13 +26,10 @@ class ArticlePageFragment: Fragment()  {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.apply {
-            button1.setOnClickListener {
+            button.setOnClickListener {
                 val action = ArticlePageFragmentDirections.actionArticlePageFragmentToHomePageFragment()
                 findNavController().navigate(action)
             }
-            button1.text = "Home"
-
-            fragmentDescription.text = "This is ArticlePageFragment."
         }
     }
 }
