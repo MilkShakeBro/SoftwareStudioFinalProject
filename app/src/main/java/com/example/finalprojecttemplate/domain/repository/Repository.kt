@@ -21,4 +21,5 @@ interface Repository {
 
     // Profile
     fun getAchievement(userid: Int): AchievementSetModel
+    fun getPersonalInfo(userid: Int): PersonalInfoModel
 }

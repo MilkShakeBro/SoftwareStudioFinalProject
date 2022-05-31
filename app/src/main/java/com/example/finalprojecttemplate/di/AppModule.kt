@@ -37,6 +37,7 @@ object AppModule {
             getHomePageInfo = GetHomePageInfo(repository),
             getThemeData = GetThemeData(repository),
             getAchievement = GetAchievement(repository),
+            getPersonalInfo = GetPersonalInfo(repository)
         )
     }
 }

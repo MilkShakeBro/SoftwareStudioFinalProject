@@ -31,4 +31,8 @@ class RepositoryImpl(
     override fun getAchievement(userid: Int): AchievementSetModel {
         return fakeDatabase.getAchievement(userid)
     }
+
+    override fun getPersonalInfo(userid: Int): PersonalInfoModel {
+        return fakeDatabase.getPersonalInfo(userid)
+    }
 }

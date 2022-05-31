@@ -10,5 +10,6 @@ data class AchievementSetModel(
 data class Achievement (
     val id: Int,
     val img: Uri,
+    val description: String,
     val obtained: Boolean
 )

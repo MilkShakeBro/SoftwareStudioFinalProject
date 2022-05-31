@@ -749,26 +749,31 @@ class FakeDatabase {
                 Achievement(
                     id = 0,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 1,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = true
                 ),
                 Achievement(
                     id = 2,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 3,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = true
                 ),
                 Achievement(
                     id = 4,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 )
             ),
@@ -779,26 +784,31 @@ class FakeDatabase {
                 Achievement(
                     id = 0,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 1,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = true
                 ),
                 Achievement(
                     id = 2,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 3,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = true
                 ),
                 Achievement(
                     id = 4,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 )
             ),
@@ -809,26 +819,31 @@ class FakeDatabase {
                 Achievement(
                     id = 0,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 1,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = true
                 ),
                 Achievement(
                     id = 2,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 3,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = true
                 ),
                 Achievement(
                     id = 4,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 )
             ),
@@ -839,26 +854,31 @@ class FakeDatabase {
                 Achievement(
                     id = 0,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 1,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = true
                 ),
                 Achievement(
                     id = 2,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 3,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = true
                 ),
                 Achievement(
                     id = 4,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 )
             ),
@@ -869,30 +889,57 @@ class FakeDatabase {
                 Achievement(
                     id = 0,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 1,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = true
                 ),
                 Achievement(
                     id = 2,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 3,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = true
                 ),
                 Achievement(
                     id = 4,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 )
             ),
         ),
+    )
+    private val personalInfo: List<PersonalInfoModel> = listOf(
+        PersonalInfoModel(
+            id = 0,
+            name = "Chris"
+        ),
+        PersonalInfoModel(
+            id = 1,
+            name = "Luna"
+        ),
+        PersonalInfoModel(
+            id = 2,
+            name = "Angela"
+        ),
+        PersonalInfoModel(
+            id = 3,
+            name = "Steven"
+        ),
+        PersonalInfoModel(
+            id = 4,
+            name = "Howard"
+        )
     )
 
     fun getArticleByIndex(index: Int): ArticleModel {
@@ -966,29 +1013,41 @@ class FakeDatabase {
                 Achievement(
                     id = 0,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 1,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 2,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 3,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 ),
                 Achievement(
                     id = 4,
                     img = Uri.parse("https://www.google.com"),
+                    description = "This is a description.",
                     obtained = false
                 )
             ),
+        )
+    }
+    fun getPersonalInfo(userid: Int): PersonalInfoModel {
+        return if (userid in 0 until 5) personalInfo[userid]
+        else PersonalInfoModel(
+            id = -1,
+            name = "poopoo"
         )
     }
 }
