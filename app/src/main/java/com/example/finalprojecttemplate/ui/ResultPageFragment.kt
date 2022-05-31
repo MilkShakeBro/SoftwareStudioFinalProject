@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate.fragments
+package com.example.finalprojecttemplate.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.finalprojecttemplate.databinding.TemplateLayoutBinding
 
-class ProfilePageFragment: Fragment()  {
+class ResultPageFragment: Fragment()  {
 
     private var binding: TemplateLayoutBinding? = null
 
@@ -26,16 +26,11 @@ class ProfilePageFragment: Fragment()  {
         super.onViewCreated(view, savedInstanceState)
         binding?.apply {
             button1.setOnClickListener {
-                val action = ProfilePageFragmentDirections.actionProfilePageFragmentToSettingPageFragment()
+                val action = ResultPageFragmentDirections.actionResultPageFragmentToHomePageFragment()
                 findNavController().navigate(action)
             }
-            button1.text = "Setting"
-            button2.setOnClickListener{
-                val action = ProfilePageFragmentDirections.actionProfilePageFragmentToHomePageFragment()
-                findNavController().navigate(action)
-            }
-            button2.text = "Home"
-            fragmentDescription.text = "This is ProfilePageFragment"
+            button1.text = "Home"
+            fragmentDescription.text = "This is ResultPageFragment"
         }
     }
 }

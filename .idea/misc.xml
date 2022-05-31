@@ -3,20 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-=======
-        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2185" />
-        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/drawable/card.xml" value="0.219" />
-        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2185" />
-        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/drawable/poopooman1.xml" value="0.2185" />
-        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/layout/card_back.xml" value="0.2526041666666667" />
-        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/layout/card_front.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/layout/flashcard_page_fragment.xml" value="0.1" />
-        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/layout/template_layout.xml" value="0.25364583333333335" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.182518115942029" />
->>>>>>> 26d29cd23c526c4d2af96f4ebd78d8297ad1bd96
+        <entry key="app/src/main/res/layout/article.xml" value="0.1" />
         <entry key="app/src/main/res/layout/template_layout.xml" value="0.10457516339869281" />
         <entry key="app/src/main/res/xml/data_extraction_rules.xml" value="0.11550151975683891" />
       </map>

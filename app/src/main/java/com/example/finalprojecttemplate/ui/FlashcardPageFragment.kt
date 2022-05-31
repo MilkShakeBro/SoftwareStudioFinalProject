@@ -1,20 +1,17 @@
-package com.example.finalprojecttemplate.fragments
+package com.example.finalprojecttemplate.ui
 
 import android.animation.Animator
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
 import android.annotation.SuppressLint
-import android.content.res.Resources
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.databinding.FlashcardPageFragmentBinding
-import com.hamedrahimvand.flipcard.model.FlipModel
 
 class FlashcardPageFragment: Fragment()  {
 

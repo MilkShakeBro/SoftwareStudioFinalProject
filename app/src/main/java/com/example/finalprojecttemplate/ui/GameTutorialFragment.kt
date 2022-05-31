@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate.fragments
+package com.example.finalprojecttemplate.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.finalprojecttemplate.databinding.TemplateLayoutBinding
 
-class GamePageFragment: Fragment()  {
+class GameTutorialFragment: Fragment()  {
 
     private var binding: TemplateLayoutBinding? = null
 
@@ -24,13 +24,14 @@ class GamePageFragment: Fragment()  {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding?.apply {
             button1.setOnClickListener {
-                val action = GamePageFragmentDirections.actionGamePageFragmentToResultPageFragment()
+                val action = GameTutorialFragmentDirections.actionGameTutorialFragmentToGamePageFragment()
                 findNavController().navigate(action)
             }
-            button1.text = "Result"
-            fragmentDescription.text = "This is GamePageFragment"
+            button1.text = "Skip"
+            fragmentDescription.text = "This is GameTutorialFragment"
         }
     }
 }

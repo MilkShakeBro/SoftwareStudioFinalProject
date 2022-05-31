@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate.fragments
+package com.example.finalprojecttemplate.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.finalprojecttemplate.databinding.TemplateLayoutBinding
 
-class HomePageFragment: Fragment()  {
+class TimerPageFragment: Fragment() {
 
     private var binding: TemplateLayoutBinding? = null
 
@@ -24,32 +24,33 @@ class HomePageFragment: Fragment()  {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding?.apply {
             button1.setOnClickListener {
-                val action = HomePageFragmentDirections.actionHomePageFragmentToArticlePageFragment()
+                val action = TimerPageFragmentDirections.actionTimerPageFragmentToHomePageFragment()
                 findNavController().navigate(action)
             }
-            button1.text = "Article"
+            button1.text = "Home"
 
             button2.setOnClickListener {
-                val action = HomePageFragmentDirections.actionHomePageFragmentToTimerPageFragment()
+                val action = TimerPageFragmentDirections.actionTimerPageFragmentToFlashcardPageFragment()
                 findNavController().navigate(action)
             }
-            button2.text = "Timer"
+            button2.text = "Start"
 
             button3.setOnClickListener {
-                val action = HomePageFragmentDirections.actionHomePageFragmentToThemePageFragment()
+                val action = TimerPageFragmentDirections.actionTimerPageFragmentToGameTutorialFragment()
                 findNavController().navigate(action)
             }
-            button3.text = "Theme"
+            button3.text = "Skip to game tutorial"
 
             button4.setOnClickListener {
-                val action = HomePageFragmentDirections.actionHomePageFragmentToProfilePageFragment()
+                val action = TimerPageFragmentDirections.actionTimerPageFragmentToGamePageFragment()
                 findNavController().navigate(action)
             }
-            button4.text = "Profile"
+            button4.text = "Skip to play game"
 
-            fragmentDescription.text = "This is HomePageFragment"
+            fragmentDescription.text = "This is TimerPageFragment"
         }
     }
 }
