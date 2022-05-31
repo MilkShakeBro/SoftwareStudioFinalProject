@@ -55,7 +55,9 @@ class ResultPageFragment: Fragment()  {
         binding?.apply {
 
             confirmButton.setOnClickListener {
-                Toast.makeText(context, "Confirm button is unavailable now.", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(context, "Confirm button is unavailable now.", Toast.LENGTH_SHORT).show()
+                val action = ResultPageFragmentDirections.actionResultPageFragmentToHomePageFragment()
+                findNavController().navigate(action)
             }
 
             againButton.setOnClickListener {

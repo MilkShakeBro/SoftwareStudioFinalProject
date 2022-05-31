@@ -69,9 +69,11 @@ class TetrisState(resources: Resources) {
 
     var tetramino = Tetramino(tetrisVocabularyArray[0].suffixRow)
 
-    private val _gameState = MutableLiveData<GameState>(GameState.PLAY)
+    private val _gameState = MutableLiveData<GameState>(GameState.PAUSE)
     val gameState : LiveData<GameState>
         get() = _gameState
+
+    var onMatchWord: () -> Unit = {}
 
     init {
         tetramino.setPosition(Point(DEFAULT_HORIZONTAL_SIZE, 5))
@@ -109,6 +111,10 @@ class TetrisState(resources: Resources) {
                 chineseMeaning = chineseArray[idx]
             )
         }
+    }
+
+    fun startGame() {
+        _gameState.value = GameState.PLAY
     }
 
     fun getChineseMeaning(): String {
@@ -297,6 +303,7 @@ class TetrisState(resources: Resources) {
                     )
             }
             answerCount++
+            onMatchWord()
         } else {
 //            tetrisArray[verticalPosition] = deepCopyCharArray(tetrisArrayOriginal[verticalPosition])
             tetrisArray[verticalPosition] = tetrisVocabularyArray[verticalPosition].prefixRow.toCharArray()

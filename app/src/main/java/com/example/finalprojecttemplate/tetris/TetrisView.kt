@@ -231,4 +231,8 @@ class TetrisView(context: Context, attrs: AttributeSet): View(context, attrs) {
     fun getChineseMeaning(): String? {
         return tetrisGameState?.getChineseMeaning()
     }
+
+    fun setOnMatchWord(func: () -> Unit) {
+        tetrisGameState?.onMatchWord = func
+    }
 }

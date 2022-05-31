@@ -144,10 +144,10 @@
             android:id="@+id/title"
             android:layout_width="1023px"
             android:layout_height="173px"
-            android:layout_marginTop="842px"
+            android:layout_marginTop="750px"
             android:gravity="center"
             android:text="CHAMPION"
-            android:textColor="@color/game_gold"
+            android:textColor="@color/game_score_text_gold"
             android:textSize="96px"
             android:textStyle="bold" />
 
@@ -155,20 +155,20 @@
             android:id="@+id/player_name"
             android:layout_width="1023px"
             android:layout_height="173px"
-            android:layout_marginTop="1015px"
+            android:layout_marginTop="923px"
             android:gravity="center"
             android:text="Chris Chen"
-            android:textColor="@color/game_gold"
+            android:textColor="@color/game_score_text_gold"
             android:textSize="96px" />
 
         <TextView
             android:id="@+id/score_title"
             android:layout_width="1023px"
             android:layout_height="87px"
-            android:layout_marginTop="1240px"
+            android:layout_marginTop="1150px"
             android:gravity="center"
             android:text="SCORE"
-            android:textColor="@color/game_gold"
+            android:textColor="@color/game_score_text_gold"
             android:textSize="72px"
             android:textStyle="bold" />
 
@@ -176,10 +176,10 @@
             android:id="@+id/score"
             android:layout_width="1023px"
             android:layout_height="350px"
-            android:layout_marginTop="1275px"
+            android:layout_marginTop="1200px"
             android:gravity="center"
             android:text="726"
-            android:textColor="@color/game_gold"
+            android:textColor="@color/game_score_text_gold"
             android:textSize="264px"
             android:textStyle="bold" />
 
@@ -189,9 +189,10 @@
             android:layout_height="270px"
             android:layout_marginLeft="92px"
             android:layout_marginTop="1625px"
+            android:fontFamily="sans-serif-light"
             android:text="#King of monograms #King of speed #King of vocabularies #Game2Mem #Defeat all the players"
-            android:textColor="@color/game_gold"
-            android:textSize="48px"
+            android:textColor="@color/game_score_tag_gold"
+            android:textSize="42px"
             android:textStyle="normal" />
 
         <ImageView

@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/gamePageFragment">
+    app:startDestination="@id/homePageFragment">
 
     <fragment
         android:id="@+id/articlePageFragment"
@@ -73,7 +73,9 @@
         android:label="ResultPageFragment" >
         <action
             android:id="@+id/action_resultPageFragment_to_homePageFragment"
-            app:destination="@id/homePageFragment" />
+            app:destination="@id/homePageFragment"
+            app:popUpTo="@id/homePageFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_resultPageFragment_to_gamePageFragment"
             app:destination="@id/gamePageFragment" />

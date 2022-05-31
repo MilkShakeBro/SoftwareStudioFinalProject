@@ -17,4 +17,12 @@
     <color name="game_light_plum">#BD708B</color>
     <color name="game_gold">#FFD966</color>
 
+    <!-- Result Page Colors -->
+    <color name="game_score_tag_gold">#FFE699</color>
+    <color name="game_score_text_gold">#FFC32D</color>
+
+    <color name="pink_A100">#FF80AB</color>
+    <color name="pink_A100_dark">#C94F7C</color>
+    <color name="pink_A100_light">#FFB2DD</color>
+
 </resources>
