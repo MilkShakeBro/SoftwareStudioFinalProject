@@ -27,4 +27,8 @@ class RepositoryImpl(
     override fun getThemeData(index: Int): ThemeDataModel {
         return fakeDatabase.getThemeData(index)
     }
+
+    override fun getAchievement(userid: Int): AchievementSetModel {
+        return fakeDatabase.getAchievement(userid)
+    }
 }

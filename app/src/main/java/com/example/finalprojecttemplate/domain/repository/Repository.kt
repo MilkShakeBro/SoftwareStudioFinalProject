@@ -19,4 +19,6 @@ interface Repository {
     // Theme
     fun getThemeData(index: Int): ThemeDataModel
 
+    // Profile
+    fun getAchievement(userid: Int): AchievementSetModel
 }

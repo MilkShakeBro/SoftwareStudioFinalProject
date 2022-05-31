@@ -6,4 +6,5 @@ data class UseCases(
     val getHistoryData: GetHistoryData,
     val getHomePageInfo: GetHomePageInfo,
     val getThemeData: GetThemeData,
+    val getAchievement: GetAchievement,
 )

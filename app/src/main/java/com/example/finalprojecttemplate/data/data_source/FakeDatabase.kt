@@ -742,6 +742,158 @@ class FakeDatabase {
             )
         ),
     )
+    private val achievementSet: List<AchievementSetModel> = listOf(
+        AchievementSetModel(
+            id = 0,
+            achievement = listOf(
+                Achievement(
+                    id = 0,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 1,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = true
+                ),
+                Achievement(
+                    id = 2,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 3,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = true
+                ),
+                Achievement(
+                    id = 4,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                )
+            ),
+        ),
+        AchievementSetModel(
+            id = 1,
+            achievement = listOf(
+                Achievement(
+                    id = 0,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 1,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = true
+                ),
+                Achievement(
+                    id = 2,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 3,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = true
+                ),
+                Achievement(
+                    id = 4,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                )
+            ),
+        ),
+        AchievementSetModel(
+            id = 2,
+            achievement = listOf(
+                Achievement(
+                    id = 0,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 1,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = true
+                ),
+                Achievement(
+                    id = 2,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 3,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = true
+                ),
+                Achievement(
+                    id = 4,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                )
+            ),
+        ),
+        AchievementSetModel(
+            id = 3,
+            achievement = listOf(
+                Achievement(
+                    id = 0,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 1,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = true
+                ),
+                Achievement(
+                    id = 2,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 3,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = true
+                ),
+                Achievement(
+                    id = 4,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                )
+            ),
+        ),
+        AchievementSetModel(
+            id = 4,
+            achievement = listOf(
+                Achievement(
+                    id = 0,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 1,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = true
+                ),
+                Achievement(
+                    id = 2,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 3,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = true
+                ),
+                Achievement(
+                    id = 4,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                )
+            ),
+        ),
+    )
 
     fun getArticleByIndex(index: Int): ArticleModel {
         return if (index in 0 until 5) articles[index]
@@ -803,6 +955,40 @@ class FakeDatabase {
             id = -1,
             image = Uri.parse("null"),
             flashcard = listOf(),
+        )
+    }
+
+    fun getAchievement(userid: Int): AchievementSetModel {
+        return if (userid in 0 until 5) achievementSet[userid]
+        else AchievementSetModel(
+            id = -1,
+            achievement = listOf(
+                Achievement(
+                    id = 0,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 1,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 2,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 3,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                ),
+                Achievement(
+                    id = 4,
+                    img = Uri.parse("https://www.google.com"),
+                    obtained = false
+                )
+            ),
         )
     }
 }

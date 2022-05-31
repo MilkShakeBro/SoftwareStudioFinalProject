@@ -35,7 +35,8 @@ object AppModule {
             getVocabularySet = GetVocabularySet(repository),
             getHistoryData = GetHistoryData(repository),
             getHomePageInfo = GetHomePageInfo(repository),
-            getThemeData = GetThemeData(repository)
+            getThemeData = GetThemeData(repository),
+            getAchievement = GetAchievement(repository),
         )
     }
 }
