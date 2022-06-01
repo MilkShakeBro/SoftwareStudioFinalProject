@@ -1,16 +1,14 @@
-package com.example.finalprojecttemplate.tetris
+package com.example.finalprojecttemplate.ui.game
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import android.widget.TextView
 import com.example.finalprojecttemplate.R
-import com.example.finalprojecttemplate.tetris.GameConstant.DEFAULT_HORIZONTAL_SIZE
-import com.example.finalprojecttemplate.tetris.GameConstant.DEFAULT_VERTICAL_SIZE
+import com.example.finalprojecttemplate.ui.game.GameConstant.DEFAULT_HORIZONTAL_SIZE
+import com.example.finalprojecttemplate.ui.game.GameConstant.DEFAULT_VERTICAL_SIZE
 import java.lang.Math.*
 import kotlin.math.atan2
 
