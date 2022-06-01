@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/articlePageFragment"
-        android:name="com.example.finalprojecttemplate.fragments.ArticlePageFragment"
+        android:name="com.example.finalprojecttemplate.ui.article.ArticlePageFragment"
         android:label="ArticlePageFragment" >
         <action
             android:id="@+id/action_articlePageFragment_to_homePageFragment"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/flashcardPageFragment"
-        android:name="com.example.finalprojecttemplate.fragments.FlashcardPageFragment"
+        android:name="com.example.finalprojecttemplate.ui.FlashcardPageFragment"
         android:label="FlashcardPageFragment" >
         <action
             android:id="@+id/action_flashcardPageFragment_to_gamePageFragment"
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/gamePageFragment"
-        android:name="com.example.finalprojecttemplate.fragments.GamePageFragment"
+        android:name="com.example.finalprojecttemplate.ui.GamePageFragment"
         android:label="GamePageFragment" >
         <action
             android:id="@+id/action_gamePageFragment_to_resultPageFragment"
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/gameTutorialFragment"
-        android:name="com.example.finalprojecttemplate.fragments.GameTutorialFragment"
+        android:name="com.example.finalprojecttemplate.ui.GameTutorialFragment"
         android:label="GameTutorialFragment" >
         <action
             android:id="@+id/action_gameTutorialFragment_to_gamePageFragment"
@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/homePageFragment"
-        android:name="com.example.finalprojecttemplate.fragments.HomePageFragment"
+        android:name="com.example.finalprojecttemplate.ui.HomePageFragment"
         android:label="HomePageFragment" >
         <action
             android:id="@+id/action_homePageFragment_to_articlePageFragment"
@@ -58,7 +58,7 @@
     </fragment>
     <fragment
         android:id="@+id/profilePageFragment"
-        android:name="com.example.finalprojecttemplate.fragments.ProfilePageFragment"
+        android:name="com.example.finalprojecttemplate.ui.ProfilePageFragment"
         android:label="ProfilePageFragment" >
         <action
             android:id="@+id/action_profilePageFragment_to_settingPageFragment"
@@ -69,7 +69,7 @@
     </fragment>
     <fragment
         android:id="@+id/resultPageFragment"
-        android:name="com.example.finalprojecttemplate.fragments.ResultPageFragment"
+        android:name="com.example.finalprojecttemplate.ui.ResultPageFragment"
         android:label="ResultPageFragment" >
         <action
             android:id="@+id/action_resultPageFragment_to_homePageFragment"
@@ -85,7 +85,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingPageFragment"
-        android:name="com.example.finalprojecttemplate.fragments.SettingPageFragment"
+        android:name="com.example.finalprojecttemplate.ui.SettingPageFragment"
         android:label="SettingPageFragment" >
         <action
             android:id="@+id/action_settingPageFragment_to_profilePageFragment"
@@ -93,7 +93,7 @@
     </fragment>
     <fragment
         android:id="@+id/themePageFragment"
-        android:name="com.example.finalprojecttemplate.fragments.ThemePageFragment"
+        android:name="com.example.finalprojecttemplate.ui.ThemePageFragment"
         android:label="ThemePageFragment" >
         <action
             android:id="@+id/action_themePageFragment_to_homePageFragment"
@@ -101,7 +101,7 @@
     </fragment>
     <fragment
         android:id="@+id/timerPageFragment"
-        android:name="com.example.finalprojecttemplate.fragments.TimerPageFragment"
+        android:name="com.example.finalprojecttemplate.ui.TimerPageFragment"
         android:label="TimerPageFragment" >
         <action
             android:id="@+id/action_timerPageFragment_to_homePageFragment"

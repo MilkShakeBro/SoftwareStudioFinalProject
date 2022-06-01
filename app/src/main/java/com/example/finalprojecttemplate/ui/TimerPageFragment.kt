@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate.fragments
+package com.example.finalprojecttemplate.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.finalprojecttemplate.databinding.TemplateLayoutBinding
 
-class FlashcardPageFragment: Fragment()  {
+class TimerPageFragment: Fragment() {
 
     private var binding: TemplateLayoutBinding? = null
 
@@ -24,19 +24,33 @@ class FlashcardPageFragment: Fragment()  {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding?.apply {
             button1.setOnClickListener {
-                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment()
+                val action = TimerPageFragmentDirections.actionTimerPageFragmentToHomePageFragment()
                 findNavController().navigate(action)
             }
-            button1.text = "Game Tutorial"
+            button1.text = "Home"
 
             button2.setOnClickListener {
-                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGamePageFragment()
+                val action = TimerPageFragmentDirections.actionTimerPageFragmentToFlashcardPageFragment()
                 findNavController().navigate(action)
             }
-            button2.text = "Game"
-            fragmentDescription.text = "This is FlashcardPageFragment"
+            button2.text = "Start"
+
+            button3.setOnClickListener {
+                val action = TimerPageFragmentDirections.actionTimerPageFragmentToGameTutorialFragment()
+                findNavController().navigate(action)
+            }
+            button3.text = "Skip to game tutorial"
+
+            button4.setOnClickListener {
+                val action = TimerPageFragmentDirections.actionTimerPageFragmentToGamePageFragment()
+                findNavController().navigate(action)
+            }
+            button4.text = "Skip to play game"
+
+            fragmentDescription.text = "This is TimerPageFragment"
         }
     }
 }

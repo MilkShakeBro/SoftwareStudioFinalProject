@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate.fragments
+package com.example.finalprojecttemplate.ui
 
 import android.content.Context
 import android.content.Intent
@@ -19,7 +19,6 @@ import com.example.finalprojecttemplate.ResultPageViewModel
 import com.example.finalprojecttemplate.databinding.ResultPageFragmentBinding
 import com.example.finalprojecttemplate.databinding.ResultPageScreenshotLayoutBinding
 import com.example.finalprojecttemplate.databinding.ScreenshotPopupWindowLayoutBinding
-import com.example.finalprojecttemplate.ui.ResultPageFragmentDirections
 import java.util.*
 
 class ResultPageFragment: Fragment()  {

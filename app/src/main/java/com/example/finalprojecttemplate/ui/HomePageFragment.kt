@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate.fragments
+package com.example.finalprojecttemplate.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,6 @@ import com.example.finalprojecttemplate.HomePageListAdapter
 import com.example.finalprojecttemplate.HomePageTestData
 import com.example.finalprojecttemplate.databinding.HomePageFragmentBinding
 import com.example.finalprojecttemplate.databinding.TemplateLayoutBinding
-import com.example.finalprojecttemplate.ui.HomePageFragmentDirections
 
 class HomePageFragment: Fragment()  {
 

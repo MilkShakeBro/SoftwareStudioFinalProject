@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate.fragments
+package com.example.finalprojecttemplate.ui
 
 import android.animation.Animator
 import android.animation.AnimatorInflater
@@ -24,7 +24,6 @@ import com.example.finalprojecttemplate.tetris.Direction
 import com.example.finalprojecttemplate.tetris.GameState
 import com.example.finalprojecttemplate.tetris.TetrisGameViewModel
 import com.example.finalprojecttemplate.tetris.TetrisGameViewModelFactory
-import com.example.finalprojecttemplate.ui.GamePageFragmentDirections
 import java.security.acl.AclNotFoundException
 
 class GamePageFragment: Fragment()  {
