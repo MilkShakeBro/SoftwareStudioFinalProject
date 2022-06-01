@@ -1,0 +1,53 @@
+<resources>
+    <string name="article_name">Zebrafish</string>
+    <string name="Article">Zebrafish, named for their characteristic stripes, have been a popular test subject for researchers. Only
+a few centimeters in length, the fish breed easily in captivity, grow quickly, and their transparent body
+makes it easy to study their organs. Above all, they possess some amazing “self-healing” power. When part
+of their heart is removed, they can grow it back in a matter of weeks. When blinded, they can quickly regain
+the ability to see.
+Recent studies show that humans and zebrafish have the same major organs and share 70 percent of
+the genes. Moreover, 84 percent of human genes associated with disease find a counterpart in zebrafish.
+Scientists thus hope that understanding the self-healing mystery of the fish may one day allow humans to
+regenerate such organs as eyes, hearts, and spines.
+Researchers at Vanderbilt University are particularly interested in zebrafish retina regeneration. They
+have learned that damage of retina can cause blindness in zebrafish, yet it only takes about three to four
+weeks before vision is restored. The structure and cell types of zebrafish retinas are almost identical to those
+of humans. If the process can be replicated in humans, it may give rise to new treatments for blindness
+caused by retinal damage.
+In order to know exactly how zebrafish retina is regenerated, the team looked at the neurotransmitter
+gamma-aminobutyric acid (GABA), a chemical messenger in the brain that reduces the activity of neurons.
+They found that lowering GABA levels in zebrafish can trigger retina regeneration, while a high level of
+GABA concentration will suppress the regeneration process. This suggested that GABA plays an important
+role in the fish’s ability to regain their sight.
+The team is beginning to test the GABA theory on mice. If that works, human trials will be next on
+the agenda. If the research proves successful in humans, some of the nearly 40 million blind people
+worldwide may one day have a tiny, striped fish to thank.
+    </string>
+    <string name="question_one">1. What can we learn about zebrafish from the passage?</string>
+    <string name="question_two">2. Which of the following statements is true regarding GABA in zebrafish?</string>
+    <string name="question_three">3. Which of the following is closest in meaning to “replicated” in the third paragraph?</string>
+    <string name="question_four">4. According to the passage, which of the following is an opinion, but NOT a fact?</string>
+
+    <string name="answer_one_A">(A) How they should be studied in labs.</string>
+    <string name="answer_one_B">(B) Where they derive their regenerative ability.</string>
+    <string name="answer_one_C">(C) Why they share humans’ genetic code.</string>
+    <string name="answer_one_D">(D) What they may offer in medical advancements.</string>
+
+    <string name="answer_two_A">(A) Increasing GABA level facilitates neuron activities.</string>
+    <string name="answer_two_B">(B) There is a high level of GABA in the brain of zebrafish.</string>
+    <string name="answer_two_C">(C) Lowering GABA levels in the brain can stimulate retina regrowth.</string>
+    <string name="answer_two_D">(D) GABA contains chemical elements that trigger the growth of neurons.</string>
+
+    <string name="answer_three_A">(A) Reproduced.</string>
+    <string name="answer_three_B">(B) Reassembled.</string>
+    <string name="answer_three_C">(C) Recycled.</string>
+    <string name="answer_three_D">(D) Restored.</string>
+
+    <string name="answer_four_A">(A) Humans and zebrafish have 70 percent of genes in common.</string>
+    <string name="answer_four_B">(B) Zebrafish can quickly recover vision after damage to the retina.</string>
+    <string name="answer_four_C">(C) Scientists are testing if the GABA theory works on mice as it does on zebrafish.</string>
+    <string name="answer_four_D">(D) Understanding regeneration in zebrafish may allow humans to regrow their organs.</string>
+
+    <string name="Button_submit">Submit</string>
+    <string name="Button_ok">OK!</string>
+</resources>
