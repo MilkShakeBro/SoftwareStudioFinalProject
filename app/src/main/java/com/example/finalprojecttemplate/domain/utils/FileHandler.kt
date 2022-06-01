@@ -1,9 +1,8 @@
-package com.example.finalprojecttemplate
+package com.example.finalprojecttemplate.domain.utils
 
 import android.content.Context
 import android.graphics.Bitmap
 import android.media.MediaScannerConnection
-import android.media.MediaScannerConnection.OnScanCompletedListener
 import android.os.Environment
 import android.util.Log
 import java.io.File

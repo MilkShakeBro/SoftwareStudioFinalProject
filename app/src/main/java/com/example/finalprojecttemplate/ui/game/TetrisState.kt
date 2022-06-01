@@ -1,18 +1,18 @@
-package com.example.finalprojecttemplate.tetris
+package com.example.finalprojecttemplate.ui.game
 
 import android.content.res.Resources
 import android.graphics.Point
 import android.util.Log
-import android.widget.TextView
 import androidx.core.graphics.plus
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.finalprojecttemplate.R
-import com.example.finalprojecttemplate.tetris.GameConstant.DEFAULT_HORIZONTAL_SIZE
+import com.example.finalprojecttemplate.domain.models.Vocabulary
+import com.example.finalprojecttemplate.ui.game.GameConstant.DEFAULT_HORIZONTAL_SIZE
 
 private const val TAG = "TetrisState"
 
-class TetrisState(resources: Resources) {
+class TetrisState(val tetrisVocabularyArray : Array<TetrisVocabulary>) {
 
 //    // This is the array that record the original game board
 //    var tetrisArrayOriginal: Array<CharArray> = resources.getStringArray(R.array.vocabulary_tetris).map { str ->
@@ -34,19 +34,19 @@ class TetrisState(resources: Resources) {
 //        handleFatCharacterM(str).toCharArray()
 //    }.toTypedArray()
 
-    val tetrisVocabularyArray: Array<TetrisVocabulary> = initialTetrisVocabulary(resources)
+//    private lateinit var tetrisVocabularyArray: Array<TetrisVocabulary>
 
     // This is the array that record the text shown on the game board
 //    var tetrisArray: Array<CharArray> = resources.getStringArray(R.array.vocabulary_tetris).map { str ->
 //        handleFatCharacterM(str).toCharArray()
 //    }.toTypedArray()
-    var tetrisArray: Array<CharArray> = tetrisVocabularyArray.map { tetrisVoc ->
+    val tetrisArray: Array<CharArray> = tetrisVocabularyArray.map { tetrisVoc ->
         tetrisVoc.prefixRow.toCharArray()
     }.toTypedArray()
 
     // The state of the each block in the game board.
     // There are 3 possible states: BLANK, OCCUPIED (by the prefix), BLANK
-    var tetrisState: Array<Array<BlockState>> = tetrisArray.map { charArray ->
+    val tetrisState: Array<Array<BlockState>> = tetrisArray.map { charArray ->
         charArray.map { char ->
             if (char == '*') BlockState.BLANK
             else BlockState.OCCUPIED
@@ -82,36 +82,37 @@ class TetrisState(resources: Resources) {
 //        }
     }
 
-    private fun initialTetrisVocabulary(resources: Resources) : Array<TetrisVocabulary> {
-        // This is the array that record the original game board
-        val tetrisArrayOriginal: Array<String> = resources.getStringArray(R.array.vocabulary_tetris).map { str ->
-            handleFatCharacterM(str).joinToString(separator = "")
-        }.toTypedArray()
+//    private fun initialTetrisVocabulary(resources: Resources) : Array<TetrisVocabulary> {
+//        // This is the array that record the original game board
+//        val tetrisArrayOriginal: Array<String> = resources.getStringArray(R.array.vocabulary_tetris).map { str ->
+//            handleFatCharacterM(str).joinToString(separator = "")
+//        }.toTypedArray()
+//
+//        // This is the array stores the suffixes
+//        val suffixArray: Array<String> = resources.getStringArray(R.array.vocabularies_suffix).map { str ->
+//            handleFatCharacterM(str).joinToString(separator = "")
+//        }.toTypedArray()
+//
+//        // The array stores the chinese meaning
+//        val chineseArray: Array<String> = resources.getTextArray(R.array.chinese_meaning).map { str ->
+//            str.toString()
+//        }.toTypedArray()
+//
+//        // The array stores the correct answers.
+//        val answerArray: Array<String> = resources.getStringArray(R.array.vocabularies).map { str ->
+//            handleFatCharacterM(str).joinToString(separator = "")
+//        }.toTypedArray()
+//
+//        return Array(GameConstant.VOCABULARY_COUNT) { idx ->
+//            TetrisVocabulary(
+//                prefixRow = tetrisArrayOriginal[idx],
+//                suffixRow = suffixArray[idx],
+//                answerRow = answerArray[idx],
+//                chineseMeaning = chineseArray[idx]
+//            )
+//        }
+//    }
 
-        // This is the array stores the suffixes
-        val suffixArray: Array<String> = resources.getStringArray(R.array.vocabularies_suffix).map { str ->
-            handleFatCharacterM(str).joinToString(separator = "")
-        }.toTypedArray()
-
-        // The array stores the chinese meaning
-        val chineseArray: Array<String> = resources.getTextArray(R.array.chinese_meaning).map { str ->
-            str.toString()
-        }.toTypedArray()
-
-        // The array stores the correct answers.
-        val answerArray: Array<String> = resources.getStringArray(R.array.vocabularies).map { str ->
-            handleFatCharacterM(str).joinToString(separator = "")
-        }.toTypedArray()
-
-        return Array(GameConstant.VOCABULARY_COUNT) { idx ->
-            TetrisVocabulary(
-                prefixRow = tetrisArrayOriginal[idx],
-                suffixRow = suffixArray[idx],
-                answerRow = answerArray[idx],
-                chineseMeaning = chineseArray[idx]
-            )
-        }
-    }
 
     fun startGame() {
         _gameState.value = GameState.PLAY
@@ -182,7 +183,8 @@ class TetrisState(resources: Resources) {
     fun makeTetraminoGoLeftMost(horizontalBlocksCount: Int, verticalBlocksCount: Int) {
         var firstOccupiedX = tetramino.position.x
         while (coordinateIsValid(firstOccupiedX, tetramino.position.y, horizontalBlocksCount, verticalBlocksCount)
-            && tetrisState[tetramino.position.y][firstOccupiedX] != BlockState.OCCUPIED) {
+            && tetrisState[tetramino.position.y][firstOccupiedX] != BlockState.OCCUPIED
+        ) {
             firstOccupiedX -= 1
         }
 
@@ -237,39 +239,6 @@ class TetrisState(resources: Resources) {
     private fun notExceedVerticalLeftBound(x: Int, y: Int, verticalBlocksCount: Int): Boolean {
         return (x >= 0 && y in 0 until verticalBlocksCount)
     }
-
-//    private fun checkTheAnswer(horizontalBlocksCount: Int, verticalBlocksCount: Int) {
-//        for (y in 0 until verticalBlocksCount) {
-//            var theWordIsCorrect: Int = 1
-//            Log.d("tetrisArray", String(tetrisArray[y]))
-//            for (x in 0 until horizontalBlocksCount) {
-//                if (tetrisArray[y][x] != answerArray[y][x]) theWordIsCorrect = 0
-//            }
-//
-//            /* Update the prefix if the user match the vocabulary */
-//            if (theWordIsCorrect == 1 && verticalBlocksCount + answerCount < GameConstant.VOCABULARY_COUNT) {
-////                Log.d("The match word is", String(tetrisArray[y]))
-//                score += 10
-//                for (x in 0 until horizontalBlocksCount) {
-//                    tetrisArray[y][x] = tetrisArray[verticalBlocksCount + answerCount][x]
-//                    chineseArray[y] = chineseArray[verticalBlocksCount + answerCount]
-//                    tetrisArrayOriginal[y][x] = tetrisArrayOriginal[verticalBlocksCount + answerCount][x]
-//                    answerArray[y][x] = answerArray[verticalBlocksCount + answerCount][x]
-//                }
-////                Log.d("The assigned word is", String(tetrisArray[(verticalBlocksCount+answerCount)]))
-//                answerCount++
-//            } else {
-//                for (x in 0 until horizontalBlocksCount) {
-//                    tetrisArray[y][x] = tetrisArrayOriginal[y][x]
-//                }
-//            }
-//
-//            /* Clear the tetramino on the game board */
-//            for (x in 0 until horizontalBlocksCount) {
-//                if (tetrisArray[y][x] == '*') tetrisState[y][x] = BlockState.BLANK
-//            }
-//        }
-//    }
 
     private fun checkTheAnswer(verticalPosition: Int, horizontalBlocksCount: Int, verticalBlocksCount: Int) {
         if (verticalPosition >= verticalBlocksCount || verticalPosition < 0) return
@@ -339,3 +308,6 @@ class TetrisState(resources: Resources) {
 
     private fun deepCopyCharArray(beCopied: CharArray) = beCopied.toList().toCharArray()
 }
+
+/*
+* */
