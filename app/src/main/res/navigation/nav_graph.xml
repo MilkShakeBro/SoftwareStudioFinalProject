@@ -95,7 +95,7 @@
     </fragment>
     <fragment
         android:id="@+id/themePageFragment"
-        android:name="com.example.finalprojecttemplate.ui.ThemePageFragment"
+        android:name="com.example.finalprojecttemplate.ui.theme.ThemePageFragment"
         android:label="ThemePageFragment" >
         <action
             android:id="@+id/action_themePageFragment_to_homePageFragment"
