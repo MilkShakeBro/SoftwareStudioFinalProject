@@ -15,7 +15,7 @@ interface Repository {
     fun getHistoryData(userid: Int): HistoryDataModel
 
     // Homepage
-    fun getHomePageInfo(userid: Int): HomePageInfoModel
+    suspend fun getHomePageInfo(userid: Int): HomePageInfoModel
 
     // Theme
     fun getThemeData(index: Int): ThemeDataModel

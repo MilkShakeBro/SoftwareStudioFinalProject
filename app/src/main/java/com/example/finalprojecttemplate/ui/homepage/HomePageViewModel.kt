@@ -15,13 +15,17 @@ class HomePageViewModel @Inject constructor (
 
     private val _homePageInfo = MutableLiveData<HomePageInfoModel>()
     val homePageInfo: LiveData<HomePageInfoModel>
-        get() =
-            if(_homePageInfo.value == null) {
-                _homePageInfo.value = useCases.getHomePageInfo(0)
-                _homePageInfo
-            } else {
-                _homePageInfo
-            }
+        get() = _homePageInfo
+//            if(_homePageInfo.value == null) {
+//                _homePageInfo.value = useCases.getHomePageInfo(0)
+//                _homePageInfo
+//            } else {
+//                _homePageInfo
+//            }
+
+    private val _status = MutableLiveData<DataFetchStatus>()
+    val status: LiveData<DataFetchStatus>
+        get() = _status
 
     val homePageArticlesInfo: List<HomePageInfo>
         get() = homePageInfo.value!!.articleInfo
@@ -31,6 +35,19 @@ class HomePageViewModel @Inject constructor (
 
     val homePageThemeInfo: List<HomePageInfo>
         get() = homePageInfo.value!!.themeInfo
+
+    fun fetchHomepageInfo() {
+        viewModelScope.launch {
+            _status.value = DataFetchStatus.LOADING
+            try {
+                _homePageInfo.value = useCases.getHomePageInfo(0)
+                _status.value = DataFetchStatus.SUCCESS
+            } catch (e: Exception) {
+                e.printStackTrace()
+                _status.value = DataFetchStatus.ERROR
+            }
+        }
+    }
 
 /** The following functions are used to test UserInfoDataStore.kt
     val userNameFlow = useCases.getUserName().asLiveData()

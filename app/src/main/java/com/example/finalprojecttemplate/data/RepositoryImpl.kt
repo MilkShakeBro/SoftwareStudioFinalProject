@@ -24,7 +24,7 @@ class RepositoryImpl(
         return fakeDatabase.getHistoryData(userid)
     }
 
-    override fun getHomePageInfo(userid: Int): HomePageInfoModel {
+    override suspend fun getHomePageInfo(userid: Int): HomePageInfoModel {
         return fakeDatabase.getHomePageInfo(userid)
     }
 

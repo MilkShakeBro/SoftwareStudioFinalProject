@@ -118,6 +118,10 @@ class TetrisState(val tetrisVocabularyArray : Array<TetrisVocabulary>) {
         _gameState.value = GameState.PLAY
     }
 
+    fun pauseGame() {
+        _gameState.value = GameState.PAUSE
+    }
+
     fun getChineseMeaning(): String {
         return if (tetramino.position.y < 0) "GAME OVER"
 //        else chineseArray[tetramino.position.y]
