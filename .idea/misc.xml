@@ -49,9 +49,11 @@
         <entry key="app/src/main/res/layout/article.xml" value="0.1" />
         <entry key="app/src/main/res/layout/card_front.xml" value="0.15653495440729484" />
         <entry key="app/src/main/res/layout/flashcard_page_fragment.xml" value="0.15653495440729484" />
+        <entry key="app/src/main/res/layout/home_page_fragment.xml" value="0.22291666666666668" />
         <entry key="app/src/main/res/layout/profile.xml" value="0.15653495440729484" />
         <entry key="app/src/main/res/layout/setting.xml" value="0.1" />
         <entry key="app/src/main/res/layout/template_layout.xml" value="0.10457516339869281" />
+        <entry key="app/src/main/res/layout/timer_fragment.xml" value="0.11313868613138686" />
       </map>
     </option>
   </component>
