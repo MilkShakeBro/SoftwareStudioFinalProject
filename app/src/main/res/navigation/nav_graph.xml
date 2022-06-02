@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_articlePageFragment_to_homePageFragment"
             app:destination="@id/homePageFragment" />
+        <argument
+            android:name="articleId"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/flashcardPageFragment"
@@ -30,6 +33,11 @@
         <action
             android:id="@+id/action_gamePageFragment_to_resultPageFragment"
             app:destination="@id/resultPageFragment" />
+        <action
+            android:id="@+id/action_gamePageFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment"
+            app:popUpTo="@id/homePageFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/gameTutorialFragment"
@@ -100,6 +108,9 @@
         <action
             android:id="@+id/action_themePageFragment_to_homePageFragment"
             app:destination="@id/homePageFragment" />
+        <argument
+            android:name="themeId"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/timerPageFragment"
@@ -117,5 +128,7 @@
         <action
             android:id="@+id/action_timerPageFragment_to_gamePageFragment"
             app:destination="@id/gamePageFragment" />
+        <argument android:name="vocabularySetId"
+            app:argType="integer" />
     </fragment>
 </navigation>

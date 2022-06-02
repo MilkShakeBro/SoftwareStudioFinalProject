@@ -35,45 +35,112 @@ class HomePageFragment: Fragment()  {
 //        fakeDataSource = HomePageTestData(resources)
 
         val articleAdapter = HomePageListAdapter { id ->
-            goToArticlePage()
+            goToArticlePage(id)
         }
 
         val vocabularyAdapter = HomePageListAdapter { id ->
-            goToVocabularyPage()
+            goToVocabularyPage(id)
         }
 
         val themeAdapter = HomePageListAdapter { id ->
-            goToThemePage()
+            goToThemePage(id)
         }
 
 //        articleAdapter.submitList(fakeDataSource.articlesTestCases)
 //        vocabularyAdapter.submitList(fakeDataSource.vocabulariesTestCases)
 //        themeAdapter.submitList(fakeDataSource.themeTestCases)
 
-        articleAdapter.submitList(viewModel.homePageArticlesInfo)
-        vocabularyAdapter.submitList(viewModel.homePageVocabularySetInfo)
-        themeAdapter.submitList(viewModel.homePageThemeInfo)
-
-
         binding?.apply {
             readingArticleRecyclerView.adapter = articleAdapter
             vocabulariesSetsListRecyclerView.adapter = vocabularyAdapter
             themeListRecyclerView.adapter = themeAdapter
+
+            binding?.loadingAndErrorLayout?.visibility = View.VISIBLE
+            binding?.loadingProgressBar?.visibility = View.VISIBLE
+            binding?.errorMessageTextView?.visibility = View.GONE
+
+            /** The following functions are used to test UserInfoDataStore.kt
+            testDataStoreButton1.setOnClickListener {
+                viewModel.setUserName("!!!")
+            }
+            testDataStoreButton2.setOnClickListener {
+                viewModel.setAmountOfVoc(100)
+            }
+            testDataStoreButton3.setOnClickListener {
+                viewModel.setIsDarkMode(true)
+            }*/
+        }
+
+        viewModel.apply {
+            fetchHomepageInfo()
+
+            status.observe(viewLifecycleOwner) { newStatus ->
+                when(newStatus) {
+                    DataFetchStatus.SUCCESS -> {
+                        articleAdapter.submitList(viewModel.homePageArticlesInfo)
+                        vocabularyAdapter.submitList(viewModel.homePageVocabularySetInfo)
+                        themeAdapter.submitList(viewModel.homePageThemeInfo)
+                        binding?.loadingAndErrorLayout?.visibility = View.GONE
+                    }
+                    DataFetchStatus.ERROR -> {
+                        binding?.loadingAndErrorLayout?.visibility = View.VISIBLE
+                        binding?.errorMessageTextView?.visibility = View.VISIBLE
+                        binding?.loadingProgressBar?.visibility = View.GONE
+                    }
+                    DataFetchStatus.LOADING -> {
+                        binding?.loadingAndErrorLayout?.visibility = View.VISIBLE
+                        binding?.loadingProgressBar?.visibility = View.VISIBLE
+                        binding?.errorMessageTextView?.visibility = View.GONE
+                    }
+                    else -> {
+
+                    }
+                }
+            }
+
+            /** The following functions are used to test UserInfoDataStore.kt
+            userNameFlow.observe(viewLifecycleOwner) {
+                updateTestText()
+            }
+
+            amountOfVoc.observe(viewLifecycleOwner) {
+                updateTestText()
+            }
+
+            isDarkMode.observe(viewLifecycleOwner) {
+                updateTestText()
+            }*/
         }
     }
 
-    private fun goToArticlePage() {
-        val action = HomePageFragmentDirections.actionHomePageFragmentToArticlePageFragment()
+    private fun goToArticlePage(id: Int) {
+        val action = HomePageFragmentDirections.actionHomePageFragmentToArticlePageFragment(
+            articleId = id
+        )
         findNavController().navigate(action)
     }
 
-    private fun goToVocabularyPage() {
-        val action = HomePageFragmentDirections.actionHomePageFragmentToTimerPageFragment()
+    private fun goToVocabularyPage(id: Int) {
+        val action = HomePageFragmentDirections.actionHomePageFragmentToTimerPageFragment(
+            vocabularySetId = id
+        )
         findNavController().navigate(action)
     }
 
-    private fun goToThemePage() {
-        val action = HomePageFragmentDirections.actionHomePageFragmentToThemePageFragment()
+    private fun goToThemePage(id: Int) {
+        val action = HomePageFragmentDirections.actionHomePageFragmentToThemePageFragment(
+            themeId = id
+        )
         findNavController().navigate(action)
     }
+
+/** The following functions are used to test UserInfoDataStore.kt
+    private fun updateTestText() {
+        binding?.testDataStoreTextView?.text = String.format(
+            "UserName: %s\nAmountOfVoc: %d\nDarkMode: %s\n",
+            viewModel.userNameFlow.value,
+            viewModel.amountOfVoc.value,
+            viewModel.isDarkMode.value.toString()
+        )
+    }*/
 }

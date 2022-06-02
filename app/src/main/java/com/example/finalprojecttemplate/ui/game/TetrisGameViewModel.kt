@@ -71,7 +71,7 @@ class TetrisGameViewModel @Inject constructor(
     private fun submitWordsToTetrisState() {
         val randomInt = (0..4).random()
 
-        tetrisVocabularySet = useCases.getVocabularySet(randomInt)
+        tetrisVocabularySet = useCases.getVocabularySet(0)
 
         val vocabularyArray = tetrisVocabularySet!!.vocabularySet.map {
             it.toTetrisVocabulary()
@@ -80,12 +80,6 @@ class TetrisGameViewModel @Inject constructor(
         tetrisState = TetrisState(vocabularyArray)
 
         GameConstant.VOCABULARY_COUNT = vocabularyArray.size
-
-        var count = 0
-        for (item in vocabularyArray) {
-            if (item.suffixRow == "ce") count++
-        }
-        Log.d("TetrisGameViewModel", "suffix count is $count")
     }
 }
 

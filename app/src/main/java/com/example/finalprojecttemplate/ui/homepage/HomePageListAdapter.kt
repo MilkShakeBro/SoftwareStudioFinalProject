@@ -2,13 +2,12 @@ package com.example.finalprojecttemplate.ui.homepage
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.databinding.HomePageItemLayoutBinding
 import com.example.finalprojecttemplate.domain.models.HomePageInfo
+import com.example.finalprojecttemplate.domain.utils.bindImage
 
 class HomePageListAdapter(private val onClickAction: (Int) -> Unit) : ListAdapter<HomePageInfo, HomePageListAdapter.HomePageListItemViewHolder>(
     DiffCallBack
