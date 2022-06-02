@@ -42,6 +42,11 @@ class FlashcardPageFragment: Fragment()  {
                 FlashcardAdapter(
                     it, requireActivity().supportFragmentManager)
             }
+            // click skip buttom to go to game tutorial
+            SkipToGame.setOnClickListener{
+                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment()
+                findNavController().navigate(action)
+            }
 //            button1.setOnClickListener {
 //                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment()
 //                findNavController().navigate(action)
