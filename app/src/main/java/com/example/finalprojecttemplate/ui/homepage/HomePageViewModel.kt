@@ -1,12 +1,11 @@
 package com.example.finalprojecttemplate.ui.homepage
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
 import com.example.finalprojecttemplate.domain.models.HomePageInfo
 import com.example.finalprojecttemplate.domain.models.HomePageInfoModel
 import com.example.finalprojecttemplate.domain.usecases.UseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -32,4 +31,27 @@ class HomePageViewModel @Inject constructor (
 
     val homePageThemeInfo: List<HomePageInfo>
         get() = homePageInfo.value!!.themeInfo
+
+/** The following functions are used to test UserInfoDataStore.kt
+    val userNameFlow = useCases.getUserName().asLiveData()
+    val amountOfVoc = useCases.getAmountOfVoc().asLiveData()
+    val isDarkMode = useCases.getIsDarkMode().asLiveData()
+
+    fun setUserName(newUserName: String) {
+        viewModelScope.launch {
+            useCases.setUserName(newUserName)
+        }
+    }
+
+    fun setAmountOfVoc(newAmount: Int) {
+        viewModelScope.launch {
+            useCases.setAmountOfVoc(newAmount)
+        }
+    }
+
+    fun setIsDarkMode(darkMode: Boolean) {
+        viewModelScope.launch {
+            useCases.setIsDarkMode(darkMode)
+        }
+    }*/
 }

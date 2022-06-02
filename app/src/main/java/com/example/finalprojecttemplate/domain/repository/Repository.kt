@@ -1,6 +1,7 @@
 package com.example.finalprojecttemplate.domain.repository
 
 import com.example.finalprojecttemplate.domain.models.*
+import kotlinx.coroutines.flow.Flow
 
 interface Repository {
 
@@ -22,4 +23,13 @@ interface Repository {
     // Profile
     fun getAchievement(userid: Int): AchievementSetModel
     fun getPersonalInfo(userid: Int): PersonalInfoModel
+
+    // Preference
+    fun getUserName(): Flow<String>
+    fun getAmountOfVoc(): Flow<Int>
+    fun getIsDarkMode(): Flow<Boolean>
+    suspend fun setUserName(newName: String)
+    suspend fun setAmountOfVoc(newAmount: Int)
+    suspend fun setIsDarkMode(darkMode: Boolean)
+    suspend fun increaseAmountOfVocBy(inc: Int)
 }

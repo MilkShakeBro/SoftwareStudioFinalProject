@@ -7,5 +7,11 @@ data class UseCases(
     val getHomePageInfo: GetHomePageInfo,
     val getThemeData: GetThemeData,
     val getAchievement: GetAchievement,
-    val getPersonalInfo: GetPersonalInfo
+    val getPersonalInfo: GetPersonalInfo,
+    val getUserName: GetUserName,
+    val getAmountOfVoc: GetAmountOfVoc,
+    val getIsDarkMode: GetIsDarkMode,
+    val setAmountOfVoc: SetAmountOfVoc,
+    val setIsDarkMode: SetIsDarkMode,
+    val setUserName: SetUserName
 )

@@ -59,6 +59,32 @@ class HomePageFragment: Fragment()  {
             readingArticleRecyclerView.adapter = articleAdapter
             vocabulariesSetsListRecyclerView.adapter = vocabularyAdapter
             themeListRecyclerView.adapter = themeAdapter
+
+            /** The following functions are used to test UserInfoDataStore.kt
+            testDataStoreButton1.setOnClickListener {
+                viewModel.setUserName("!!!")
+            }
+            testDataStoreButton2.setOnClickListener {
+                viewModel.setAmountOfVoc(100)
+            }
+            testDataStoreButton3.setOnClickListener {
+                viewModel.setIsDarkMode(true)
+            }*/
+        }
+
+        viewModel.apply {
+            /** The following functions are used to test UserInfoDataStore.kt
+            userNameFlow.observe(viewLifecycleOwner) {
+                updateTestText()
+            }
+
+            amountOfVoc.observe(viewLifecycleOwner) {
+                updateTestText()
+            }
+
+            isDarkMode.observe(viewLifecycleOwner) {
+                updateTestText()
+            }*/
         }
     }
 
@@ -76,4 +102,14 @@ class HomePageFragment: Fragment()  {
         val action = HomePageFragmentDirections.actionHomePageFragmentToThemePageFragment()
         findNavController().navigate(action)
     }
+
+/** The following functions are used to test UserInfoDataStore.kt
+    private fun updateTestText() {
+        binding?.testDataStoreTextView?.text = String.format(
+            "UserName: %s\nAmountOfVoc: %d\nDarkMode: %s\n",
+            viewModel.userNameFlow.value,
+            viewModel.amountOfVoc.value,
+            viewModel.isDarkMode.value.toString()
+        )
+    }*/
 }
