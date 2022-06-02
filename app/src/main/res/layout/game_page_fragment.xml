@@ -66,7 +66,7 @@
             app:layout_constraintStart_toStartOf="@id/chinese_explanation"
             app:layout_constraintBottom_toTopOf="@id/tetris_view"/>
 
-        <com.example.finalprojecttemplate.tetris.TetrisView
+        <com.example.finalprojecttemplate.ui.game.TetrisView
             android:id="@+id/tetris_view"
             android:layout_width="match_parent"
             android:layout_height="450dp"

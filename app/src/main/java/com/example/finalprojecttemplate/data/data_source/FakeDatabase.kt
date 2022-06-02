@@ -1,96 +1,98 @@
 package com.example.finalprojecttemplate.data.data_source
 
 import android.net.Uri
+import androidx.core.net.toUri
 import com.example.finalprojecttemplate.domain.models.*
+import com.example.finalprojecttemplate.ui.homepage.HomePageListItem
 
 class FakeDatabase {
     private val vocabularySets: List<VocabularySetModel> = listOf(
         VocabularySetModel(
             id = 0,
-            name = "au",
+            name = "裝飾",
             image = Uri.parse("https://www.google.com"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "ornament",
+                    chinese = "n.[C] 裝飾品",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 1,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "stylish",
+                    chinese = "adj. 時髦的，流行的",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 2,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "vogue",
+                    chinese = "n.[U] 流行，時尚，時髦",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 3,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "accessory",
+                    chinese = "n.[C] 附加物件，衣物配件",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 4,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "ribbon",
+                    chinese = "n.[C] 彩帶，緞帶",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 5,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "brooch",
+                    chinese = "n.[C] 女用胸針",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 6,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "jewel",
+                    chinese = "n.[C] 珠寶",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 7,
-                    word = "audience",
+                    word = "bracelet",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 8,
-                    word = "audience",
+                    word = "cosmetic",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 9,
-                    word = "audience",
+                    word = "lipstick",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 10,
-                    word = "audience",
+                    word = "wig",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 11,
-                    word = "audience",
+                    word = "hairdo",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 12,
-                    word = "audience",
+                    word = "wreath",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 13,
-                    word = "audience",
+                    word = "bouquet",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),
@@ -470,7 +472,7 @@ class FakeDatabase {
                 2 to "B",
                 3 to "C"
             ),
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/330px-Image_created_with_a_mobile_phone.png"),
             content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac arcu ac lorem vulputate consequat a ut lectus. Vivamus tincidunt purus vel nulla egestas, a semper erat hendrerit. Morbi blandit, diam eget interdum porta, velit eros placerat massa, vitae suscipit magna ante quis magna. In suscipit libero nunc, tincidunt aliquet orci luctus in. Vivamus quis venenatis ligula. Fusce iaculis nisi eget tellus maximus pharetra. Praesent nec justo a felis elementum pharetra. Nulla dui dolor, hendrerit rhoncus blandit ut, blandit nec nisi. Vivamus at facilisis augue. Suspendisse molestie finibus risus, sed pharetra arcu gravida eu. Praesent et pretium urna, et hendrerit nibh. Vestibulum in auctor velit, id luctus lorem. Phasellus accumsan eros gravida massa placerat, iaculis mattis turpis pharetra. Mauris porttitor elit neque, et pellentesque metus mattis ut. In nisi felis, bibendum sit amet tellus id, tempus finibus nulla. Quisque fringilla urna ipsum, sit amet pellentesque metus fringilla eu."
         ),
         ArticleModel(
@@ -986,7 +988,7 @@ class FakeDatabase {
 
         articles.forEach{ item->articleInfo.add(HomePageInfo(item.id, item.image, item.name)) }
         vocabularySets.forEach{ item->vocabularySetInfo.add(HomePageInfo(item.id, item.image, item.name)) }
-        articles.forEach{ item->themeInfo.add(HomePageInfo(item.id, item.image, item.name)) }
+        themeData.forEach{ item->themeInfo.add(HomePageInfo(item.id, item.image, "item.name???")) }
 
         return if (userid in 0 until 5) HomePageInfoModel(articleInfo, vocabularySetInfo, themeInfo)
         else HomePageInfoModel(

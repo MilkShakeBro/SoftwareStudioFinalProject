@@ -1,10 +1,8 @@
-package com.example.finalprojecttemplate.tetris
+package com.example.finalprojecttemplate.ui.game
 
-import android.content.res.Resources
 import android.graphics.Color
 import android.graphics.Point
-import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
+import com.example.finalprojecttemplate.domain.models.Vocabulary
 
 object GameColor {
     val ORANGE = Color.parseColor("#F8B200")
@@ -40,5 +38,5 @@ enum class GameState { PAUSE, PLAY, END }
 object GameConstant {
     const val DEFAULT_HORIZONTAL_SIZE = 22
     const val DEFAULT_VERTICAL_SIZE = 10
-    const val VOCABULARY_COUNT = 18
+    var VOCABULARY_COUNT = 18
 }

@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate.tetris
+package com.example.finalprojecttemplate.ui.game
 
 import android.graphics.Point
 import androidx.core.graphics.plus

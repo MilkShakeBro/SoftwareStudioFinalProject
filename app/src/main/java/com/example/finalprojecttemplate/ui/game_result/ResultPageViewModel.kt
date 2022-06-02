@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate
+package com.example.finalprojecttemplate.ui.game_result
 
 import android.content.Context
 import android.graphics.Bitmap

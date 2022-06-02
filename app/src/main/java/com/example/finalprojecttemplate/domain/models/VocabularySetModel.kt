@@ -1,6 +1,7 @@
 package com.example.finalprojecttemplate.domain.models
 
 import android.net.Uri
+import java.io.Serializable
 
 data class VocabularySetModel(
     val id: Int,
@@ -21,4 +22,4 @@ data class Vocabulary (
     val word: String,
     val chinese: String,
     val breakpoint: Int
-)
+) : Serializable

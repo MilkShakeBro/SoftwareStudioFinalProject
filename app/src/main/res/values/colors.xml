@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="flashcard_page_background">#C94F7C</color>
     <color name="flashcard_background">#FF80AB</color>
+    <color name="vocabulary_background">#FFB2DD</color>
 
     <!-- Game Colors -->
     <color name="game_orange">#F8B200</color>
@@ -26,4 +27,5 @@
     <color name="pink_A100">#FF80AB</color>
     <color name="pink_A100_dark">#C94F7C</color>
     <color name="pink_A100_light">#FFB2DD</color>
+
 </resources>

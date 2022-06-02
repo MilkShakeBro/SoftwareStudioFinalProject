@@ -1,8 +1,10 @@
-package com.example.finalprojecttemplate
+package com.example.finalprojecttemplate.ui.homepage
 
 import android.content.res.Resources
 import androidx.core.graphics.drawable.toBitmap
+import com.example.finalprojecttemplate.R
 
+@Deprecated("")
 data class HomePageTestData(
     val resources: Resources
 ) {
