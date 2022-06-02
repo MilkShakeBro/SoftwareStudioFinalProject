@@ -6,7 +6,7 @@ import com.example.finalprojecttemplate.domain.repository.Repository
 class GetHomePageInfo(
     private val repository: Repository
 ) {
-    operator fun invoke(userid: Int): HomePageInfoModel {
+    suspend operator fun invoke(userid: Int): HomePageInfoModel {
         return repository.getHomePageInfo(userid)
     }
 }

@@ -1,9 +1,9 @@
 package com.example.finalprojecttemplate.data.data_source
 
 import android.net.Uri
-import androidx.core.net.toUri
 import com.example.finalprojecttemplate.domain.models.*
-import com.example.finalprojecttemplate.ui.homepage.HomePageListItem
+import kotlinx.coroutines.delay
+import java.lang.Thread.sleep
 
 class FakeDatabase {
     private val vocabularySets: List<VocabularySetModel> = listOf(
@@ -28,7 +28,7 @@ class FakeDatabase {
                     id = 2,
                     word = "vogue",
                     chinese = "n.[U] 流行，時尚，時髦",
-                    breakpoint = 6
+                    breakpoint = 4
                 ),
                 Vocabulary(
                     id = 3,
@@ -40,19 +40,19 @@ class FakeDatabase {
                     id = 4,
                     word = "ribbon",
                     chinese = "n.[C] 彩帶，緞帶",
-                    breakpoint = 6
+                    breakpoint = 5
                 ),
                 Vocabulary(
                     id = 5,
                     word = "brooch",
                     chinese = "n.[C] 女用胸針",
-                    breakpoint = 6
+                    breakpoint = 4
                 ),
                 Vocabulary(
                     id = 6,
                     word = "jewel",
                     chinese = "n.[C] 珠寶",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 7,
@@ -76,25 +76,25 @@ class FakeDatabase {
                     id = 10,
                     word = "wig",
                     chinese = "觀眾",
-                    breakpoint = 6
+                    breakpoint = 1
                 ),
                 Vocabulary(
                     id = 11,
                     word = "hairdo",
                     chinese = "觀眾",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 12,
                     word = "wreath",
                     chinese = "觀眾",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 13,
                     word = "bouquet",
                     chinese = "觀眾",
-                    breakpoint = 6
+                    breakpoint = 4
                 ),
             ),
         ),
@@ -981,7 +981,7 @@ class FakeDatabase {
         )
     }
 
-    fun getHomePageInfo(userid: Int): HomePageInfoModel {
+    suspend fun getHomePageInfo(userid: Int): HomePageInfoModel {
         var articleInfo: MutableList<HomePageInfo> = mutableListOf()
         var vocabularySetInfo: MutableList<HomePageInfo> = mutableListOf()
         var themeInfo: MutableList<HomePageInfo> = mutableListOf()
@@ -989,6 +989,8 @@ class FakeDatabase {
         articles.forEach{ item->articleInfo.add(HomePageInfo(item.id, item.image, item.name)) }
         vocabularySets.forEach{ item->vocabularySetInfo.add(HomePageInfo(item.id, item.image, item.name)) }
         themeData.forEach{ item->themeInfo.add(HomePageInfo(item.id, item.image, "item.name???")) }
+
+        delay(1000)
 
         return if (userid in 0 until 5) HomePageInfoModel(articleInfo, vocabularySetInfo, themeInfo)
         else HomePageInfoModel(
