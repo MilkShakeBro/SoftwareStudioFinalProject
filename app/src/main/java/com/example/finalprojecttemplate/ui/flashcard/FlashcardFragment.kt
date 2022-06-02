@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate.ui
+package com.example.finalprojecttemplate.ui.flashcard
 
 import android.animation.Animator
 import android.animation.AnimatorInflater
@@ -11,25 +11,38 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.finalprojecttemplate.R
+import com.example.finalprojecttemplate.databinding.FlashcardFragmentBinding
 import com.example.finalprojecttemplate.databinding.FlashcardPageFragmentBinding
+import com.example.finalprojecttemplate.domain.models.Vocabulary
+import com.example.finalprojecttemplate.domain.models.VocabularySetModel
+import kotlinx.android.synthetic.main.flashcard_fragment.*
 
-class FlashcardPageFragment: Fragment()  {
-
+class FlashcardFragment : Fragment(){
     //ClockWise
     private lateinit var animatorSetLeftOut: AnimatorSet
     private lateinit var animatorSetRightIn: AnimatorSet
     private var canFlip = true
 
-//    private var flipModel: FlipModel? = null
-    private var binding: FlashcardPageFragmentBinding? = null
+    private var flipModel: Vocabulary? = null
+    private var binding: FlashcardFragmentBinding? = null
     private var isBackVisible = false
+
+    companion object {
+        const val FLIP_MODEL_KEY = "FLIP_MODEL_KEY"
+        fun getDefaultBundle(flipModel: Vocabulary): Bundle = Bundle().apply {
+            putSerializable(
+                FLIP_MODEL_KEY,
+                flipModel
+            )
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val fragmentBinding = FlashcardPageFragmentBinding.inflate(inflater, container, false)
+        val fragmentBinding = FlashcardFragmentBinding.inflate(inflater, container, false)
         binding = fragmentBinding
         return fragmentBinding.root
     }
@@ -37,12 +50,12 @@ class FlashcardPageFragment: Fragment()  {
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        countdown()
+        flipModel = arguments?.getSerializable(FLIP_MODEL_KEY) as Vocabulary?
         loadAnimations()
         changeCameraDistance()
         setup()
         binding?.apply {
+
 //            button1.setOnClickListener {
 //                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment()
 //                findNavController().navigate(action)
@@ -58,34 +71,26 @@ class FlashcardPageFragment: Fragment()  {
         }
     }
     private fun setup(){
-        binding?.cardFront?.setOnClickListener{
-            flipClockWise()
-        }
-        binding?.cardBack?.setOnClickListener{
-            flipClockWise()
-        }
-        binding?.cardBack?.alpha = 0f
-        binding?.cardFront?.alpha = 1f
-    }
-    private fun countdown(){
-        val countDownTimerTextView = binding?.countdownTimer
-
-        object : CountDownTimer(100000, 1000) {
-            override fun onTick(millisUntilFinished: Long) {
-                val secondsUntilFinished: Long = millisUntilFinished / 1000
-                val seconds = secondsUntilFinished % 60
-                val minutesUntilFinished : Long = secondsUntilFinished / 60
-                val minutes = minutesUntilFinished % 60
-                val hoursUntilFinished : Long = minutesUntilFinished / 60
-                val hours = hoursUntilFinished % 60
-
-                countDownTimerTextView?.text = String.format("%02d:%02d:%02d", hours, minutes, seconds)
+        binding?.apply {
+            tvTitle.text = flipModel?.id.toString()
+            tvContent.text = flipModel?.word
+            tvContentBack.text = flipModel?.chinese
+            ibFlipBack.setOnClickListener {
+                flipClockWise()
             }
-
-            override fun onFinish() {
-                countDownTimerTextView?.text = "00:00:00"
+            ibFlipFront.setOnClickListener {
+                flipClockWise()
             }
-        }.start()
+            /*if(flipModel?.isFlipped == true){
+                cardBack.alpha = 1f
+                cardFront.alpha = 0f
+            }else{
+                cardBack.alpha = 0f
+                cardFront.alpha = 1f
+            }*/
+            cardBack.alpha = 0f
+            cardFront.alpha = 1f
+        }
     }
     private fun loadAnimations(){
         animatorSetLeftOut = AnimatorInflater.loadAnimator(

@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintBottom_toTopOf="@+id/flashcard_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -37,28 +37,22 @@
             app:layout_constraintTop_toBottomOf="@+id/countdown_timer"
             app:srcCompat="@drawable/poopooman" />
 
-        <FrameLayout
-            android:id="@+id/cardFront"
-            android:layout_width="350dp"
-            android:layout_height="350dp"
+        <com.example.finalprojecttemplate.ui.flashcard.FlashcardViewPager
+            android:id="@+id/flashcard"
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
             android:gravity="center"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/poohpoohman1">
-            <include layout="@layout/card_front" />
-        </FrameLayout>
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/poohpoohman1"
+            app:layout_constraintVertical_bias="0.0">
 
-        <FrameLayout
-            android:id="@+id/cardBack"
-            android:layout_width="350dp"
-            android:layout_height="350dp"
-            android:alpha="0"
-            android:gravity="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/poohpoohman1">
-            <include layout="@layout/card_back" />
-        </FrameLayout>
+            <include layout="@layout/card_front" />
+        </com.example.finalprojecttemplate.ui.flashcard.FlashcardViewPager>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

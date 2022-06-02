@@ -9,90 +9,90 @@ class FakeDatabase {
     private val vocabularySets: List<VocabularySetModel> = listOf(
         VocabularySetModel(
             id = 0,
-            name = "au",
+            name = "裝飾",
             image = Uri.parse("https://www.google.com"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "ornament",
+                    chinese = "n.[C] 裝飾品",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 1,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "stylish",
+                    chinese = "adj. 時髦的，流行的",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 2,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "vogue",
+                    chinese = "n.[U] 流行，時尚，時髦",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 3,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "accessory",
+                    chinese = "n.[C] 附加物件，衣物配件",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 4,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "ribbon",
+                    chinese = "n.[C] 彩帶，緞帶",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 5,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "brooch",
+                    chinese = "n.[C] 女用胸針",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 6,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "jewel",
+                    chinese = "n.[C] 珠寶",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 7,
-                    word = "audience",
+                    word = "bracelet",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 8,
-                    word = "audience",
+                    word = "cosmetic",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 9,
-                    word = "audience",
+                    word = "lipstick",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 10,
-                    word = "audience",
+                    word = "wig",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 11,
-                    word = "audience",
+                    word = "hairdo",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 12,
-                    word = "audience",
+                    word = "wreath",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 13,
-                    word = "audience",
+                    word = "bouquet",
                     chinese = "觀眾",
                     breakpoint = 6
                 ),

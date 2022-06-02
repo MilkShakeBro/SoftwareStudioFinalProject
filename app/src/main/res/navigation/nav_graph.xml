@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/flashcardPageFragment"
-        android:name="com.example.finalprojecttemplate.ui.FlashcardPageFragment"
+        android:name="com.example.finalprojecttemplate.ui.flashcard.FlashcardPageFragment"
         android:label="FlashcardPageFragment" >
         <action
             android:id="@+id/action_flashcardPageFragment_to_gamePageFragment"
@@ -103,7 +103,7 @@
     </fragment>
     <fragment
         android:id="@+id/timerPageFragment"
-        android:name="com.example.finalprojecttemplate.ui.TimerPageFragment"
+        android:name="com.example.finalprojecttemplate.ui.timer.TimerPageFragment"
         android:label="TimerPageFragment" >
         <action
             android:id="@+id/action_timerPageFragment_to_homePageFragment"
