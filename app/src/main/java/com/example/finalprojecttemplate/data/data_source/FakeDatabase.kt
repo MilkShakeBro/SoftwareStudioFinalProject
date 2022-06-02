@@ -57,407 +57,407 @@ class FakeDatabase {
                 Vocabulary(
                     id = 7,
                     word = "bracelet",
-                    chinese = "觀眾",
+                    chinese = "n.[C] 手鐲",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 8,
                     word = "cosmetic",
-                    chinese = "觀眾",
+                    chinese = "n.[C] 化妝品，美容品",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 9,
                     word = "lipstick",
-                    chinese = "觀眾",
+                    chinese = "n.[C/U] 口紅",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 10,
                     word = "wig",
-                    chinese = "觀眾",
+                    chinese = "n.[C] （女用）假髮",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 11,
                     word = "hairdo",
-                    chinese = "觀眾",
+                    chinese = "n.[C] 髮型",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 12,
                     word = "wreath",
-                    chinese = "觀眾",
+                    chinese = "n.[C] 花環",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 13,
                     word = "bouquet",
-                    chinese = "觀眾",
+                    chinese = "n.[C] 花束",
                     breakpoint = 6
                 ),
             ),
         ),
         VocabularySetModel(
             id = 1,
-            name = "di",
+            name = "烹飪",
             image = Uri.parse("https://www.google.com"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "broil",
+                    chinese = "vt.（直接在熱源上）烤",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 1,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "roast",
+                    chinese = "vt./vi. 烘，烤",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 2,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "grill",
+                    chinese = "vt.（用烤架）烤（食物）",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 3,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "simmer",
+                    chinese = "vt./vi. 用小火煮",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 4,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "stew",
+                    chinese = "vt. 燉",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 5,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "grind",
+                    chinese = "vt./vi. 研磨，磨碎",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 6,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "mill",
+                    chinese = "vt. 碾碎",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 7,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "mash",
+                    chinese = "vt. 搗碎",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 8,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "whisk",
+                    chinese = "vt. 攪拌",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 9,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "scramble",
+                    chinese = "vt. 炒蛋",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 10,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "marinate",
+                    chinese = "vt. 醃漬(用油、香料、酒)",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 11,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "pickle",
+                    chinese = "vt. 醃漬(用鹽巴、醋)",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 12,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "ferment",
+                    chinese = "vt./vi. 發酵",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 13,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "braise",
+                    chinese = "vt. 燉",
                     breakpoint = 6
                 ),
             ),
         ),
         VocabularySetModel(
             id = 2,
-            name = "en",
+            name = "農牧",
             image = Uri.parse("https://www.google.com"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "agriculture",
+                    chinese = "n.[U] 農業",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 1,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "rural",
+                    chinese = "adj. 鄉村的",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 2,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "peasant",
+                    chinese = "n.[C]（較為貧窮的）農夫，佃農",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 3,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "plow",
+                    chinese = "n.[C] 犁",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 4,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "barn",
+                    chinese = "n.[C] 穀倉",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 5,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "greenhouse",
+                    chinese = "n.[C] 溫室",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 6,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "organic",
+                    chinese = "adj. 有機的",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 7,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "fertilizer",
+                    chinese = "n.[C] 肥料",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 8,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "barren",
+                    chinese = "adj. 荒蕪的",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 9,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "pesticide",
+                    chinese = "n.[C] 殺蟲劑",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 10,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "harvest",
+                    chinese = "n.[C] 收成",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 11,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "ranch",
+                    chinese = "n.[C] 大農場，大牧場",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 12,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "dairy",
+                    chinese = "n.[U] 酪農",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 13,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "shepherd",
+                    chinese = "n.[C] 牧羊人",
                     breakpoint = 6
                 ),
             ),
         ),
         VocabularySetModel(
             id = 3,
-            name = "ce",
+            name = "運動",
             image = Uri.parse("https://www.google.com"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "badminton",
+                    chinese = "n.[U] 羽毛球",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 1,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "hike",
+                    chinese = "n./vi. 健行",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 2,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "dive",
+                    chinese = "vi. 跳水，潛水",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 3,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "surf",
+                    chinese = "vi. 衝浪",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 4,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "marathon",
+                    chinese = "n.[C] 馬拉松",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 5,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "relay",
+                    chinese = "n.[C] 接力賽",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 6,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "yoga",
+                    chinese = "n.[U] 瑜珈",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 7,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "boxing",
+                    chinese = "n.[U] 拳擊",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 8,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "wrestle",
+                    chinese = "vi. 摔角，角力",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 9,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "stunt",
+                    chinese = "n.[C] 特技",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 10,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "football",
+                    chinese = "n.[U] 美式足球",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 11,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "hockey",
+                    chinese = "n.[U] 曲棍球",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 12,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "volleyball",
+                    chinese = "n.[U] 排球",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 13,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "ballet",
+                    chinese = "n.[U] 籃球",
                     breakpoint = 6
                 ),
             ),
         ),
         VocabularySetModel(
             id = 4,
-            name = "s",
+            name = "生病",
             image = Uri.parse("https://www.google.com"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "stroke",
+                    chinese = "n.[C] 中風",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 1,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "tumor",
+                    chinese = "n.[C] 腫瘤",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 2,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "measles",
+                    chinese = "n.[pl] 麻疹",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 3,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "asthma",
+                    chinese = "n.[U] 氣喘",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 4,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "allergy",
+                    chinese = "n.[C] 過敏",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 5,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "malaria",
+                    chinese = "n.[U] 瘧疾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 6,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "trauma",
+                    chinese = "n.[U/C] 心理創傷",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 7,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "paralyze",
+                    chinese = "vt. 使癱瘓",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 8,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "irritation",
+                    chinese = "n.[U] 發炎",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 9,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "deteriorate",
+                    chinese = "vi. 惡化",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 10,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "disorder",
+                    chinese = "n.[U] (身體功能）失調",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 11,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "upset",
+                    chinese = "adj. 腸胃不適的",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 12,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "shortsighted",
+                    chinese = "adj. 近視的",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 13,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "Diarrhea",
+                    chinese = "n. 腹瀉",
                     breakpoint = 6
                 ),
             ),

@@ -24,38 +24,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/tvTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TITLE"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:id="@+id/tvTitle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:text="TITLE"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="24sp"-->
+<!--                android:textStyle="bold" />-->
 
             <TextView
                 android:id="@+id/tvContent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="Content"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="fill"
                 android:gravity="center"
+                android:text="Content"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
-
-            <Button
-                android:id="@+id/ibFlipFront"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="?selectableItemBackground"
-                android:text="Flip me"
-                app:layout_constraintBottom_toBottomOf="@id/cardFront"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
         </FrameLayout>
 
         <FrameLayout
@@ -67,6 +54,7 @@
             android:backgroundTint="@color/flashcard_background"
             android:gravity="center"
             android:padding="16dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,27 +62,13 @@
 
             <TextView
                 android:id="@+id/tvContentBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 android:text="Content"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
 
-            <Button
-                android:id="@+id/ibFlipBack"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="?selectableItemBackground"
-                android:text="Flip me"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="@id/cardBack"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
         </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
