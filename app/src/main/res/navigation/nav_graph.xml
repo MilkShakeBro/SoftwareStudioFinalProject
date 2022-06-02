@@ -103,7 +103,7 @@
     </fragment>
     <fragment
         android:id="@+id/timerPageFragment"
-        android:name="com.example.finalprojecttemplate.ui.TimerPageFragment"
+        android:name="com.example.finalprojecttemplate.ui.timer.TimerPageFragment"
         android:label="TimerPageFragment" >
         <action
             android:id="@+id/action_timerPageFragment_to_homePageFragment"

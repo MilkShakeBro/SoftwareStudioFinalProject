@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate.ui
+package com.example.finalprojecttemplate.ui.timer
 
 import android.os.Bundle
 import android.view.LayoutInflater
