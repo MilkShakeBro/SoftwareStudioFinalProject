@@ -1,4 +1,4 @@
-package com.hamedrahimvand.flipcard.model
+package com.example.finalprojecttemplate.ui.flashcard
 
 import java.io.Serializable
 

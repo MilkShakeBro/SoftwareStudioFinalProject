@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/drawable/card.xml" value="0.235" />
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/layout/flashcard_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/layout/flashcard_page_fragment.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/article.xml" value="0.1" />
         <entry key="app/src/main/res/layout/template_layout.xml" value="0.10457516339869281" />
