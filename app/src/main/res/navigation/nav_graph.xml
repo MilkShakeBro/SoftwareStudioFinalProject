@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/gamePageFragment"
-        android:name="com.example.finalprojecttemplate.ui.GamePageFragment"
+        android:name="com.example.finalprojecttemplate.ui.game.GamePageFragment"
         android:label="GamePageFragment" >
         <action
             android:id="@+id/action_gamePageFragment_to_resultPageFragment"
@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/homePageFragment"
-        android:name="com.example.finalprojecttemplate.ui.HomePageFragment"
+        android:name="com.example.finalprojecttemplate.ui.homepage.HomePageFragment"
         android:label="HomePageFragment" >
         <action
             android:id="@+id/action_homePageFragment_to_articlePageFragment"
@@ -69,11 +69,21 @@
     </fragment>
     <fragment
         android:id="@+id/resultPageFragment"
-        android:name="com.example.finalprojecttemplate.ui.ResultPageFragment"
+        android:name="com.example.finalprojecttemplate.ui.game_result.ResultPageFragment"
         android:label="ResultPageFragment" >
         <action
             android:id="@+id/action_resultPageFragment_to_homePageFragment"
-            app:destination="@id/homePageFragment" />
+            app:destination="@id/homePageFragment"
+            app:popUpTo="@id/homePageFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_resultPageFragment_to_gamePageFragment"
+            app:destination="@id/gamePageFragment"
+            app:popUpTo="@id/gamePageFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/settingPageFragment"
@@ -93,7 +103,7 @@
     </fragment>
     <fragment
         android:id="@+id/timerPageFragment"
-        android:name="com.example.finalprojecttemplate.ui.TimerPageFragment"
+        android:name="com.example.finalprojecttemplate.ui.timer.TimerPageFragment"
         android:label="TimerPageFragment" >
         <action
             android:id="@+id/action_timerPageFragment_to_homePageFragment"

@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.finalprojecttemplate.databinding.ArticlePageBinding
 import com.example.finalprojecttemplate.databinding.TemplateLayoutBinding
+import com.example.finalprojecttemplate.ui.article.ArticlePageFragmentDirections
 
 class ThemePageFragment: Fragment()  {
 
@@ -31,6 +33,10 @@ class ThemePageFragment: Fragment()  {
             }
             button1.text = "Home"
             fragmentDescription.text = "This is ThemePageFragment"
+            button1.setOnClickListener {
+                val action = ArticlePageFragmentDirections.actionArticlePageFragmentToHomePageFragment()
+                findNavController().navigate(action)
+            }
         }
     }
 }

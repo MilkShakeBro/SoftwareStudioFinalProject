@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tetris_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tetris_background_gradient">
+<!--        android:background="@color/game_plum">-->
+
+
+        <TextView
+            android:id="@+id/score_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/score_number_text_view"
+            app:layout_constraintEnd_toStartOf="@id/score_number_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/score_number_text_view"
+            android:layout_marginVertical="16dp"
+            android:layout_marginStart="40dp"/>
+
+        <TextView
+            android:id="@+id/score_number_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/game_gold"
+            android:textSize="40dp"
+            app:layout_constraintStart_toEndOf="@id/score_text_view"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="40dp"/>
+
+        <TextView
+            android:id="@+id/chinese_explanation"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="觀眾"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="36dp"
+            app:layout_constraintBottom_toTopOf="@id/skip_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/score_number_text_view"
+            android:layout_marginTop="16dp"/>
+
+        <ImageButton
+            android:id="@+id/skip_button"
+            android:layout_width="102dp"
+            android:layout_height="38dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/ripple_skip_button"
+            app:layout_constraintTop_toBottomOf="@id/chinese_explanation"
+            app:layout_constraintEnd_toEndOf="@id/chinese_explanation"
+            app:layout_constraintStart_toStartOf="@id/chinese_explanation"
+            app:layout_constraintBottom_toTopOf="@id/tetris_view"/>
+
+        <com.example.finalprojecttemplate.ui.game.TetrisView
+            android:id="@+id/tetris_view"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_margin="8dp"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/score_number_text_view" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/left_button"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="LEFT"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@id/up_button"-->
+        <!--            app:layout_constraintEnd_toStartOf="@id/up_button"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/up_button" />-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/up_button"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="UP"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toStartOf="@id/down_button"-->
+        <!--            app:layout_constraintStart_toEndOf="@id/left_button"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/tetris_view" />-->
+
+        <!--        <Button-->
+        <!--            android:id="@+id/down_button"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="DOWN"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/up_button"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/up_button"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/up_button" />-->
+
+        <ImageButton
+            android:id="@+id/up_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/down_button"
+            app:layout_constraintStart_toEndOf="@id/left_button"
+            app:layout_constraintTop_toBottomOf="@+id/tetris_view"
+            android:scaleType="fitXY"
+            android:background="@drawable/ripple_ic_up_arrow"/>
+
+        <ImageButton
+            android:id="@+id/down_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="DOWN"
+            app:layout_constraintBottom_toBottomOf="@+id/up_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/up_button"
+            app:layout_constraintTop_toTopOf="@+id/up_button"
+            android:scaleType="fitXY"
+            android:background="@drawable/ripple_ic_up_arrow"
+            android:rotation="180"/>
+
+        <ImageButton
+            android:id="@+id/left_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="LEFT"
+            app:layout_constraintBottom_toBottomOf="@id/up_button"
+            app:layout_constraintEnd_toStartOf="@id/up_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/up_button"
+            android:scaleType="fitXY"
+            android:background="@drawable/ripple_ic_left_arrow"/>
+
+        <TextView
+            android:id="@+id/match_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="MATCH"
+            android:textStyle="bold"
+            android:textColor="@color/game_gold"
+            android:textAppearance="?attr/textAppearanceHeadline2"
+            tools:visibility="visible"
+            android:visibility="gone"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/countdown_message_constraint_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:foregroundGravity="center"
+            android:background="#5F70223E"
+            tools:visibility="gone">
+
+            <TextView
+                android:id="@+id/countdown_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"
+                android:textColor="@color/pink_A100_light"
+                android:textSize="500sp"
+                android:textStyle="bold"
+                android:textAppearance="?attr/textAppearanceHeadline1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
