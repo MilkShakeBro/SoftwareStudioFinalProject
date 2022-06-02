@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOUR"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@id/timer"
+            app:layout_constraintBottom_toTopOf="@id/timer">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MINUTE"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:paddingLeft="33dp"
+            app:layout_constraintStart_toEndOf="@id/hour"
+            app:layout_constraintBottom_toTopOf="@id/timer">
+        </TextView>
+
+        <TextView
+            android:id="@+id/second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SECOND"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/timer"
+            app:layout_constraintBottom_toTopOf="@id/timer">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <NumberPicker
+                android:id="@+id/numPickerH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <NumberPicker
+                android:id="@+id/numPickerM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="#ebebeb" />
+
+            <NumberPicker
+                android:id="@+id/numPickerS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="* Set the timer to memorize the vocabulary *"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/timer"
+            >
+
+        </TextView>
+
+        <Button
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            android:layout_marginEnd="60sp"
+            app:layout_constraintTop_toTopOf="@id/description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/start">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/skip_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="* Skip to play game *"
+            android:paddingBottom="5dp"
+            android:textSize="10dp"
+            app:layout_constraintStart_toStartOf="@id/start"
+            app:layout_constraintTop_toBottomOf="@id/start"
+            >
+
+        </TextView>
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:layout_marginLeft="60sp"
+            app:layout_constraintTop_toTopOf="@id/description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/skip"
+            app:layout_constraintRight_toRightOf="parent">
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
