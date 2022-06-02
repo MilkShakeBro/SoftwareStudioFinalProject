@@ -466,25 +466,69 @@ class FakeDatabase {
     private val articles: List<ArticleModel> = listOf(
         ArticleModel(
             id = 0,
+            name = "Zebrafish",
+            answer = mapOf(
+                1 to "A",
+                2 to "B",
+                3 to "C",
+                4 to "D"
+            ),
+            image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/330px-Image_created_with_a_mobile_phone.png"),
+            content = "Zebrafish, named for their characteristic stripes, have been a popular test subject for researchers. Only " +
+                    "a few centimeters in length, the fish breed easily in captivity, grow quickly, and their transparent body " +
+                    "makes it easy to study their organs. Above all, they possess some amazing “self-healing” power. When part " +
+                    "of their heart is removed, they can grow it back in a matter of weeks. When blinded, they can quickly regain " +
+                    "the ability to see.\n" +
+                    "Recent studies show that humans and zebrafish have the same major organs and share 70 percent of " +
+                    "the genes. Moreover, 84 percent of human genes associated with disease find a counterpart in zebrafish. " +
+                    "Scientists thus hope that understanding the self-healing mystery of the fish may one day allow humans to " +
+                    "regenerate such organs as eyes, hearts, and spines.\n" +
+                    "Researchers at Vanderbilt University are particularly interested in zebrafish retina regeneration. They " +
+                    "have learned that damage of retina can cause blindness in zebrafish, yet it only takes about three to four " +
+                    "weeks before vision is restored. The structure and cell types of zebrafish retinas are almost identical to those " +
+                    "of humans. If the process can be replicated in humans, it may give rise to new treatments for blindness " +
+                    "caused by retinal damage.\n" +
+                    "In order to know exactly how zebrafish retina is regenerated, the team looked at the neurotransmitter " +
+                    "gamma-aminobutyric acid (GABA), a chemical messenger in the brain that reduces the activity of neurons. " +
+                    "They found that lowering GABA levels in zebrafish can trigger retina regeneration, while a high level of " +
+                    "GABA concentration will suppress the regeneration process. This suggested that GABA plays an important " +
+                    "role in the fish’s ability to regain their sight.\n" +
+                    "The team is beginning to test the GABA theory on mice. If that works, human trials will be next on " +
+                    "the agenda. If the research proves successful in humans, some of the nearly 40 million blind people " +
+                    "worldwide may one day have a tiny, striped fish to thank."
+        ),
+        ArticleModel(
+            id = 1,
             name = "Lorem",
             answer = mapOf(
                 1 to "A",
                 2 to "B",
-                3 to "C"
+                3 to "C",
+                4 to "D"
             ),
             image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/330px-Image_created_with_a_mobile_phone.png"),
-            content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac arcu ac lorem vulputate consequat a ut lectus. Vivamus tincidunt purus vel nulla egestas, a semper erat hendrerit. Morbi blandit, diam eget interdum porta, velit eros placerat massa, vitae suscipit magna ante quis magna. In suscipit libero nunc, tincidunt aliquet orci luctus in. Vivamus quis venenatis ligula. Fusce iaculis nisi eget tellus maximus pharetra. Praesent nec justo a felis elementum pharetra. Nulla dui dolor, hendrerit rhoncus blandit ut, blandit nec nisi. Vivamus at facilisis augue. Suspendisse molestie finibus risus, sed pharetra arcu gravida eu. Praesent et pretium urna, et hendrerit nibh. Vestibulum in auctor velit, id luctus lorem. Phasellus accumsan eros gravida massa placerat, iaculis mattis turpis pharetra. Mauris porttitor elit neque, et pellentesque metus mattis ut. In nisi felis, bibendum sit amet tellus id, tempus finibus nulla. Quisque fringilla urna ipsum, sit amet pellentesque metus fringilla eu."
-        ),
-        ArticleModel(
-            id = 1,
-            name = "Morbi",
-            answer = mapOf(
-                1 to "A",
-                2 to "B",
-                3 to "C"
-            ),
-            image = Uri.parse("https://www.google.com"),
-            content = "Morbi tincidunt nunc non elit tempus accumsan. Donec rutrum mollis lacinia. Suspendisse ut ante at tortor rutrum dapibus. Suspendisse porta nisi vel magna sollicitudin, in fermentum sem convallis. Quisque luctus justo eu varius pulvinar. Nullam finibus pellentesque maximus. Nullam sollicitudin elit vitae cursus dignissim. Sed quam nisl, ullamcorper et lorem eget, aliquam interdum quam. Ut sed erat non libero placerat lobortis. Nunc porttitor dui ac eros varius luctus."
+            content = "Zebrafish, named for their characteristic stripes, have been a popular test subject for researchers. Only " +
+                    "a few centimeters in length, the fish breed easily in captivity, grow quickly, and their transparent body " +
+                    "makes it easy to study their organs. Above all, they possess some amazing “self-healing” power. When part " +
+                    "of their heart is removed, they can grow it back in a matter of weeks. When blinded, they can quickly regain " +
+                    "the ability to see.\n" +
+                    "Recent studies show that humans and zebrafish have the same major organs and share 70 percent of " +
+                    "the genes. Moreover, 84 percent of human genes associated with disease find a counterpart in zebrafish. " +
+                    "Scientists thus hope that understanding the self-healing mystery of the fish may one day allow humans to " +
+                    "regenerate such organs as eyes, hearts, and spines.\n" +
+                    "Researchers at Vanderbilt University are particularly interested in zebrafish retina regeneration. They " +
+                    "have learned that damage of retina can cause blindness in zebrafish, yet it only takes about three to four " +
+                    "weeks before vision is restored. The structure and cell types of zebrafish retinas are almost identical to those " +
+                    "of humans. If the process can be replicated in humans, it may give rise to new treatments for blindness " +
+                    "caused by retinal damage.\n" +
+                    "In order to know exactly how zebrafish retina is regenerated, the team looked at the neurotransmitter " +
+                    "gamma-aminobutyric acid (GABA), a chemical messenger in the brain that reduces the activity of neurons. " +
+                    "They found that lowering GABA levels in zebrafish can trigger retina regeneration, while a high level of " +
+                    "GABA concentration will suppress the regeneration process. This suggested that GABA plays an important " +
+                    "role in the fish’s ability to regain their sight.\n" +
+                    "The team is beginning to test the GABA theory on mice. If that works, human trials will be next on " +
+                    "the agenda. If the research proves successful in humans, some of the nearly 40 million blind people " +
+                    "worldwide may one day have a tiny, striped fish to thank."
         ),
         ArticleModel(
             id = 2,
@@ -492,7 +536,8 @@ class FakeDatabase {
             answer = mapOf(
                 1 to "A",
                 2 to "B",
-                3 to "C"
+                3 to "C",
+                4 to "D"
             ),
             image = Uri.parse("https://www.google.com"),
             content = "Cras accumsan tristique ultricies. Vivamus quis tincidunt metus, sed interdum augue. Nulla facilisi. Aliquam viverra, sem in pharetra fringilla, quam justo fermentum neque, et hendrerit justo purus nec lectus. Praesent posuere varius nulla, vel efficitur lacus dapibus non. Mauris pharetra mi sit amet turpis dignissim, et maximus nibh euismod. Curabitur iaculis tristique elit, sit amet maximus libero varius non. Donec molestie nunc est, id elementum quam ultrices vel. Morbi rhoncus turpis massa, quis mollis lorem blandit vel. Proin eu arcu tortor. Fusce nunc eros, luctus faucibus magna nec, tristique elementum felis. Cras consequat facilisis mauris sed volutpat. Sed egestas odio id neque aliquam venenatis."
@@ -503,7 +548,8 @@ class FakeDatabase {
             answer = mapOf(
                 1 to "A",
                 2 to "B",
-                3 to "C"
+                3 to "C",
+                4 to "D"
             ),
             image = Uri.parse("https://www.google.com"),
             content = "Nam vitae euismod neque, eget imperdiet diam. Praesent a ultrices sem. Suspendisse semper, purus eu dictum iaculis, arcu neque posuere augue, eget tristique mi metus vitae orci. Duis metus est, tempus nec porta id, mattis ac dui. Mauris in lorem ac mi placerat accumsan non ut odio. In ultricies ultricies risus id elementum. Proin iaculis lacus at velit consectetur gravida nec ut nibh."
@@ -514,7 +560,8 @@ class FakeDatabase {
             answer = mapOf(
                 1 to "A",
                 2 to "B",
-                3 to "C"
+                3 to "C",
+                4 to "D"
             ),
             image = Uri.parse("https://www.google.com"),
             content = "Vivamus faucibus tortor non nunc viverra tempor vitae id nibh. Praesent mattis id nibh vitae sodales. Suspendisse euismod hendrerit elit, quis vulputate sem imperdiet eget. Nam in maximus est. Etiam consectetur lorem et ligula euismod, in maximus eros pulvinar. Nulla mollis elementum consequat. Nulla luctus tristique ex ut blandit. Sed ut eros eleifend, molestie mi vitae, hendrerit velit. Nunc a vulputate turpis. Curabitur mattis ultrices sem, at laoreet leo efficitur et. Etiam eu velit magna. Proin interdum mi enim, eu hendrerit neque scelerisque eu. Cras molestie sodales eros in ultricies. Duis scelerisque malesuada nisl ullamcorper semper."
@@ -952,7 +999,8 @@ class FakeDatabase {
             answer = mapOf(
                 1 to "-1",
                 2 to "-1",
-                3 to "-1"
+                3 to "-1",
+                4 to "-1"
             ),
             image = Uri.parse("null"),
             content = "Article not found"
