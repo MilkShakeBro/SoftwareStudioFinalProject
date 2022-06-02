@@ -10,6 +10,7 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.postDelayed
 import androidx.fragment.app.Fragment
@@ -17,6 +18,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.databinding.GamePageFragmentBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -150,6 +152,27 @@ class GamePageFragment: Fragment()  {
             }
             handler.post(loop)
         }
+
+        val onBackPressedCallback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+
+                tetrisGameViewModel.tetrisState.pauseGame()
+
+                MaterialAlertDialogBuilder(requireContext())
+                    .setTitle("Are you sure to leave game?")
+                    .setMessage("")
+                    .setCancelable(false)
+                    .setPositiveButton("Cancel") { _, _ ->
+                        tetrisGameViewModel.tetrisState.startGame()
+                    }
+                    .setNegativeButton("Yes") { _, _ ->
+                        goBackToHomePage()
+                    }
+                    .show()
+            }
+        }
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, onBackPressedCallback)
     }
 
     override fun onDestroyView() {
@@ -163,6 +186,11 @@ class GamePageFragment: Fragment()  {
             score = tetrisGameViewModel.tetrisState.score.value!!
         )
 //        val action = GamePageFragmentDirections.actionGamePageFragmentToResultPageFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun goBackToHomePage() {
+        val action = GamePageFragmentDirections.actionGamePageFragmentToHomePageFragment()
         findNavController().navigate(action)
     }
 

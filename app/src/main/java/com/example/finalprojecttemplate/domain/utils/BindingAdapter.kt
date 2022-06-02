@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate.ui.homepage
+package com.example.finalprojecttemplate.domain.utils
 
 import android.net.Uri
 import android.widget.ImageView
