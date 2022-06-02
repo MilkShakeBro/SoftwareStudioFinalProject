@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/theme_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/living_room"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <FrameLayout
+                android:id="@+id/theme_card"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/theme_image">
+                <include layout="@layout/vocabulary_card" />
+            </FrameLayout>
+
+            <include
+                android:id="@+id/click1"
+                layout="@layout/click_button"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                tools:layout_editor_absoluteX="110dp"
+                tools:layout_editor_absoluteY="120dp" />
+
+            <include
+                android:id="@+id/click2"
+                layout="@layout/click_button"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                tools:layout_editor_absoluteX="278dp"
+                tools:layout_editor_absoluteY="120dp" />
+
+            <include
+                android:id="@+id/click3"
+                layout="@layout/click_button"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                tools:layout_editor_absoluteX="47dp"
+                tools:layout_editor_absoluteY="301dp" />
+
+            <include
+                android:id="@+id/click4"
+                layout="@layout/click_button"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                tools:layout_editor_absoluteX="198dp"
+                tools:layout_editor_absoluteY="241dp" />
+
+            <include
+                android:id="@+id/click5"
+                layout="@layout/click_button"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                tools:layout_editor_absoluteX="344dp"
+                tools:layout_editor_absoluteY="271dp" />
+
+            <include
+                android:id="@+id/click6"
+                layout="@layout/click_button"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                tools:layout_editor_absoluteX="191dp"
+                tools:layout_editor_absoluteY="338dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+
+
+</layout>
