@@ -1,24 +1,25 @@
-package com.example.finalprojecttemplate
+package com.example.finalprojecttemplate.ui.homepage
 
-import android.content.Context
-import android.graphics.Bitmap
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.databinding.HomePageItemLayoutBinding
+import com.example.finalprojecttemplate.domain.models.HomePageInfo
 
-class HomePageListAdapter(private val onClickAction: (Int) -> Unit) : ListAdapter<HomePageListItem, HomePageListAdapter.HomePageListItemViewHolder>(
+class HomePageListAdapter(private val onClickAction: (Int) -> Unit) : ListAdapter<HomePageInfo, HomePageListAdapter.HomePageListItemViewHolder>(
     DiffCallBack
 ) {
     class HomePageListItemViewHolder(
         private var binding: HomePageItemLayoutBinding,
         private val onClickAction: (Int) -> Unit) : RecyclerView.ViewHolder(binding.root) {
-        fun bindItem(item: HomePageListItem) {
+        fun bindItem(item: HomePageInfo) {
             binding.apply {
-                displayImage.setImageBitmap(item.displayedImage)
-                displayName.text = item.displayedName
+                bindImage(displayImage, item.img)
+                displayName.text = item.name
                 displayItemLinearLayout.setOnClickListener {
                     onClickAction(item.id)
                 }
@@ -37,12 +38,12 @@ class HomePageListAdapter(private val onClickAction: (Int) -> Unit) : ListAdapte
     }
 
     companion object {
-        private val DiffCallBack = object : DiffUtil.ItemCallback<HomePageListItem>() {
-            override fun areItemsTheSame(oldItem: HomePageListItem, newItem: HomePageListItem): Boolean {
+        private val DiffCallBack = object : DiffUtil.ItemCallback<HomePageInfo>() {
+            override fun areItemsTheSame(oldItem: HomePageInfo, newItem: HomePageInfo): Boolean {
                 return oldItem.id == newItem.id
             }
 
-            override fun areContentsTheSame(oldItem: HomePageListItem, newItem: HomePageListItem): Boolean {
+            override fun areContentsTheSame(oldItem: HomePageInfo, newItem: HomePageInfo): Boolean {
                 return oldItem == newItem
             }
         }

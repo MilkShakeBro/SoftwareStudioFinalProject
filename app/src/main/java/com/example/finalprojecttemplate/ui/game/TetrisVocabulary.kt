@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate.tetris
+package com.example.finalprojecttemplate.ui.game
 
 data class TetrisVocabulary (
     val prefixRow: String,

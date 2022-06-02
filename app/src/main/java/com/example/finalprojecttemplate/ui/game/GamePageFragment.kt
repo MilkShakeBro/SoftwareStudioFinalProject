@@ -1,9 +1,7 @@
-package com.example.finalprojecttemplate.ui
+package com.example.finalprojecttemplate.ui.game
 
-import android.animation.Animator
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.graphics.Typeface
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
@@ -19,20 +17,18 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.databinding.GamePageFragmentBinding
-import com.example.finalprojecttemplate.databinding.TemplateLayoutBinding
-import com.example.finalprojecttemplate.tetris.Direction
-import com.example.finalprojecttemplate.tetris.GameState
-import com.example.finalprojecttemplate.tetris.TetrisGameViewModel
-import com.example.finalprojecttemplate.tetris.TetrisGameViewModelFactory
-import java.security.acl.AclNotFoundException
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class GamePageFragment: Fragment()  {
 
     private var binding : GamePageFragmentBinding? = null
 
-    private val tetrisGameViewModel: TetrisGameViewModel by viewModels {
-        TetrisGameViewModelFactory(resources)
-    }
+//    private val tetrisGameViewModel: TetrisGameViewModel by viewModels {
+//        TetrisGameViewModelFactory(resources)
+//    }
+
+    private val tetrisGameViewModel: TetrisGameViewModel by viewModels()
 
 //    private lateinit var tetrisState : TetrisState
 

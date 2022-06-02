@@ -1,7 +1,9 @@
 package com.example.finalprojecttemplate.data.data_source
 
 import android.net.Uri
+import androidx.core.net.toUri
 import com.example.finalprojecttemplate.domain.models.*
+import com.example.finalprojecttemplate.ui.homepage.HomePageListItem
 
 class FakeDatabase {
     private val vocabularySets: List<VocabularySetModel> = listOf(
@@ -470,7 +472,7 @@ class FakeDatabase {
                 2 to "B",
                 3 to "C"
             ),
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/330px-Image_created_with_a_mobile_phone.png"),
             content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac arcu ac lorem vulputate consequat a ut lectus. Vivamus tincidunt purus vel nulla egestas, a semper erat hendrerit. Morbi blandit, diam eget interdum porta, velit eros placerat massa, vitae suscipit magna ante quis magna. In suscipit libero nunc, tincidunt aliquet orci luctus in. Vivamus quis venenatis ligula. Fusce iaculis nisi eget tellus maximus pharetra. Praesent nec justo a felis elementum pharetra. Nulla dui dolor, hendrerit rhoncus blandit ut, blandit nec nisi. Vivamus at facilisis augue. Suspendisse molestie finibus risus, sed pharetra arcu gravida eu. Praesent et pretium urna, et hendrerit nibh. Vestibulum in auctor velit, id luctus lorem. Phasellus accumsan eros gravida massa placerat, iaculis mattis turpis pharetra. Mauris porttitor elit neque, et pellentesque metus mattis ut. In nisi felis, bibendum sit amet tellus id, tempus finibus nulla. Quisque fringilla urna ipsum, sit amet pellentesque metus fringilla eu."
         ),
         ArticleModel(
@@ -986,7 +988,7 @@ class FakeDatabase {
 
         articles.forEach{ item->articleInfo.add(HomePageInfo(item.id, item.image, item.name)) }
         vocabularySets.forEach{ item->vocabularySetInfo.add(HomePageInfo(item.id, item.image, item.name)) }
-        articles.forEach{ item->themeInfo.add(HomePageInfo(item.id, item.image, item.name)) }
+        themeData.forEach{ item->themeInfo.add(HomePageInfo(item.id, item.image, "item.name???")) }
 
         return if (userid in 0 until 5) HomePageInfoModel(articleInfo, vocabularySetInfo, themeInfo)
         else HomePageInfoModel(

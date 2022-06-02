@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate.ui
+package com.example.finalprojecttemplate.ui.game_result
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,6 @@ import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import android.widget.PopupWindow
 import android.widget.Toast
@@ -14,8 +13,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.example.finalprojecttemplate.FileHandler
-import com.example.finalprojecttemplate.ResultPageViewModel
+import com.example.finalprojecttemplate.domain.utils.FileHandler
 import com.example.finalprojecttemplate.databinding.ResultPageFragmentBinding
 import com.example.finalprojecttemplate.databinding.ResultPageScreenshotLayoutBinding
 import com.example.finalprojecttemplate.databinding.ScreenshotPopupWindowLayoutBinding

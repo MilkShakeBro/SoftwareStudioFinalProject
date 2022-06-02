@@ -1,13 +1,23 @@
-package com.example.finalprojecttemplate.tetris
+package com.example.finalprojecttemplate.ui.game
 
 import android.content.res.Resources
+import android.util.Log
 import androidx.lifecycle.*
+import com.example.finalprojecttemplate.domain.models.Vocabulary
+import com.example.finalprojecttemplate.domain.models.VocabularySetModel
+import com.example.finalprojecttemplate.domain.usecases.UseCases
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 enum class ApiStatus { LOADING, ERROR, DONE }
 
-class TetrisGameViewModel(resources: Resources): ViewModel() {
-    var tetrisState: TetrisState = TetrisState(resources)
+@HiltViewModel
+class TetrisGameViewModel @Inject constructor(
+    private val useCases: UseCases
+): ViewModel() {
+
+    lateinit var tetrisState: TetrisState
 
     // The internal MutableLiveData that stores the status of the most recent request
     private val _status = MutableLiveData<ApiStatus>()
@@ -23,12 +33,14 @@ class TetrisGameViewModel(resources: Resources): ViewModel() {
 
     val word: LiveData<String> = _word
 
+    private var tetrisVocabularySet : VocabularySetModel? = null
+
     /**
      * Call getWords() on init so we can display status immediately.
      */
-//    init {
-//        getWords()
-//    }
+    init {
+        submitWordsToTetrisState()
+    }
 
 //    private fun getWords() {
 //        viewModelScope.launch {
@@ -55,11 +67,31 @@ class TetrisGameViewModel(resources: Resources): ViewModel() {
             }
         }
     }
-}
 
-class TetrisGameViewModelFactory(private val resources: Resources): ViewModelProvider.Factory {
-    @Suppress("UNCHECKED_CAST")
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return TetrisGameViewModel(resources) as T
+    private fun submitWordsToTetrisState() {
+        val randomInt = (0..4).random()
+
+        tetrisVocabularySet = useCases.getVocabularySet(randomInt)
+
+        val vocabularyArray = tetrisVocabularySet!!.vocabularySet.map {
+            it.toTetrisVocabulary()
+        }.toTypedArray()
+
+        tetrisState = TetrisState(vocabularyArray)
+
+        GameConstant.VOCABULARY_COUNT = vocabularyArray.size
+
+        var count = 0
+        for (item in vocabularyArray) {
+            if (item.suffixRow == "ce") count++
+        }
+        Log.d("TetrisGameViewModel", "suffix count is $count")
     }
 }
+
+//class TetrisGameViewModelFactory(private val resources: Resources): ViewModelProvider.Factory {
+//    @Suppress("UNCHECKED_CAST")
+//    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+//        return TetrisGameViewModel() as T
+//    }
+//}

@@ -1,4 +1,4 @@
-package com.example.finalprojecttemplate
+package com.example.finalprojecttemplate.ui.homepage
 
 import android.graphics.Bitmap
 
