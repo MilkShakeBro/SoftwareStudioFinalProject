@@ -1007,7 +1007,8 @@ class FakeDatabase {
         )
     }
 
-    fun getVocabularySetByIndex(index: Int): VocabularySetModel {
+    suspend fun getVocabularySetByIndex(index: Int): VocabularySetModel {
+        delay(1000)
         return if (index in 0 until 5) vocabularySets[index]
         else VocabularySetModel(
             id = -1,

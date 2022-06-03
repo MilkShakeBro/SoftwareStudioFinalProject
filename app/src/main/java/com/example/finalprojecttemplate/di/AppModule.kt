@@ -42,9 +42,9 @@ object AppModule {
             getIsDarkMode = GetIsDarkMode(repository),
             getAmountOfVoc = GetAmountOfVoc(repository),
             getUserName = GetUserName(repository),
-            setAmountOfVoc = SetAmountOfVoc(repository),
-            setIsDarkMode = SetIsDarkMode(repository),
-            setUserName = SetUserName(repository)
+            setAmountOfVocUseCase = SetAmountOfVocUseCase(repository),
+            setIsDarkModeUseCase = SetIsDarkModeUseCase(repository),
+            setUserNameUseCase = SetUserNameUseCase(repository)
         )
     }
 

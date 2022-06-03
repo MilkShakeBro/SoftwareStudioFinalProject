@@ -2,7 +2,7 @@ package com.example.finalprojecttemplate.domain.usecases
 
 import com.example.finalprojecttemplate.domain.repository.Repository
 
-class SetIsDarkMode(
+class SetIsDarkModeUseCase(
     val repository: Repository
 ) {
     suspend operator fun invoke(isDarkMode: Boolean) {

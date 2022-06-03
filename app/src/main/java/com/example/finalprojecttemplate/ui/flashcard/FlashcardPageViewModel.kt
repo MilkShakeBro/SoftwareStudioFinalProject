@@ -1,5 +1,6 @@
 package com.example.finalprojecttemplate.ui.flashcard
 
+import androidx.core.net.toUri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -23,6 +24,6 @@ class FlashcardPageViewModel @Inject constructor(
 
     private fun onFetchVocabularySet() {
         val randomInt = (0..4).random()
-        _displayedVocabularySet.value = useCases.getVocabularySet(randomInt)
+        _displayedVocabularySet.value = VocabularySetModel(0, "", "".toUri(), listOf()) //useCases.getVocabularySet(randomInt)
     }
 }

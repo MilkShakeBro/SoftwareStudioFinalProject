@@ -9,7 +9,7 @@ interface Repository {
     fun getArticleByIndex(index: Int): ArticleModel
 
     // Gamepage
-    fun getVocabularySetByIndex(index: Int): VocabularySetModel
+    suspend fun getVocabularySetByIndex(index: Int): VocabularySetModel
 
     // History Data
     fun getHistoryData(userid: Int): HistoryDataModel

@@ -16,7 +16,7 @@ class RepositoryImpl(
         return fakeDatabase.getArticleByIndex(index)
     }
 
-    override fun getVocabularySetByIndex(index: Int): VocabularySetModel {
+    override suspend fun getVocabularySetByIndex(index: Int): VocabularySetModel {
         return fakeDatabase.getVocabularySetByIndex(index)
     }
 
