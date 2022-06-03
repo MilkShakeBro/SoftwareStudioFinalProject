@@ -13,5 +13,7 @@ data class UseCases(
     val getIsDarkMode: GetIsDarkMode,
     val setAmountOfVocUseCase: SetAmountOfVocUseCase,
     val setIsDarkModeUseCase: SetIsDarkModeUseCase,
-    val setUserNameUseCase: SetUserNameUseCase
+    val setUserNameUseCase: SetUserNameUseCase,
+    val addAchievementUseCase: AddAchievementUseCase,
+    val getAllAchievementsUseCase: GetAllAchievementsUseCase
 )

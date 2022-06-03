@@ -1,6 +1,8 @@
 package com.example.finalprojecttemplate.ui.homepage
 
+import androidx.core.net.toUri
 import androidx.lifecycle.*
+import com.example.finalprojecttemplate.domain.models.Achievement
 import com.example.finalprojecttemplate.domain.models.HomePageInfo
 import com.example.finalprojecttemplate.domain.models.HomePageInfoModel
 import com.example.finalprojecttemplate.domain.usecases.UseCases
@@ -49,7 +51,21 @@ class HomePageViewModel @Inject constructor (
         }
     }
 
-/** The following functions are used to test UserInfoDataStore.kt
+    /** The following functions and variables are used too test LocalDatabase.kt
+    val achievementsFlow = useCases.getAllAchievementsUseCase().asLiveData()
+
+    fun addAchievement() {
+        viewModelScope.launch {
+            val achievement = Achievement(
+                img = "https://google.com".toUri(),
+                description = "HAHAHA",
+                obtained = false
+            )
+            useCases.addAchievementUseCase(achievement)
+        }
+    } */
+
+    /** The following functions are used to test UserInfoDataStore.kt
     val userNameFlow = useCases.getUserName().asLiveData()
     val amountOfVoc = useCases.getAmountOfVoc().asLiveData()
     val isDarkMode = useCases.getIsDarkMode().asLiveData()

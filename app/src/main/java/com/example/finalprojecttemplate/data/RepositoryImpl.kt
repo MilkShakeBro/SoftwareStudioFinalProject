@@ -1,6 +1,8 @@
 package com.example.finalprojecttemplate.data
 
 import com.example.finalprojecttemplate.data.data_source.FakeDatabase
+import com.example.finalprojecttemplate.data.data_source.LocalDatabase
+import com.example.finalprojecttemplate.data.data_source.LocalDatabaseDao
 import com.example.finalprojecttemplate.data.data_source.UserInfoDataStore
 import com.example.finalprojecttemplate.domain.models.*
 import com.example.finalprojecttemplate.domain.repository.Repository
@@ -8,8 +10,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.newSingleThreadContext
 
 class RepositoryImpl(
-    val fakeDatabase: FakeDatabase,
-    val userInfoDataStore: UserInfoDataStore
+    private val fakeDatabase: FakeDatabase,
+    private val userInfoDataStore: UserInfoDataStore,
+    private val localDatabaseDao: LocalDatabaseDao
 ): Repository {
 
     override fun getArticleByIndex(index: Int): ArticleModel {
@@ -38,6 +41,14 @@ class RepositoryImpl(
 
     override fun getPersonalInfo(userid: Int): PersonalInfoModel {
         return fakeDatabase.getPersonalInfo(userid)
+    }
+
+    override suspend fun addAchievement(achievement: Achievement) {
+        localDatabaseDao.insert(achievement)
+    }
+
+    override fun getAllAchievements(): Flow<List<Achievement>> {
+        return localDatabaseDao.getAchievements()
     }
 
     override fun getUserName(): Flow<String> {

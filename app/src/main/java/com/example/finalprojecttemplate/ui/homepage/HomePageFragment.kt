@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.finalprojecttemplate.databinding.HomePageFragmentBinding
+import com.example.finalprojecttemplate.domain.models.showInString
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -59,6 +60,12 @@ class HomePageFragment: Fragment()  {
             binding?.loadingProgressBar?.visibility = View.VISIBLE
             binding?.errorMessageTextView?.visibility = View.GONE
 
+
+            /** The following operation is used to test LocalDatabase.kt
+            forTestLocalDatabaseUseButton.setOnClickListener {
+                viewModel.addAchievement()
+            } */
+
             /** The following functions are used to test UserInfoDataStore.kt
             testDataStoreButton1.setOnClickListener {
                 viewModel.setUserName("!!!")
@@ -97,6 +104,15 @@ class HomePageFragment: Fragment()  {
                     }
                 }
             }
+
+            /** The following operations are used to test LocalDatabase.kt
+            achievementsFlow.observe(viewLifecycleOwner) { newList ->
+                var showString = ""
+                newList.forEach { achievement ->
+                    showString += achievement.showInString()
+                }
+                binding?.forTestLocalDatabaseUseTextView?.text = showString
+            } */
 
             /** The following functions are used to test UserInfoDataStore.kt
             userNameFlow.observe(viewLifecycleOwner) {

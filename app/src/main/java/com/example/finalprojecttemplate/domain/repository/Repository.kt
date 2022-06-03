@@ -23,6 +23,8 @@ interface Repository {
     // Profile
     fun getAchievement(userid: Int): AchievementSetModel
     fun getPersonalInfo(userid: Int): PersonalInfoModel
+    suspend fun addAchievement(achievement: Achievement)
+    fun getAllAchievements(): Flow<List<Achievement>>
 
     // Preference
     fun getUserName(): Flow<String>
