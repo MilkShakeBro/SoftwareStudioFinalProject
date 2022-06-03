@@ -28,4 +28,8 @@
     <color name="pink_A100_dark">#C94F7C</color>
     <color name="pink_A100_light">#FFB2DD</color>
 
+    <!-- Tutorial Page Colors -->
+    <color name="selected">#FFD966</color>
+    <color name="unselected">#676060</color>
+
 </resources>

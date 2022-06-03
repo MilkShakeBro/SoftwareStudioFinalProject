@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/gameTutorialFragment"
-        android:name="com.example.finalprojecttemplate.ui.GameTutorialFragment"
+        android:name="com.example.finalprojecttemplate.ui.game_tutorial.GameTutorialFragment"
         android:label="GameTutorialFragment" >
         <action
             android:id="@+id/action_gameTutorialFragment_to_gamePageFragment"
