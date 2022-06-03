@@ -6,6 +6,7 @@ import android.animation.AnimatorSet
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.databinding.FlashcardPageFragmentBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -36,6 +38,8 @@ class FlashcardPageFragment: Fragment()  {
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val args: FlashcardPageFragmentArgs by navArgs()
+        Log.d("args", args.toString())
         countdown()
         binding?.apply {
             flashcard.adapter = viewModel.displayedVocabularySet.value?.vocabularySet?.let {

@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/articlePageFragment"
         android:name="com.example.finalprojecttemplate.ui.article.ArticlePageFragment"
-        android:label="ArticlePageFragment" >
+        android:label="ArticlePageFragment">
         <action
             android:id="@+id/action_articlePageFragment_to_homePageFragment"
             app:destination="@id/homePageFragment" />
@@ -18,18 +18,30 @@
     <fragment
         android:id="@+id/flashcardPageFragment"
         android:name="com.example.finalprojecttemplate.ui.flashcard.FlashcardPageFragment"
-        android:label="FlashcardPageFragment" >
+        android:label="FlashcardPageFragment">
         <action
             android:id="@+id/action_flashcardPageFragment_to_gamePageFragment"
             app:destination="@id/gamePageFragment" />
         <action
             android:id="@+id/action_flashcardPageFragment_to_gameTutorialFragment"
             app:destination="@id/gameTutorialFragment" />
+        <argument
+            android:name="Hour"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="Minute"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="Second"
+            app:argType="integer"
+            android:defaultValue="59" />
     </fragment>
     <fragment
         android:id="@+id/gamePageFragment"
         android:name="com.example.finalprojecttemplate.ui.game.GamePageFragment"
-        android:label="GamePageFragment" >
+        android:label="GamePageFragment">
         <action
             android:id="@+id/action_gamePageFragment_to_resultPageFragment"
             app:destination="@id/resultPageFragment" />
@@ -42,7 +54,7 @@
     <fragment
         android:id="@+id/gameTutorialFragment"
         android:name="com.example.finalprojecttemplate.ui.game_tutorial.GameTutorialFragment"
-        android:label="GameTutorialFragment" >
+        android:label="GameTutorialFragment">
         <action
             android:id="@+id/action_gameTutorialFragment_to_gamePageFragment"
             app:destination="@id/gamePageFragment" />
@@ -50,7 +62,7 @@
     <fragment
         android:id="@+id/homePageFragment"
         android:name="com.example.finalprojecttemplate.ui.homepage.HomePageFragment"
-        android:label="HomePageFragment" >
+        android:label="HomePageFragment">
         <action
             android:id="@+id/action_homePageFragment_to_articlePageFragment"
             app:destination="@id/articlePageFragment" />
@@ -67,7 +79,7 @@
     <fragment
         android:id="@+id/profilePageFragment"
         android:name="com.example.finalprojecttemplate.ui.ProfilePageFragment"
-        android:label="ProfilePageFragment" >
+        android:label="ProfilePageFragment">
         <action
             android:id="@+id/action_profilePageFragment_to_settingPageFragment"
             app:destination="@id/settingPageFragment" />
@@ -78,7 +90,7 @@
     <fragment
         android:id="@+id/resultPageFragment"
         android:name="com.example.finalprojecttemplate.ui.game_result.ResultPageFragment"
-        android:label="ResultPageFragment" >
+        android:label="ResultPageFragment">
         <action
             android:id="@+id/action_resultPageFragment_to_homePageFragment"
             app:destination="@id/homePageFragment"
@@ -96,7 +108,7 @@
     <fragment
         android:id="@+id/settingPageFragment"
         android:name="com.example.finalprojecttemplate.ui.SettingPageFragment"
-        android:label="SettingPageFragment" >
+        android:label="SettingPageFragment">
         <action
             android:id="@+id/action_settingPageFragment_to_profilePageFragment"
             app:destination="@id/profilePageFragment" />
@@ -104,7 +116,7 @@
     <fragment
         android:id="@+id/themePageFragment"
         android:name="com.example.finalprojecttemplate.ui.theme.ThemePageFragment"
-        android:label="ThemePageFragment" >
+        android:label="ThemePageFragment">
         <action
             android:id="@+id/action_themePageFragment_to_homePageFragment"
             app:destination="@id/homePageFragment" />
@@ -115,7 +127,7 @@
     <fragment
         android:id="@+id/timerPageFragment"
         android:name="com.example.finalprojecttemplate.ui.timer.TimerPageFragment"
-        android:label="TimerPageFragment" >
+        android:label="TimerPageFragment">
         <action
             android:id="@+id/action_timerPageFragment_to_homePageFragment"
             app:destination="@id/homePageFragment" />
@@ -128,7 +140,8 @@
         <action
             android:id="@+id/action_timerPageFragment_to_gamePageFragment"
             app:destination="@id/gamePageFragment" />
-        <argument android:name="vocabularySetId"
+        <argument
+            android:name="vocabularySetId"
             app:argType="integer" />
     </fragment>
 </navigation>

@@ -8,11 +8,8 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.PagerAdapter
 import com.example.finalprojecttemplate.R
-import com.example.finalprojecttemplate.databinding.GameTutorialSlideFragmentBinding
-import kotlinx.android.synthetic.main.game_tutorial_fragment.*
 
 class GameTutorialAdapter(
     private val ctx: Context?,
