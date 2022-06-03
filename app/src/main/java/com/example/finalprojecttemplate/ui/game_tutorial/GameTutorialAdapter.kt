@@ -4,14 +4,18 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.PagerAdapter
 import com.example.finalprojecttemplate.R
-
+import com.example.finalprojecttemplate.databinding.GameTutorialSlideFragmentBinding
+import kotlinx.android.synthetic.main.game_tutorial_fragment.*
 
 class GameTutorialAdapter(
-    private val ctx: Context?
+    private val ctx: Context?,
     ): PagerAdapter() {
 
     override fun getCount(): Int {
@@ -34,6 +38,7 @@ class GameTutorialAdapter(
         val page3Button: ImageView = view.findViewById(R.id.page3)
         val page4Button: ImageView = view.findViewById(R.id.page4)
         val page5Button: ImageView = view.findViewById(R.id.page5)
+        val enterButton: Button = view.findViewById(R.id.enter)
 
         when (position) {
             0 -> {
@@ -43,6 +48,7 @@ class GameTutorialAdapter(
                 page4Button.setImageResource(R.drawable.unselected)
                 page5Button.setImageResource(R.drawable.unselected)
                 explanation.text = "Move up and down to match the word."
+                enterButton.visibility = View.INVISIBLE
             }
             1 -> {
                 page1Button.setImageResource(R.drawable.unselected)
@@ -51,6 +57,7 @@ class GameTutorialAdapter(
                 page4Button.setImageResource(R.drawable.unselected)
                 page5Button.setImageResource(R.drawable.unselected)
                 explanation.text = "Press left arrow to match the word."
+                enterButton.visibility = View.INVISIBLE
             }
             2 -> {
                 page1Button.setImageResource(R.drawable.unselected)
@@ -59,6 +66,7 @@ class GameTutorialAdapter(
                 page4Button.setImageResource(R.drawable.unselected)
                 page5Button.setImageResource(R.drawable.unselected)
                 explanation.text = "Press skip button to skip the game."
+                enterButton.visibility = View.INVISIBLE
             }
             3 -> {
                 page1Button.setImageResource(R.drawable.unselected)
@@ -67,6 +75,7 @@ class GameTutorialAdapter(
                 page4Button.setImageResource(R.drawable.selected)
                 page5Button.setImageResource(R.drawable.unselected)
                 explanation.text = "Chinese meaning is given on top right."
+                enterButton.visibility = View.INVISIBLE
             }
             4 -> {
                 page1Button.setImageResource(R.drawable.unselected)
@@ -75,6 +84,11 @@ class GameTutorialAdapter(
                 page4Button.setImageResource(R.drawable.unselected)
                 page5Button.setImageResource(R.drawable.selected)
                 explanation.text = "Earn the score as high as possible."
+                enterButton.visibility = View.VISIBLE
+                enterButton.setOnClickListener { view ->
+                    val action = GameTutorialFragmentDirections.actionGameTutorialFragmentToGamePageFragment()
+                    view.findNavController().navigate(action)
+                }
             }
         }
         container.addView(view)

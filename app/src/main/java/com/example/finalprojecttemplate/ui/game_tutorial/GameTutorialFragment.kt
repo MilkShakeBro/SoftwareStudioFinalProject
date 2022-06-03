@@ -8,7 +8,10 @@ import android.widget.Adapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
+import com.example.finalprojecttemplate.databinding.GameTutorialFragmentBinding
 import com.example.finalprojecttemplate.databinding.GameTutorialSlideFragmentBinding
+import com.example.finalprojecttemplate.ui.flashcard.FlashcardPageFragmentDirections
+import kotlinx.android.synthetic.main.game_tutorial_fragment.*
 
 class GameTutorialFragment: Fragment()  {
 
@@ -33,5 +36,6 @@ class GameTutorialFragment: Fragment()  {
         binding?.apply {
             viewpager.adapter = gameTutorialAdapter
         }
+
     }
 }
