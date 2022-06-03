@@ -28,7 +28,7 @@ class FakeDatabase {
                     id = 2,
                     word = "vogue",
                     chinese = "n.[U] 流行，時尚，時髦",
-                    breakpoint = 4
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 3,
@@ -57,407 +57,407 @@ class FakeDatabase {
                 Vocabulary(
                     id = 7,
                     word = "bracelet",
-                    chinese = "觀眾",
+                    chinese = "n.[C] 手鐲",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 8,
                     word = "cosmetic",
-                    chinese = "觀眾",
+                    chinese = "n.[C] 化妝品，美容品",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 9,
                     word = "lipstick",
-                    chinese = "觀眾",
+                    chinese = "n.[C/U] 口紅",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 10,
                     word = "wig",
-                    chinese = "觀眾",
+                    chinese = "n.[C] （女用）假髮",
                     breakpoint = 1
                 ),
                 Vocabulary(
                     id = 11,
                     word = "hairdo",
-                    chinese = "觀眾",
-                    breakpoint = 2
+                    chinese = "n.[C] 髮型",
+                    breakpoint = 6
                 ),
                 Vocabulary(
                     id = 12,
                     word = "wreath",
-                    chinese = "觀眾",
-                    breakpoint = 2
+                    chinese = "n.[C] 花環",
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 13,
                     word = "bouquet",
-                    chinese = "觀眾",
-                    breakpoint = 4
+                    chinese = "n.[C] 花束",
+                    breakpoint = 5
                 ),
             ),
         ),
         VocabularySetModel(
             id = 1,
-            name = "di",
+            name = "烹飪",
             image = Uri.parse("https://www.google.com"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "broil",
+                    chinese = "vt.（直接在熱源上）烤",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 1,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "roast",
+                    chinese = "vt./vi. 烘，烤",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 2,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "grill",
+                    chinese = "vt.（用烤架）烤（食物）",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 3,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "simmer",
+                    chinese = "vt./vi. 用小火煮",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 4,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "stew",
+                    chinese = "vt. 燉",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 5,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "grind",
+                    chinese = "vt./vi. 研磨，磨碎",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 6,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "mill",
+                    chinese = "vt. 碾碎",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 7,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "mash",
+                    chinese = "vt. 搗碎",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 8,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "whisk",
+                    chinese = "vt. 攪拌",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 9,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "scramble",
+                    chinese = "vt. 炒蛋",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 10,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "marinate",
+                    chinese = "vt. 醃漬(用油、香料、酒)",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 11,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "pickle",
+                    chinese = "vt. 醃漬(用鹽巴、醋)",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 12,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "ferment",
+                    chinese = "vt./vi. 發酵",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 13,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "braise",
+                    chinese = "vt. 燉",
                     breakpoint = 6
                 ),
             ),
         ),
         VocabularySetModel(
             id = 2,
-            name = "en",
+            name = "農牧",
             image = Uri.parse("https://www.google.com"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "agriculture",
+                    chinese = "n.[U] 農業",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 1,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "rural",
+                    chinese = "adj. 鄉村的",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 2,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "peasant",
+                    chinese = "n.[C]（較為貧窮的）農夫，佃農",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 3,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "plow",
+                    chinese = "n.[C] 犁",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 4,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "barn",
+                    chinese = "n.[C] 穀倉",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 5,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "greenhouse",
+                    chinese = "n.[C] 溫室",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 6,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "organic",
+                    chinese = "adj. 有機的",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 7,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "fertilizer",
+                    chinese = "n.[C] 肥料",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 8,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "barren",
+                    chinese = "adj. 荒蕪的",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 9,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "pesticide",
+                    chinese = "n.[C] 殺蟲劑",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 10,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "harvest",
+                    chinese = "n.[C] 收成",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 11,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "ranch",
+                    chinese = "n.[C] 大農場，大牧場",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 12,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "dairy",
+                    chinese = "n.[U] 酪農",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 13,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "shepherd",
+                    chinese = "n.[C] 牧羊人",
                     breakpoint = 6
                 ),
             ),
         ),
         VocabularySetModel(
             id = 3,
-            name = "ce",
+            name = "運動",
             image = Uri.parse("https://www.google.com"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "badminton",
+                    chinese = "n.[U] 羽毛球",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 1,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "hike",
+                    chinese = "n./vi. 健行",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 2,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "dive",
+                    chinese = "vi. 跳水，潛水",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 3,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "surf",
+                    chinese = "vi. 衝浪",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 4,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "marathon",
+                    chinese = "n.[C] 馬拉松",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 5,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "relay",
+                    chinese = "n.[C] 接力賽",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 6,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "yoga",
+                    chinese = "n.[U] 瑜珈",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 7,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "boxing",
+                    chinese = "n.[U] 拳擊",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 8,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "wrestle",
+                    chinese = "vi. 摔角，角力",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 9,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "stunt",
+                    chinese = "n.[C] 特技",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 10,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "football",
+                    chinese = "n.[U] 美式足球",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 11,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "hockey",
+                    chinese = "n.[U] 曲棍球",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 12,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "volleyball",
+                    chinese = "n.[U] 排球",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 13,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "ballet",
+                    chinese = "n.[U] 籃球",
                     breakpoint = 6
                 ),
             ),
         ),
         VocabularySetModel(
             id = 4,
-            name = "s",
+            name = "生病",
             image = Uri.parse("https://www.google.com"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "stroke",
+                    chinese = "n.[C] 中風",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 1,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "tumor",
+                    chinese = "n.[C] 腫瘤",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 2,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "measles",
+                    chinese = "n.[pl] 麻疹",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 3,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "asthma",
+                    chinese = "n.[U] 氣喘",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 4,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "allergy",
+                    chinese = "n.[C] 過敏",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 5,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "malaria",
+                    chinese = "n.[U] 瘧疾",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 6,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "trauma",
+                    chinese = "n.[U/C] 心理創傷",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 7,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "paralyze",
+                    chinese = "vt. 使癱瘓",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 8,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "irritation",
+                    chinese = "n.[U] 發炎",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 9,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "deteriorate",
+                    chinese = "vi. 惡化",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 10,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "disorder",
+                    chinese = "n.[U] (身體功能）失調",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 11,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "upset",
+                    chinese = "adj. 腸胃不適的",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 12,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "shortsighted",
+                    chinese = "adj. 近視的",
                     breakpoint = 6
                 ),
                 Vocabulary(
                     id = 13,
-                    word = "audience",
-                    chinese = "觀眾",
+                    word = "Diarrhea",
+                    chinese = "n. 腹瀉",
                     breakpoint = 6
                 ),
             ),
@@ -466,25 +466,69 @@ class FakeDatabase {
     private val articles: List<ArticleModel> = listOf(
         ArticleModel(
             id = 0,
+            name = "Zebrafish",
+            answer = mapOf(
+                1 to "A",
+                2 to "B",
+                3 to "C",
+                4 to "D"
+            ),
+            image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/330px-Image_created_with_a_mobile_phone.png"),
+            content = "Zebrafish, named for their characteristic stripes, have been a popular test subject for researchers. Only " +
+                    "a few centimeters in length, the fish breed easily in captivity, grow quickly, and their transparent body " +
+                    "makes it easy to study their organs. Above all, they possess some amazing “self-healing” power. When part " +
+                    "of their heart is removed, they can grow it back in a matter of weeks. When blinded, they can quickly regain " +
+                    "the ability to see.\n" +
+                    "Recent studies show that humans and zebrafish have the same major organs and share 70 percent of " +
+                    "the genes. Moreover, 84 percent of human genes associated with disease find a counterpart in zebrafish. " +
+                    "Scientists thus hope that understanding the self-healing mystery of the fish may one day allow humans to " +
+                    "regenerate such organs as eyes, hearts, and spines.\n" +
+                    "Researchers at Vanderbilt University are particularly interested in zebrafish retina regeneration. They " +
+                    "have learned that damage of retina can cause blindness in zebrafish, yet it only takes about three to four " +
+                    "weeks before vision is restored. The structure and cell types of zebrafish retinas are almost identical to those " +
+                    "of humans. If the process can be replicated in humans, it may give rise to new treatments for blindness " +
+                    "caused by retinal damage.\n" +
+                    "In order to know exactly how zebrafish retina is regenerated, the team looked at the neurotransmitter " +
+                    "gamma-aminobutyric acid (GABA), a chemical messenger in the brain that reduces the activity of neurons. " +
+                    "They found that lowering GABA levels in zebrafish can trigger retina regeneration, while a high level of " +
+                    "GABA concentration will suppress the regeneration process. This suggested that GABA plays an important " +
+                    "role in the fish’s ability to regain their sight.\n" +
+                    "The team is beginning to test the GABA theory on mice. If that works, human trials will be next on " +
+                    "the agenda. If the research proves successful in humans, some of the nearly 40 million blind people " +
+                    "worldwide may one day have a tiny, striped fish to thank."
+        ),
+        ArticleModel(
+            id = 1,
             name = "Lorem",
             answer = mapOf(
                 1 to "A",
                 2 to "B",
-                3 to "C"
+                3 to "C",
+                4 to "D"
             ),
             image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/330px-Image_created_with_a_mobile_phone.png"),
-            content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac arcu ac lorem vulputate consequat a ut lectus. Vivamus tincidunt purus vel nulla egestas, a semper erat hendrerit. Morbi blandit, diam eget interdum porta, velit eros placerat massa, vitae suscipit magna ante quis magna. In suscipit libero nunc, tincidunt aliquet orci luctus in. Vivamus quis venenatis ligula. Fusce iaculis nisi eget tellus maximus pharetra. Praesent nec justo a felis elementum pharetra. Nulla dui dolor, hendrerit rhoncus blandit ut, blandit nec nisi. Vivamus at facilisis augue. Suspendisse molestie finibus risus, sed pharetra arcu gravida eu. Praesent et pretium urna, et hendrerit nibh. Vestibulum in auctor velit, id luctus lorem. Phasellus accumsan eros gravida massa placerat, iaculis mattis turpis pharetra. Mauris porttitor elit neque, et pellentesque metus mattis ut. In nisi felis, bibendum sit amet tellus id, tempus finibus nulla. Quisque fringilla urna ipsum, sit amet pellentesque metus fringilla eu."
-        ),
-        ArticleModel(
-            id = 1,
-            name = "Morbi",
-            answer = mapOf(
-                1 to "A",
-                2 to "B",
-                3 to "C"
-            ),
-            image = Uri.parse("https://www.google.com"),
-            content = "Morbi tincidunt nunc non elit tempus accumsan. Donec rutrum mollis lacinia. Suspendisse ut ante at tortor rutrum dapibus. Suspendisse porta nisi vel magna sollicitudin, in fermentum sem convallis. Quisque luctus justo eu varius pulvinar. Nullam finibus pellentesque maximus. Nullam sollicitudin elit vitae cursus dignissim. Sed quam nisl, ullamcorper et lorem eget, aliquam interdum quam. Ut sed erat non libero placerat lobortis. Nunc porttitor dui ac eros varius luctus."
+            content = "Zebrafish, named for their characteristic stripes, have been a popular test subject for researchers. Only " +
+                    "a few centimeters in length, the fish breed easily in captivity, grow quickly, and their transparent body " +
+                    "makes it easy to study their organs. Above all, they possess some amazing “self-healing” power. When part " +
+                    "of their heart is removed, they can grow it back in a matter of weeks. When blinded, they can quickly regain " +
+                    "the ability to see.\n" +
+                    "Recent studies show that humans and zebrafish have the same major organs and share 70 percent of " +
+                    "the genes. Moreover, 84 percent of human genes associated with disease find a counterpart in zebrafish. " +
+                    "Scientists thus hope that understanding the self-healing mystery of the fish may one day allow humans to " +
+                    "regenerate such organs as eyes, hearts, and spines.\n" +
+                    "Researchers at Vanderbilt University are particularly interested in zebrafish retina regeneration. They " +
+                    "have learned that damage of retina can cause blindness in zebrafish, yet it only takes about three to four " +
+                    "weeks before vision is restored. The structure and cell types of zebrafish retinas are almost identical to those " +
+                    "of humans. If the process can be replicated in humans, it may give rise to new treatments for blindness " +
+                    "caused by retinal damage.\n" +
+                    "In order to know exactly how zebrafish retina is regenerated, the team looked at the neurotransmitter " +
+                    "gamma-aminobutyric acid (GABA), a chemical messenger in the brain that reduces the activity of neurons. " +
+                    "They found that lowering GABA levels in zebrafish can trigger retina regeneration, while a high level of " +
+                    "GABA concentration will suppress the regeneration process. This suggested that GABA plays an important " +
+                    "role in the fish’s ability to regain their sight.\n" +
+                    "The team is beginning to test the GABA theory on mice. If that works, human trials will be next on " +
+                    "the agenda. If the research proves successful in humans, some of the nearly 40 million blind people " +
+                    "worldwide may one day have a tiny, striped fish to thank."
         ),
         ArticleModel(
             id = 2,
@@ -492,7 +536,8 @@ class FakeDatabase {
             answer = mapOf(
                 1 to "A",
                 2 to "B",
-                3 to "C"
+                3 to "C",
+                4 to "D"
             ),
             image = Uri.parse("https://www.google.com"),
             content = "Cras accumsan tristique ultricies. Vivamus quis tincidunt metus, sed interdum augue. Nulla facilisi. Aliquam viverra, sem in pharetra fringilla, quam justo fermentum neque, et hendrerit justo purus nec lectus. Praesent posuere varius nulla, vel efficitur lacus dapibus non. Mauris pharetra mi sit amet turpis dignissim, et maximus nibh euismod. Curabitur iaculis tristique elit, sit amet maximus libero varius non. Donec molestie nunc est, id elementum quam ultrices vel. Morbi rhoncus turpis massa, quis mollis lorem blandit vel. Proin eu arcu tortor. Fusce nunc eros, luctus faucibus magna nec, tristique elementum felis. Cras consequat facilisis mauris sed volutpat. Sed egestas odio id neque aliquam venenatis."
@@ -503,7 +548,8 @@ class FakeDatabase {
             answer = mapOf(
                 1 to "A",
                 2 to "B",
-                3 to "C"
+                3 to "C",
+                4 to "D"
             ),
             image = Uri.parse("https://www.google.com"),
             content = "Nam vitae euismod neque, eget imperdiet diam. Praesent a ultrices sem. Suspendisse semper, purus eu dictum iaculis, arcu neque posuere augue, eget tristique mi metus vitae orci. Duis metus est, tempus nec porta id, mattis ac dui. Mauris in lorem ac mi placerat accumsan non ut odio. In ultricies ultricies risus id elementum. Proin iaculis lacus at velit consectetur gravida nec ut nibh."
@@ -514,7 +560,8 @@ class FakeDatabase {
             answer = mapOf(
                 1 to "A",
                 2 to "B",
-                3 to "C"
+                3 to "C",
+                4 to "D"
             ),
             image = Uri.parse("https://www.google.com"),
             content = "Vivamus faucibus tortor non nunc viverra tempor vitae id nibh. Praesent mattis id nibh vitae sodales. Suspendisse euismod hendrerit elit, quis vulputate sem imperdiet eget. Nam in maximus est. Etiam consectetur lorem et ligula euismod, in maximus eros pulvinar. Nulla mollis elementum consequat. Nulla luctus tristique ex ut blandit. Sed ut eros eleifend, molestie mi vitae, hendrerit velit. Nunc a vulputate turpis. Curabitur mattis ultrices sem, at laoreet leo efficitur et. Etiam eu velit magna. Proin interdum mi enim, eu hendrerit neque scelerisque eu. Cras molestie sodales eros in ultricies. Duis scelerisque malesuada nisl ullamcorper semper."
@@ -952,7 +999,8 @@ class FakeDatabase {
             answer = mapOf(
                 1 to "-1",
                 2 to "-1",
-                3 to "-1"
+                3 to "-1",
+                4 to "-1"
             ),
             image = Uri.parse("null"),
             content = "Article not found"

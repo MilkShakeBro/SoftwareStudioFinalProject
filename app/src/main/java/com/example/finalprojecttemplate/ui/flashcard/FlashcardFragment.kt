@@ -72,13 +72,13 @@ class FlashcardFragment : Fragment(){
     }
     private fun setup(){
         binding?.apply {
-            tvTitle.text = flipModel?.id.toString()
+            //tvTitle.text = flipModel?.id.toString()
             tvContent.text = flipModel?.word
             tvContentBack.text = flipModel?.chinese
-            ibFlipBack.setOnClickListener {
+            cardFront.setOnClickListener {
                 flipClockWise()
             }
-            ibFlipFront.setOnClickListener {
+            cardBack.setOnClickListener {
                 flipClockWise()
             }
             /*if(flipModel?.isFlipped == true){
