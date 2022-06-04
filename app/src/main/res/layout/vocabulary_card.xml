@@ -11,12 +11,4 @@
         app:tint="@color/vocabulary_background"
         android:src="@drawable/card"
         />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="word"
-        android:textColor="@color/black"
-        style="@style/Base.TextAppearance.AppCompat.Display1"
-        android:gravity="center"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,7 @@ import com.example.finalprojecttemplate.domain.repository.Repository
 class GetThemeData(
     private val repository: Repository
 ) {
-    operator fun invoke(index: Int): ThemeDataModel {
+    suspend operator fun invoke(index: Int): ThemeDataModel {
         return repository.getThemeData(index)
     }
 }

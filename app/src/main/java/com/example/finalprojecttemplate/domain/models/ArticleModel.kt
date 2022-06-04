@@ -7,5 +7,6 @@ data class ArticleModel(
     val name: String,
     val image: Uri,
     val answer: Map<Int, String>,
+    val question: Map<Int, List<String>>,
     val content: String
 )
