@@ -6,7 +6,7 @@ import com.example.finalprojecttemplate.domain.repository.Repository
 class GetArticleUseCase(
     private val repository: Repository
 ) {
-    operator fun invoke(index: Int) : ArticleModel {
+    suspend operator fun invoke(index: Int) : ArticleModel {
         return repository.getArticleByIndex(index)
     }
 }

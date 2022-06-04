@@ -12,7 +12,7 @@ class RepositoryImpl(
     val userInfoDataStore: UserInfoDataStore
 ): Repository {
 
-    override fun getArticleByIndex(index: Int): ArticleModel {
+    override suspend fun getArticleByIndex(index: Int): ArticleModel {
         return fakeDatabase.getArticleByIndex(index)
     }
 
@@ -28,7 +28,7 @@ class RepositoryImpl(
         return fakeDatabase.getHomePageInfo(userid)
     }
 
-    override fun getThemeData(index: Int): ThemeDataModel {
+    override suspend fun getThemeData(index: Int): ThemeDataModel {
         return fakeDatabase.getThemeData(index)
     }
 
