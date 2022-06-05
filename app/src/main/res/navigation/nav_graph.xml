@@ -78,6 +78,8 @@
     </fragment>
     <fragment
         android:id="@+id/profilePageFragment"
+        android:name="com.example.finalprojecttemplate.ui.profile.ProfilePageFragment"
+        android:label="ProfilePageFragment" >
         android:name="com.example.finalprojecttemplate.ui.ProfilePageFragment"
         android:label="ProfilePageFragment">
         <action
@@ -107,6 +109,9 @@
     </fragment>
     <fragment
         android:id="@+id/settingPageFragment"
+
+        android:name="com.example.finalprojecttemplate.ui.setting.SettingPageFragment"
+        android:label="SettingPageFragment" >
         android:name="com.example.finalprojecttemplate.ui.SettingPageFragment"
         android:label="SettingPageFragment">
         <action

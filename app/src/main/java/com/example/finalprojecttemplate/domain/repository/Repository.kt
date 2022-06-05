@@ -21,7 +21,7 @@ interface Repository {
     suspend fun getThemeData(index: Int): ThemeDataModel
 
     // Profile
-    fun getAchievement(userid: Int): AchievementSetModel
+    suspend fun getAchievement(userid: Int): AchievementSetModel
     fun getPersonalInfo(userid: Int): PersonalInfoModel
 
     // Preference

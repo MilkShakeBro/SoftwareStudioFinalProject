@@ -32,7 +32,7 @@ class RepositoryImpl(
         return fakeDatabase.getThemeData(index)
     }
 
-    override fun getAchievement(userid: Int): AchievementSetModel {
+    override suspend fun getAchievement(userid: Int): AchievementSetModel {
         return fakeDatabase.getAchievement(userid)
     }
 
