@@ -797,7 +797,7 @@ class FakeDatabase {
             achievement = listOf(
                 Achievement(
                     id = 0,
-                    img = Uri.parse("https://www.google.com"),
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
                     description = "This is a description.",
                     obtained = false
                 ),
@@ -1057,7 +1057,8 @@ class FakeDatabase {
         )
     }
 
-    fun getAchievement(userid: Int): AchievementSetModel {
+    suspend fun getAchievement(userid: Int): AchievementSetModel {
+        delay(1000)
         return if (userid in 0 until 5) achievementSet[userid]
         else AchievementSetModel(
             id = -1,
@@ -1065,7 +1066,7 @@ class FakeDatabase {
                 Achievement(
                     id = 0,
                     img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    description = "Finish the game once successfully",
                     obtained = false
                 ),
                 Achievement(
