@@ -6,6 +6,7 @@ import android.animation.AnimatorSet
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,16 +14,22 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.databinding.FlashcardPageFragmentBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.flashcard_page_fragment.*
+import kotlin.properties.Delegates
 
 @AndroidEntryPoint
 class FlashcardPageFragment: Fragment()  {
 
+    private var hour by Delegates.notNull<Int>()
+    private var min by Delegates.notNull<Int>()
+    private var sec by Delegates.notNull<Int>()
     private val viewModel: FlashcardPageViewModel by viewModels()
     private var binding: FlashcardPageFragmentBinding? = null
-
+    private val args: FlashcardPageFragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,14 +40,24 @@ class FlashcardPageFragment: Fragment()  {
         return fragmentBinding.root
     }
 
-    @SuppressLint("SetTextI18n")
+    //@SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        countdown()
+        Log.d("args", args.toString())
+        val hour = arguments?.getInt("Hour") ?:1
+        val min = arguments?.getInt("Minute") ?:0
+        val sec = arguments?.getInt("Second") ?:0
+        val time: Long = ((hour.times(3600) + min*60 + sec).times(1000)).toLong() ?: 0
+        countdown(time)
         binding?.apply {
             flashcard.adapter = viewModel.displayedVocabularySet.value?.vocabularySet?.let {
                 FlashcardAdapter(
                     it, requireActivity().supportFragmentManager)
+            }
+            // click skip buttom to go to game tutorial
+            SkipToGame.setOnClickListener{
+                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment()
+                findNavController().navigate(action)
             }
 //            button1.setOnClickListener {
 //                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment()
@@ -56,12 +73,11 @@ class FlashcardPageFragment: Fragment()  {
 //            fragmentDescription.text = "This is FlashcardPageFragment"
         }
     }
-    private fun countdown(){
+    private fun countdown(Time: Long){
         val countDownTimerTextView = binding?.countdownTimer
-
-        object : CountDownTimer(100000, 1000) {
-            override fun onTick(millisUntilFinished: Long) {
-                val secondsUntilFinished: Long = millisUntilFinished / 1000
+        object : CountDownTimer(Time, 1000) {
+            override fun onTick(Time: Long) {
+                val secondsUntilFinished: Long = Time / 1000
                 val seconds = secondsUntilFinished % 60
                 val minutesUntilFinished : Long = secondsUntilFinished / 60
                 val minutes = minutesUntilFinished % 60

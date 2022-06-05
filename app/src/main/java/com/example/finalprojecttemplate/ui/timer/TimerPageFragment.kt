@@ -41,11 +41,7 @@ class TimerPageFragment: Fragment() {
                 val minute = numPickerM.value
                 val second = numPickerS.value
 
-                Log.d("Hour", hour.toString())
-                Log.d("Minute", minute.toString())
-                Log.d("Second", second.toString())
-
-                val action = TimerPageFragmentDirections.actionTimerPageFragmentToFlashcardPageFragment()
+                val action = TimerPageFragmentDirections.actionTimerPageFragmentToFlashcardPageFragment(hour, minute, second)
                 findNavController().navigate(action)
             }
 

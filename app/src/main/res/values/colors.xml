@@ -7,10 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
     <color name="flashcard_page_background">#C94F7C</color>
     <color name="flashcard_background">#FF80AB</color>
     <color name="vocabulary_background">#FFB2DD</color>
-
+    <color name="skip_background">#441D1D</color>
     <!-- Game Colors -->
     <color name="game_orange">#F8B200</color>
     <color name="game_dark_gray">#3E3E3E</color>
@@ -27,5 +28,9 @@
     <color name="pink_A100">#FF80AB</color>
     <color name="pink_A100_dark">#C94F7C</color>
     <color name="pink_A100_light">#FFB2DD</color>
+
+    <!-- Tutorial Page Colors -->
+    <color name="selected">#FFD966</color>
+    <color name="unselected">#676060</color>
 
 </resources>
