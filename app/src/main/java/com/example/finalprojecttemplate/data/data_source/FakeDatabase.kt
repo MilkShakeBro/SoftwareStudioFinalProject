@@ -545,10 +545,10 @@ class FakeDatabase {
                     "b. hats with see-through shields\n"+
                     "c. hats with canvas and leather\n"+
                     "d. hats with tar over them",
-                    "(A) d\uF0E0c\uF0E0a\uF0E0b ",
-                    "(B) c\uF0E0d\uF0E0b\uF0E0a",
-                    "(C) c\uF0E0b\uF0E0a\uF0E0d",
-                    "(D) d\uF0E0c\uF0E0b\uF0E0a"),
+                    "(A) d → c → a → b",
+                    "(B) c → d → b → a",
+                    "(C) c → b → a → d",
+                    "(D) d → c → b → a"),
                 3 to listOf<String>(
                     "3. According to the passage, which of the following statements is true about the hard hat?\n",
                     "(A) Global sales have doubled every ten years.",
