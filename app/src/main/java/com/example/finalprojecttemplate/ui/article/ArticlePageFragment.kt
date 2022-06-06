@@ -46,7 +46,6 @@ class ArticlePageFragment: Fragment()  {
 
         binding?.apply {
             showArticleViewModel.themeindex = arguments?.getInt("articleId") ?: 0
-
             ArticleContent.text = ""
             QuestionOne.text = ""
             QuestionTwo.text = ""
