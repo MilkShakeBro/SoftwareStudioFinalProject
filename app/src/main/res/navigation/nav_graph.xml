@@ -37,6 +37,9 @@
             android:name="Second"
             app:argType="integer"
             android:defaultValue="59" />
+        <argument
+            android:name="vocabularySetId"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/gamePageFragment"
