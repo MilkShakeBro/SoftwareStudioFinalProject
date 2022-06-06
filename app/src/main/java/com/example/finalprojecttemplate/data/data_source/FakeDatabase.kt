@@ -6,6 +6,8 @@ import com.example.finalprojecttemplate.domain.models.*
 import kotlinx.coroutines.delay
 import java.lang.Thread.sleep
 
+private const val FAKE_DATABASE_IS_BROKEN = false
+
 class FakeDatabase {
     private val vocabularySets: List<VocabularySetModel> = listOf(
         VocabularySetModel(
@@ -29,7 +31,7 @@ class FakeDatabase {
                     id = 2,
                     word = "vogue",
                     chinese = "n.[U] 流行，時尚，時髦",
-                    breakpoint = 4
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 3,
@@ -77,7 +79,7 @@ class FakeDatabase {
                     id = 10,
                     word = "wig",
                     chinese = "n.[C] （女用）假髮",
-                    breakpoint = 6
+                    breakpoint = 1
                 ),
                 Vocabulary(
                     id = 11,
@@ -89,13 +91,13 @@ class FakeDatabase {
                     id = 12,
                     word = "wreath",
                     chinese = "n.[C] 花環",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 13,
                     word = "bouquet",
                     chinese = "n.[C] 花束",
-                    breakpoint = 6
+                    breakpoint = 5
                 ),
             ),
         ),
@@ -1251,7 +1253,10 @@ class FakeDatabase {
         )
     )
 
-    suspend fun getArticleByIndex(index: Int): ArticleModel {
+    fun getArticleByIndex(index: Int): ArticleModel {
+
+        if (FAKE_DATABASE_IS_BROKEN && (0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
+
         return if (index in 0 until 5) articles[index]
         else ArticleModel(
             id = -1,
@@ -1274,6 +1279,9 @@ class FakeDatabase {
     }
 
     fun getVocabularySetByIndex(index: Int): VocabularySetModel {
+//        delay(1000)
+        if (FAKE_DATABASE_IS_BROKEN && (0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
+
         return if (index in 0 until 5) vocabularySets[index]
         else VocabularySetModel(
             id = -1,
@@ -1295,7 +1303,9 @@ class FakeDatabase {
         )
     }
 
-    suspend fun getHomePageInfo(userid: Int): HomePageInfoModel {
+    fun getHomePageInfo(userid: Int): HomePageInfoModel {
+        if (FAKE_DATABASE_IS_BROKEN && (0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
+
         var articleInfo: MutableList<HomePageInfo> = mutableListOf()
         var vocabularySetInfo: MutableList<HomePageInfo> = mutableListOf()
         var themeInfo: MutableList<HomePageInfo> = mutableListOf()
@@ -1304,7 +1314,7 @@ class FakeDatabase {
         vocabularySets.forEach{ item->vocabularySetInfo.add(HomePageInfo(item.id, item.image, item.name)) }
         themeData.forEach{ item->themeInfo.add(HomePageInfo(item.id, item.image, "item.name???")) }
 
-        delay(1000)
+//        delay(1000)
 
         return if (userid in 0 until 5) HomePageInfoModel(articleInfo, vocabularySetInfo, themeInfo)
         else HomePageInfoModel(
@@ -1314,7 +1324,9 @@ class FakeDatabase {
         )
     }
 
-    suspend fun getThemeData(index: Int): ThemeDataModel {
+    fun getThemeData(index: Int): ThemeDataModel {
+        if (FAKE_DATABASE_IS_BROKEN && (0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
+
         return if (index in 0 until 5) themeData[index]
         else ThemeDataModel(
             id = -1,
