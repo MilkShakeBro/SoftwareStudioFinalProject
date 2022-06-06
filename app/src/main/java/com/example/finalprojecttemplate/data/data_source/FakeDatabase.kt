@@ -5,6 +5,8 @@ import com.example.finalprojecttemplate.domain.models.*
 import kotlinx.coroutines.delay
 import java.lang.Thread.sleep
 
+private const val FAKE_DATABASE_IS_BROKEN = false
+
 class FakeDatabase {
     private val vocabularySets: List<VocabularySetModel> = listOf(
         VocabularySetModel(
@@ -993,7 +995,7 @@ class FakeDatabase {
 
     fun getArticleByIndex(index: Int): ArticleModel {
 
-        if ((0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
+        if (FAKE_DATABASE_IS_BROKEN && (0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
 
         return if (index in 0 until 5) articles[index]
         else ArticleModel(
@@ -1012,7 +1014,7 @@ class FakeDatabase {
 
     fun getVocabularySetByIndex(index: Int): VocabularySetModel {
 //        delay(1000)
-        if ((0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
+        if (FAKE_DATABASE_IS_BROKEN && (0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
 
         return if (index in 0 until 5) vocabularySets[index]
         else VocabularySetModel(
@@ -1036,7 +1038,7 @@ class FakeDatabase {
     }
 
     fun getHomePageInfo(userid: Int): HomePageInfoModel {
-        if ((0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
+        if (FAKE_DATABASE_IS_BROKEN && (0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
 
         var articleInfo: MutableList<HomePageInfo> = mutableListOf()
         var vocabularySetInfo: MutableList<HomePageInfo> = mutableListOf()
@@ -1057,7 +1059,7 @@ class FakeDatabase {
     }
 
     fun getThemeData(index: Int): ThemeDataModel {
-        if ((0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
+        if (FAKE_DATABASE_IS_BROKEN && (0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
 
         return if (index in 0 until 5) themeData[index]
         else ThemeDataModel(
