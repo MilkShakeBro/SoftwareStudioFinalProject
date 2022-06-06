@@ -6,7 +6,7 @@ import com.example.finalprojecttemplate.domain.repository.Repository
 class GetAchievement (
     private val repository: Repository
         ) {
-    operator fun invoke(userid: Int): AchievementSetModel {
+    operator suspend fun invoke(userid: Int): AchievementSetModel {
         return repository.getAchievement(userid)
     }
 }
