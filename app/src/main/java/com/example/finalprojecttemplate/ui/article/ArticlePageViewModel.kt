@@ -15,14 +15,14 @@ class ShowArticleViewModel @Inject constructor (
     private val useCases: UseCases
 ): ViewModel() {
 
-    var themeindex = 0
+    var articleindex = 0
     private val _displayedArticle = MutableLiveData<ArticleModel>()
     val displayArticle : LiveData<ArticleModel>
         get() = _displayedArticle
 
     fun onEvent() {
         viewModelScope.launch {
-            _displayedArticle.value = useCases.getArticleUseCase(themeindex)
+            _displayedArticle.value = useCases.getArticleUseCase(articleindex)
         }
     }
 }
