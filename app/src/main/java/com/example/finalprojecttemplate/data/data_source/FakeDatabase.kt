@@ -1208,6 +1208,7 @@ class FakeDatabase {
     )
 
     suspend fun getArticleByIndex(index: Int): ArticleModel {
+        delay(1000)
         return if (index in 0 until 5) articles[index]
         else ArticleModel(
             id = -1,
