@@ -17,6 +17,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.databinding.FlashcardPageFragmentBinding
+import com.example.finalprojecttemplate.domain.models.VocabularySetModel
+import com.example.finalprojecttemplate.ui.homepage.DataFetchStatus
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.flashcard_page_fragment.*
 import kotlin.properties.Delegates
@@ -24,12 +26,11 @@ import kotlin.properties.Delegates
 @AndroidEntryPoint
 class FlashcardPageFragment: Fragment()  {
 
-    private var hour by Delegates.notNull<Int>()
-    private var min by Delegates.notNull<Int>()
-    private var sec by Delegates.notNull<Int>()
     private val viewModel: FlashcardPageViewModel by viewModels()
     private var binding: FlashcardPageFragmentBinding? = null
     private val args: FlashcardPageFragmentArgs by navArgs()
+    private var vocabularyset: VocabularySetModel?=null
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -44,16 +45,42 @@ class FlashcardPageFragment: Fragment()  {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.d("args", args.toString())
+
+        viewModel.apply {
+            index = arguments?.getInt("vocabularySetId") ?:0
+            onFetchVocabularySet()
+            status.observe(viewLifecycleOwner){ newStatus ->
+                when(newStatus){
+                    DataFetchStatus.SUCCESS -> {
+                        flashcard.adapter = viewModel.displayedVocabularySet.value?.vocabularySet?.let {
+                            FlashcardAdapter(
+                                it, requireActivity().supportFragmentManager)
+                        }
+                    }
+                    DataFetchStatus.ERROR -> {
+//                        binding?.loadingAndErrorLayout?.visibility = View.VISIBLE
+//                        binding?.errorMessageTextView?.visibility = View.VISIBLE
+//                        binding?.loadingProgressBar?.visibility = View.GONE
+                    }
+                    DataFetchStatus.LOADING -> {
+//                        binding?.loadingAndErrorLayout?.visibility = View.VISIBLE
+//                        binding?.errorMessageTextView?.visibility = View.VISIBLE
+//                        binding?.loadingProgressBar?.visibility = View.GONE
+                    }
+                }
+
+            }
+        }
+//        viewModel.index = arguments?.getInt("vocabularySetId") ?:0
+//        viewModel.onFetchVocabularySet()
+
         val hour = arguments?.getInt("Hour") ?:1
         val min = arguments?.getInt("Minute") ?:0
         val sec = arguments?.getInt("Second") ?:0
         val time: Long = ((hour.times(3600) + min*60 + sec).times(1000)).toLong() ?: 0
         countdown(time)
         binding?.apply {
-            flashcard.adapter = viewModel.displayedVocabularySet.value?.vocabularySet?.let {
-                FlashcardAdapter(
-                    it, requireActivity().supportFragmentManager)
-            }
+
             // click skip buttom to go to game tutorial
             SkipToGame.setOnClickListener{
                 val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment()
