@@ -45,7 +45,7 @@ class ArticlePageFragment: Fragment()  {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
-            showArticleViewModel.themeindex = arguments?.getInt("articleId") ?: 0
+            showArticleViewModel.articleindex = arguments?.getInt("articleId") ?: 0
 
             ArticleContent.text = ""
             QuestionOne.text = ""
@@ -312,7 +312,6 @@ class ArticlePageFragment: Fragment()  {
                     findNavController().navigate(action)
                 }
             }
-
         }
 
         showArticleViewModel.displayArticle.observe(viewLifecycleOwner) { newArticle ->
