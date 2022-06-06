@@ -20,6 +20,7 @@ class ShowArticleViewModel @Inject constructor (
     val displayArticle : LiveData<ArticleModel>
         get() = _displayedArticle
 
+
     fun onEvent() {
         viewModelScope.launch {
             _displayedArticle.value = useCases.getArticleUseCase(articleindex)

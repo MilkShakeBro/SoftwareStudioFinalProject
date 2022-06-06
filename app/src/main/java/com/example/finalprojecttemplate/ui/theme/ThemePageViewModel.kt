@@ -22,6 +22,7 @@ class ShowThemeViewModel @Inject constructor (
     val displayTheme : LiveData<ThemeDataModel>
         get() = _displayedTheme
 
+
     fun onEvent() {
         viewModelScope.launch{
             _displayedTheme.value = useCases.getThemeData(0)

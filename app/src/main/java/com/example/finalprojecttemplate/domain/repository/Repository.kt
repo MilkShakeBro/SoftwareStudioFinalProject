@@ -9,7 +9,7 @@ interface Repository {
     suspend fun getArticleByIndex(index: Int): ArticleModel
 
     // Gamepage
-    fun getVocabularySetByIndex(index: Int): VocabularySetModel
+    suspend fun getVocabularySetByIndex(index: Int): VocabularySetModel
 
     // History Data
     fun getHistoryData(userid: Int): HistoryDataModel
@@ -23,6 +23,8 @@ interface Repository {
     // Profile
     suspend fun getAchievement(userid: Int): AchievementSetModel
     fun getPersonalInfo(userid: Int): PersonalInfoModel
+    suspend fun addAchievement(achievement: Achievement)
+    suspend fun getAllAchievements(): List<Achievement>
 
     // Preference
     fun getUserName(): Flow<String>

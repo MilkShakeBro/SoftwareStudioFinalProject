@@ -6,7 +6,7 @@ import com.example.finalprojecttemplate.domain.repository.Repository
 class GetVocabularySet (
     private val repository: Repository
 ) {
-    operator fun invoke(index: Int): VocabularySetModel {
+    suspend operator fun invoke(index: Int): VocabularySetModel {
         return repository.getVocabularySetByIndex(index)
     }
 }

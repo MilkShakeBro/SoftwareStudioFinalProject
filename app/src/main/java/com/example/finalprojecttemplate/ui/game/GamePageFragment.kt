@@ -7,17 +7,20 @@ import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.os.postDelayed
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.databinding.GamePageFragmentBinding
+import com.example.finalprojecttemplate.ui.homepage.DataFetchStatus
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -37,16 +40,13 @@ class GamePageFragment: Fragment()  {
     private lateinit var handler: Handler
 
     private lateinit var loop: Runnable
+    private lateinit var backgroundAnimationLoop: Runnable
 
     private lateinit var gradientDrawable: GradientDrawable
-
     private lateinit var fadeAwayObjectAnimator: AnimatorSet
-
     private lateinit var moveUpObjectAnimator: AnimatorSet
 
     private var theta = 0f
-
-    private var countDownSecondCount = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -83,12 +83,7 @@ class GamePageFragment: Fragment()  {
 //            tetrisView.fontFamily = ResourcesCompat.getFont(requireContext(), R.font.oxygen_bold)
             tetrisView.fontFamily = Typeface.DEFAULT_BOLD
 
-            tetrisView.setTetrisState(tetrisGameViewModel.tetrisState)
-
-            tetrisView.setOnMatchWord {
-                moveUpAndDisappearInMillisecond(matchMessage, 1000)
-            }
-
+//            tetrisView.setTetrisState(tetrisGameViewModel.tetrisState)
 
             leftButton.setOnClickListener {
 //                tetrisView.tetraminoGoDir(Direction.LEFT)
@@ -102,55 +97,57 @@ class GamePageFragment: Fragment()  {
                 tetrisView.tetraminoGoDir(Direction.UP)
             }
 
-            showAndDisappearInMillisecond(countdownMessage, 1000)
+            startGameLoop()
 
-            handler = Handler(Looper.getMainLooper())
-            loop = object: Runnable {
-                override fun run() {
-                    /* 20220507, Change the period time of updating. Consider the execution time and fluent */
-                    handler.postDelayed(this, 20)
-//                    tetrisView.update(scoreNumberTextView)
-                    tetrisView.update()
-                    chineseExplanation.text = tetrisView.getChineseMeaning().toString()
+            tetrisGameViewModel.submitWordsToTetrisState()
 
-                    if (theta >= 2 * Math.PI) theta = 0f
-                    else theta += 0.0157f
-
-                    gradientDrawable.setGradientCenter(
-                        0.5f + 0.5f * kotlin.math.cos(theta.toDouble()).toFloat(),
-                        0.5f + 0.5f * kotlin.math.sin(theta.toDouble()).toFloat()
-                    )
-
-                    tetrisConstraintLayout.background = gradientDrawable
-
-                    when (countDownSecondCount) {
-                        50 -> {
-                            countdownMessage.text = "2"
-                            showAndDisappearInMillisecond(countdownMessage, 1000)
-                        }
-                        100 -> {
-                            countdownMessage.text = "1"
-                            showAndDisappearInMillisecond(countdownMessage, 1000)
-                        }
-                        150 -> {
-                            countdownMessage.visibility = View.GONE
-                            countdownMessageConstraintLayout.visibility = View.GONE
-                            tetrisView.tetrisGameState?.startGame()
-                        }
-                    }
-                    if (countDownSecondCount <= 150) countDownSecondCount += 1
-                }
-            }
-            tetrisGameViewModel.tetrisState.score.observe(viewLifecycleOwner) { newScore ->
-                scoreNumberTextView.text = newScore.toString()
-            }
-            tetrisGameViewModel.tetrisState.gameState.observe(viewLifecycleOwner) { newState ->
-                if (newState == GameState.END) goToResultPage()
-            }
+//            handler = Handler(Looper.getMainLooper())
+//            loop = object: Runnable {
+//                override fun run() {
+//                    /* 20220507, Change the period time of updating. Consider the execution time and fluent */
+//                    handler.postDelayed(this, 20)
+////                    tetrisView.update(scoreNumberTextView)
+//                    tetrisView.update()
+//                    chineseExplanation.text = tetrisView.getChineseMeaning().toString()
+//
+//                    if (theta >= 2 * Math.PI) theta = 0f
+//                    else theta += 0.0157f
+//
+//                    gradientDrawable.setGradientCenter(
+//                        0.5f + 0.5f * kotlin.math.cos(theta.toDouble()).toFloat(),
+//                        0.5f + 0.5f * kotlin.math.sin(theta.toDouble()).toFloat()
+//                    )
+//
+//                    tetrisConstraintLayout.background = gradientDrawable
+//
+//                    when (countDownSecondCount) {
+//                        50 -> {
+//                            countdownMessage.text = "2"
+//                            showAndDisappearInMillisecond(countdownMessage, 1000)
+//                        }
+//                        100 -> {
+//                            countdownMessage.text = "1"
+//                            showAndDisappearInMillisecond(countdownMessage, 1000)
+//                        }
+//                        150 -> {
+//                            countdownMessage.visibility = View.GONE
+//                            countdownMessageConstraintLayout.visibility = View.GONE
+//                            tetrisView.tetrisGameState?.startGame()
+//                        }
+//                    }
+//                    if (countDownSecondCount <= 150) countDownSecondCount += 1
+//                }
+//            }
+//            tetrisGameViewModel.tetrisState.score.observe(viewLifecycleOwner) { newScore ->
+//                scoreNumberTextView.text = newScore.toString()
+//            }
+//            tetrisGameViewModel.tetrisState.gameState.observe(viewLifecycleOwner) { newState ->
+//                if (newState == GameState.END) goToResultPage()
+//            }
             skipButton.setOnClickListener {
                 goToResultPage()
             }
-            handler.post(loop)
+//            handler.post(loop)
         }
 
         val onBackPressedCallback = object : OnBackPressedCallback(true) {
@@ -176,7 +173,7 @@ class GamePageFragment: Fragment()  {
     }
 
     override fun onDestroyView() {
-        handler.removeCallbacks(loop)
+        endLoops()
         super.onDestroyView()
     }
 
@@ -194,7 +191,9 @@ class GamePageFragment: Fragment()  {
         findNavController().navigate(action)
     }
 
-    private fun showAndDisappearInMillisecond(view: View, millisecond: Long) {
+    private fun showAndDisappearInMillisecond(view: View) {
+        fadeAwayObjectAnimator.end()
+
         view.visibility = View.VISIBLE
         view.alpha = 1f
 
@@ -202,12 +201,14 @@ class GamePageFragment: Fragment()  {
 
         fadeAwayObjectAnimator.start()
 
-        Handler(Looper.getMainLooper()).postDelayed(millisecond) {
-            view.visibility = View.GONE
-        }
+//        handler.postDelayed(millisecond) {
+//            view.visibility = View.GONE
+//        }
     }
 
     private fun moveUpAndDisappearInMillisecond(view: View, millisecond: Long) {
+        moveUpObjectAnimator.end()
+
         view.visibility = View.VISIBLE
         view.alpha = 1f
 
@@ -215,8 +216,112 @@ class GamePageFragment: Fragment()  {
 
         moveUpObjectAnimator.start()
 
-        Handler(Looper.getMainLooper()).postDelayed(millisecond) {
-            view.visibility = View.GONE
+//        handler.postDelayed(millisecond) {
+//            view.visibility = View.GONE
+//        }
+    }
+
+    private fun startGameLoop() {
+        handler = Handler(Looper.getMainLooper())
+        loop = object: Runnable {
+            override fun run() {
+                /* 20220507, Change the period time of updating. Consider the execution time and fluent */
+                handler.postDelayed(this, 20)
+                binding?.apply {
+                    when (tetrisGameViewModel.status.value) {
+                        DataFetchStatus.SUCCESS -> {
+                            if (tetrisGameViewModel.previousStatus == DataFetchStatus.LOADING) {
+                                initializeGame()
+                            }
+                            tetrisView.update()
+                            chineseExplanation.text = tetrisView.getChineseMeaning().toString()
+                            progressBarErrorMsgLayout.visibility = View.GONE
+                            countdownMessage.visibility = View.VISIBLE
+                        }
+                        DataFetchStatus.ERROR -> {
+                            countdownMessage.visibility = View.GONE
+                            progressBarErrorMsgLayout.visibility = View.VISIBLE
+                            errorMessageTextView.visibility = View.VISIBLE
+                            progressBar.visibility = View.GONE
+                        }
+                        DataFetchStatus.LOADING -> {
+                            countdownMessage.visibility = View.GONE
+                            progressBarErrorMsgLayout.visibility = View.VISIBLE
+                            errorMessageTextView.visibility = View.GONE
+                            progressBar.visibility = View.VISIBLE
+                        }
+                        else -> {}
+                    }
+                }
+                tetrisGameViewModel.previousStatus = tetrisGameViewModel.status.value ?: DataFetchStatus.SUCCESS
+            }
         }
+        handler.post(loop)
+    }
+
+    private fun endLoops() {
+        handler.removeCallbacks(loop)
+        handler.removeCallbacks(backgroundAnimationLoop)
+    }
+
+    private fun initializeGame() {
+        binding?.apply {
+            startCountDown(countdownMessage, countdownMessageConstraintLayout, tetrisView)
+            startBackgroundAnimation(tetrisConstraintLayout)
+            tetrisView.tetrisGameState = tetrisGameViewModel.tetrisState
+            tetrisView.setOnMatchWord {
+                moveUpAndDisappearInMillisecond(matchMessage, 1000)
+            }
+            tetrisGameViewModel.tetrisState.score.observe(viewLifecycleOwner) { newScore ->
+                scoreNumberTextView.text = newScore.toString()
+            }
+            tetrisGameViewModel.tetrisState.gameState.observe(viewLifecycleOwner) { newState ->
+                if (newState == GameState.END) goToResultPage()
+            }
+        }
+    }
+
+    private fun startCountDown(
+        countdownMessage: TextView,
+        countdownMessageConstraintLayout: ConstraintLayout,
+        tetrisView: TetrisView
+    ) {
+        val loop = object: Runnable {
+            override fun run() {
+                val secondLeft = countdownMessage.text.toString().toInt()
+
+                if (secondLeft >= 2) {
+                    countdownMessage.text = (secondLeft - 1).toString()
+                    showAndDisappearInMillisecond(countdownMessage)
+                    Log.d("GamePageFragment", "Second Left: ${countdownMessage.text}")
+                    handler.postDelayed(this, 1000)
+                } else {
+                    countdownMessage.visibility = View.GONE
+                    countdownMessageConstraintLayout.visibility = View.GONE
+                    tetrisView.tetrisGameState?.startGame()
+                }
+            }
+        }
+        showAndDisappearInMillisecond(countdownMessage)
+        handler.postDelayed(loop, 1000)
+    }
+
+    private fun startBackgroundAnimation(tetrisConstraintLayout: ConstraintLayout) {
+        backgroundAnimationLoop = object : Runnable {
+            override fun run() {
+                if (theta >= 2 * Math.PI) theta = 0f
+                else theta += 0.0157f
+
+                gradientDrawable.setGradientCenter(
+                    0.5f + 0.5f * kotlin.math.cos(theta.toDouble()).toFloat(),
+                    0.5f + 0.5f * kotlin.math.sin(theta.toDouble()).toFloat()
+                )
+
+                tetrisConstraintLayout.background = gradientDrawable
+
+                handler.postDelayed(this, 20)
+            }
+        }
+        handler.post(backgroundAnimationLoop)
     }
 }
