@@ -51,6 +51,8 @@
                     android:layout_marginTop="16dp"/>
 <!--                    android:layout_marginTop="80dp"/>-->
 
+
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/reading_article_recycler_view"
                     android:orientation="horizontal"
@@ -110,6 +112,14 @@
                     app:layout_constraintTop_toBottomOf="@id/vocabulary_theme_list_title"
                     android:layout_margin="0dp"
                     />
+
+                <Button
+                    android:id="@+id/profile_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    tools:layout_editor_absoluteX="301dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <!-- The following elements are used to test UserInfoDataStore.kt
                 <TextView

@@ -17,6 +17,8 @@ data class ArticleModel(
     @ColumnInfo
     val answer: Map<Int, String>,
     @ColumnInfo
+    val question: Map<Int, List<String>>,
+    @ColumnInfo
     val content: String
 ) {
     companion object {
@@ -26,6 +28,7 @@ data class ArticleModel(
                 name = "",
                 image = "".toUri(),
                 answer = mapOf(),
+                question = mapOf(),
                 content = ""
             )
     }

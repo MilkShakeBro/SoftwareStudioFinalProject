@@ -13,13 +13,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.finalprojecttemplate.databinding.TimerFragmentBinding
+import com.example.finalprojecttemplate.ui.flashcard.FlashcardPageFragmentArgs
 
 
 class TimerPageFragment: Fragment() {
 
     private var binding: TimerFragmentBinding? = null
-
+    private val args: TimerPageFragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -32,7 +34,8 @@ class TimerPageFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        Log.d("args", args.toString())
+        val id = arguments?.getInt("vocabularySetId") ?:0
         initAllPicker()
 
         binding?.apply {
@@ -40,12 +43,7 @@ class TimerPageFragment: Fragment() {
                 val hour = numPickerH.value
                 val minute = numPickerM.value
                 val second = numPickerS.value
-
-                Log.d("Hour", hour.toString())
-                Log.d("Minute", minute.toString())
-                Log.d("Second", second.toString())
-
-                val action = TimerPageFragmentDirections.actionTimerPageFragmentToFlashcardPageFragment()
+                val action = TimerPageFragmentDirections.actionTimerPageFragmentToFlashcardPageFragment(id, hour, minute, second)
                 findNavController().navigate(action)
             }
 

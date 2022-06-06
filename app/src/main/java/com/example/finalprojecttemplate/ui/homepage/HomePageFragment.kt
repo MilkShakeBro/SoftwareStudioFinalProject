@@ -1,6 +1,7 @@
 package com.example.finalprojecttemplate.ui.homepage
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -59,6 +60,10 @@ class HomePageFragment: Fragment()  {
             binding?.loadingAndErrorLayout?.visibility = View.VISIBLE
             binding?.loadingProgressBar?.visibility = View.VISIBLE
             binding?.errorMessageTextView?.visibility = View.GONE
+            profileButton.setOnClickListener{
+                val action = HomePageFragmentDirections.actionHomePageFragmentToProfilePageFragment()
+                findNavController().navigate(action)
+            }
 
 
 //            testButton.setOnClickListener {

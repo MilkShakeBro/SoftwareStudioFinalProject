@@ -470,103 +470,289 @@ class FakeDatabase {
             id = 0,
             name = "Zebrafish",
             answer = mapOf(
-                1 to "A",
-                2 to "B",
-                3 to "C",
+                1 to "D",
+                2 to "C",
+                3 to "A",
                 4 to "D"
             ),
+            question= mapOf<Int, List<String>>(
+                1 to listOf<String>(
+                    "1. What can we learn about zebrafish from the passage?",
+                    "(A) How they should be studied in labs.",
+                    "(B) Where they derive their regenerative ability.",
+                    "(C) Why they share humans’ genetic code.",
+                    "(D) What they may offer in medical advancements."),
+                2 to listOf<String>(
+                    "2. Which of the following statements is true regarding GABA in zebrafish?",
+                    "(A) Increasing GABA level facilitates neuron activities.",
+                    "(B) There is a high level of GABA in the brain of zebrafish.",
+                    "(C) Lowering GABA levels in the brain can stimulate retina regrowth.",
+                    "(D) GABA contains chemical elements that trigger the growth of neurons."),
+                3 to listOf<String>(
+                    "3. Which of the following is closest in meaning to “replicated” in the third paragraph?",
+                    "(A) Reproduced.",
+                    "(B) Reassembled.",
+                    "(C) Recycled.",
+                    "(D) Restored."),
+                4 to listOf<String>(
+                    "4. According to the passage, which of the following is an opinion, but NOT a fact?",
+                    "(A) Humans and zebrafish have 70 percent of genes in common.",
+                    "(B) Zebrafish can quickly recover vision after damage to the retina.",
+                    "(C) Scientists are testing if the GABA theory works on mice as it does on zebrafish.",
+                    "(D) Understanding regeneration in zebrafish may allow humans to regrow their organs.")
+            ),
             image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/330px-Image_created_with_a_mobile_phone.png"),
-            content = "Zebrafish, named for their characteristic stripes, have been a popular test subject for researchers. Only " +
+            content = "     Zebrafish, named for their characteristic stripes, have been a popular test subject for researchers. Only " +
                     "a few centimeters in length, the fish breed easily in captivity, grow quickly, and their transparent body " +
                     "makes it easy to study their organs. Above all, they possess some amazing “self-healing” power. When part " +
                     "of their heart is removed, they can grow it back in a matter of weeks. When blinded, they can quickly regain " +
                     "the ability to see.\n" +
-                    "Recent studies show that humans and zebrafish have the same major organs and share 70 percent of " +
+                    "       Recent studies show that humans and zebrafish have the same major organs and share 70 percent of " +
                     "the genes. Moreover, 84 percent of human genes associated with disease find a counterpart in zebrafish. " +
                     "Scientists thus hope that understanding the self-healing mystery of the fish may one day allow humans to " +
                     "regenerate such organs as eyes, hearts, and spines.\n" +
-                    "Researchers at Vanderbilt University are particularly interested in zebrafish retina regeneration. They " +
+                    "       Researchers at Vanderbilt University are particularly interested in zebrafish retina regeneration. They " +
                     "have learned that damage of retina can cause blindness in zebrafish, yet it only takes about three to four " +
                     "weeks before vision is restored. The structure and cell types of zebrafish retinas are almost identical to those " +
                     "of humans. If the process can be replicated in humans, it may give rise to new treatments for blindness " +
                     "caused by retinal damage.\n" +
-                    "In order to know exactly how zebrafish retina is regenerated, the team looked at the neurotransmitter " +
+                    "       In order to know exactly how zebrafish retina is regenerated, the team looked at the neurotransmitter " +
                     "gamma-aminobutyric acid (GABA), a chemical messenger in the brain that reduces the activity of neurons. " +
                     "They found that lowering GABA levels in zebrafish can trigger retina regeneration, while a high level of " +
                     "GABA concentration will suppress the regeneration process. This suggested that GABA plays an important " +
                     "role in the fish’s ability to regain their sight.\n" +
-                    "The team is beginning to test the GABA theory on mice. If that works, human trials will be next on " +
+                    "       The team is beginning to test the GABA theory on mice. If that works, human trials will be next on " +
                     "the agenda. If the research proves successful in humans, some of the nearly 40 million blind people " +
                     "worldwide may one day have a tiny, striped fish to thank."
         ),
         ArticleModel(
             id = 1,
-            name = "Lorem",
+            name = "Hard Hat",
             answer = mapOf(
-                1 to "A",
-                2 to "B",
-                3 to "C",
-                4 to "D"
+                1 to "D",
+                2 to "A",
+                3 to "B",
+                4 to "B"
+            ),
+            question= mapOf<Int, List<String>>(
+                1 to listOf<String>(
+                    "1. Which of the following aspects about hard hats is NOT discussed in the passage?",
+                    "(A) Their functions.",
+                    "(B) Their appearances.",
+                    "(C) Their materials.",
+                    "(D) Their limitations."),
+                2 to listOf<String>(
+                    "2. In what order did the following protective hats appear?\n"+
+                    "a. fiberglass hats\n"+
+                    "b. hats with see-through shields\n"+
+                    "c. hats with canvas and leather\n"+
+                    "d. hats with tar over them",
+                    "(A) d → c → a → b",
+                    "(B) c → d → b → a",
+                    "(C) c → b → a → d",
+                    "(D) d → c → b → a"),
+                3 to listOf<String>(
+                    "3. According to the passage, which of the following statements is true about the hard hat?\n",
+                    "(A) Global sales have doubled every ten years.",
+                    "(B) The inspiration came from the inventor’s wartime experience.",
+                    "(C) It was standard equipment for construction workers in the 1920s.",
+                    "(D) Different colors are used in different industries to signal the roles of people on site."),
+                4 to listOf<String>(
+                    "4. Which of the following words are used in the passage to refer to the hard hat?\n"+
+                    "a. tool b. code c. device d. helmet e. accessory f. headgear",
+                    "(A) a, b, d, e ",
+                    "(B) a, c, d, f ",
+                    "(C) c, d, e, f ",
+                    "(D) a, d, e, f ")
             ),
             image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/330px-Image_created_with_a_mobile_phone.png"),
-            content = "Zebrafish, named for their characteristic stripes, have been a popular test subject for researchers. Only " +
-                    "a few centimeters in length, the fish breed easily in captivity, grow quickly, and their transparent body " +
-                    "makes it easy to study their organs. Above all, they possess some amazing “self-healing” power. When part " +
-                    "of their heart is removed, they can grow it back in a matter of weeks. When blinded, they can quickly regain " +
-                    "the ability to see.\n" +
-                    "Recent studies show that humans and zebrafish have the same major organs and share 70 percent of " +
-                    "the genes. Moreover, 84 percent of human genes associated with disease find a counterpart in zebrafish. " +
-                    "Scientists thus hope that understanding the self-healing mystery of the fish may one day allow humans to " +
-                    "regenerate such organs as eyes, hearts, and spines.\n" +
-                    "Researchers at Vanderbilt University are particularly interested in zebrafish retina regeneration. They " +
-                    "have learned that damage of retina can cause blindness in zebrafish, yet it only takes about three to four " +
-                    "weeks before vision is restored. The structure and cell types of zebrafish retinas are almost identical to those " +
-                    "of humans. If the process can be replicated in humans, it may give rise to new treatments for blindness " +
-                    "caused by retinal damage.\n" +
-                    "In order to know exactly how zebrafish retina is regenerated, the team looked at the neurotransmitter " +
-                    "gamma-aminobutyric acid (GABA), a chemical messenger in the brain that reduces the activity of neurons. " +
-                    "They found that lowering GABA levels in zebrafish can trigger retina regeneration, while a high level of " +
-                    "GABA concentration will suppress the regeneration process. This suggested that GABA plays an important " +
-                    "role in the fish’s ability to regain their sight.\n" +
-                    "The team is beginning to test the GABA theory on mice. If that works, human trials will be next on " +
-                    "the agenda. If the research proves successful in humans, some of the nearly 40 million blind people " +
-                    "worldwide may one day have a tiny, striped fish to thank."
+            content = "     A hard hat is a helmet used mostly at worksites to protect the head from injuries due to falling objects." +
+                    "Since its introduction in the early 20th century, the headgear has saved countless lives and is considered the" +
+                    "number one safety tool for construction workers.\n" +
+                    "       The hard hat was invented in 1919 by Edward W. Bullard, who had just returned from World War I." +
+                    "Before the war, workers used to smear their hats with coal tar for protection of their head. Bullard, having" +
+                    "witnessed the life-saving power of the metal helmet in the War, decided to produce a head protection device" +
+                    "that was affordable for every worker and lightweight enough to be worn all day long. The Hard Boiled Hat" +
+                    "was thus born, using steamed canvas and leather, covered with black paint, and featuring a suspension" +
+                    "system to reduce impact. Soon, hard hats became widely used. The headgear was later made mandatory at" +
+                    "construction sites in major construction projects, such as the Hoover Dam in 1931 and the Golden Gate" +
+                    "Bridge in 1933.\n" +
+                    "       Over the past century, hard hats have advanced considerably, evolving from canvas and leather to" +
+                    "aluminum, fiberglass, and, eventually, to thermoplastic. Recently, new models have been introduced and" +
+                    "accessories added to meet the needs of laborers working on various job sites. For instance, a ventilated hard" +
+                    "hat was developed to keep wearers cooler, and see-through face shields were attached to better see the" +
+                    "hazards lurking above. Today, attachments include radios, sensors, cameras, and a lot more. A common" +
+                    "color code has also been developed for recognizing people and their roles on site. Yellow is used for general" +
+                    "laborers and contractors, white (or sometimes black) for supervisors and managers, and green for inspectors" +
+                    "and new workers.\n" +
+                    "       New products continue to expand the market. Global sales of hard hats totaled USD 2.1 billion in 2016," +
+                    "and are expected to reach USD 3.19 billion in 2025."
         ),
         ArticleModel(
             id = 2,
-            name = "Cras",
+            name = "Cactus",
             answer = mapOf(
-                1 to "A",
-                2 to "B",
-                3 to "C",
-                4 to "D"
+                1 to "B",
+                2 to "D",
+                3 to "D",
+                4 to "B"
+            ),
+            question= mapOf<Int, List<String>>(
+                1 to listOf<String>(
+                    "1. What is the purpose of this passage?",
+                    "(A) To argue for the benefits of nopales.",
+                    "(B) To introduce a new source of energy.",
+                    "(C) To predict the future agriculture policy of Mexico.",
+                    "(D) To change people’s ideas about energy consumption."),
+                2 to listOf<String>(
+                    "2. Which of the following is NOT mentioned as a function of the prickly pear?",
+                    "(A) For treating illnesses.",
+                    "(B) For personal hygiene.",
+                    "(C) For food and beverage.",
+                    "(D) For gardening and landscaping."),
+                3 to listOf<String>(
+                    "3. Which of the following statements about the prickly pear cactus is true?",
+                    "(A) Its soft inner part is often discarded.",
+                    "(B) It was not discovered until the modern era.",
+                    "(C) It turns into 200,000 tons of waste in Mexico each year.",
+                    "(D) It appears in a prominent place on Mexico’s national flag."),
+                4 to listOf<String>(
+                    "4. What advantage does the prickly pear cactus have over other biofuel crops?",
+                    "(A) It generates more energy.",
+                    "(B) It will not influence food prices.",
+                    "(C) It may replace feed for livestock.",
+                    "(D) It can increase global food production.")
             ),
             image = Uri.parse("https://www.google.com"),
-            content = "Cras accumsan tristique ultricies. Vivamus quis tincidunt metus, sed interdum augue. Nulla facilisi. Aliquam viverra, sem in pharetra fringilla, quam justo fermentum neque, et hendrerit justo purus nec lectus. Praesent posuere varius nulla, vel efficitur lacus dapibus non. Mauris pharetra mi sit amet turpis dignissim, et maximus nibh euismod. Curabitur iaculis tristique elit, sit amet maximus libero varius non. Donec molestie nunc est, id elementum quam ultrices vel. Morbi rhoncus turpis massa, quis mollis lorem blandit vel. Proin eu arcu tortor. Fusce nunc eros, luctus faucibus magna nec, tristique elementum felis. Cras consequat facilisis mauris sed volutpat. Sed egestas odio id neque aliquam venenatis."
+            content = "     The prickly pear cactus is such a powerful symbol in Mexico that it occupies a prime spot on Mexico’s" +
+                    "national flag. The plant was considered sacred by the ancient Aztecs, and modern-day Mexicans eat it," +
+                    "drink it, and even use it in medicines and shampoos. Now scientists have come up with a new use for the" +
+                    "bright green plant: producing renewable energy.\n" +
+                    "       Known locally as nopal, the prickly pear is farmed on a massive scale in Mexico. Over the years, only" +
+                    "the edible soft inner flesh has been used. The cactus’s thick outer layer (i.e., husk), with all those spines," +
+                    "had always been viewed as a waste product until researchers developed a biogas generator to turn the husks" +
+                    "into electricity.\n" +
+                    "       The pilot project dedicated to developing the cactus biogas generator began in the south of Mexico" +
+                    "City. The area produces 200,000 tons a year of prickly pear cactus—up to 10 tons of which ends up as" +
+                    "waste on the floor of the cactus market each day. Then, a local green energy startup company got the idea" +
+                    "to turn that waste into energy. The generator is now in place at the cactus market, where the vendors are" +
+                    "enthusiastic about this new way to utilize the tons of cactus husks that once went directly into the trash.\n" +
+                    "       The prickly pear has a number of advantages over other biofuel crops, such as wheat, sugarcane, and" +
+                    "soybeans. For one thing, only the husk of the cactus is used for generating biofuel, while its inner flesh is" +
+                    "still preserved for food. Therefore, using the plant as a fuel source will not put pressure on food prices." +
+                    "Moreover, the cactus requires minimum water, and thus is not grown on traditional agricultural pasture." +
+                    "This means that no increased competition arises for the water or land presently used for food production." +
+                    "The project in Mexico City has brought new hope to reducing the use of fossil fuels. If it can be" +
+                    "expanded, the prickly pear could be the key to Mexico’s energy future"
         ),
         ArticleModel(
             id = 3,
-            name = "Nam",
+            name = "Travel Document",
             answer = mapOf(
                 1 to "A",
                 2 to "B",
                 3 to "C",
                 4 to "D"
             ),
+            question= mapOf<Int, List<String>>(
+                1 to listOf<String>(
+                    "1. How is the information in the passage organized?",
+                    "(A) In order of time.",
+                    "(B) By cause and effect.",
+                    "(C) In order of importance",
+                    "(D) By definition and illustration."),
+                2 to listOf<String>(
+                    "2. Which of the following statements is true about the earliest travel document?",
+                    "(A) It was issued by the king of Judah.",
+                    "(B) It was given to an official of Persia",
+                    "(C) It appeared more than three thousand years ago.",
+                    "(D) It served to invite people to travel beyond the river."),
+                3 to listOf<String>(
+                    "3. When did the term “passport” start being used?",
+                    "(A) In about 450 B.C.",
+                    "(B) During World War I",
+                    "(C)  In the 16th century",
+                    "(D) During King Henry V’s reign."),
+                4 to listOf<String>(
+                    "4. Which of the following is NOT mentioned in the passage as a form of passport?",
+                    "(A) A letter",
+                    "(B) A receipt. ",
+                    "(C) A proof of identity.",
+                    "(D) A list of seaports.")
+            ),
             image = Uri.parse("https://www.google.com"),
-            content = "Nam vitae euismod neque, eget imperdiet diam. Praesent a ultrices sem. Suspendisse semper, purus eu dictum iaculis, arcu neque posuere augue, eget tristique mi metus vitae orci. Duis metus est, tempus nec porta id, mattis ac dui. Mauris in lorem ac mi placerat accumsan non ut odio. In ultricies ultricies risus id elementum. Proin iaculis lacus at velit consectetur gravida nec ut nibh."
+            content = "     The concept of a travel document, which shows a person is under a ruler’s protection while in a foreign" +
+                    "land, has probably existed since rulers and states were first invented. But the earliest mention of an object" +
+                    "which we might recognize as a passport appeared in about 450 B.C. The Hebrew Bible states that Nehemiah," +
+                    "an official serving King Artaxerxes of ancient Persia, asked permission to travel to Judah. The King agreed" +
+                    "and gave Nehemiah a letter “to the governors of the province beyond the river,” requesting safe passage for" +
+                    "him as he travelled through their lands.\n" +
+                    "       Later, in the medieval Islamic Caliphate, a form of passport was the bara’a, a receipt for taxes paid." +
+                    "Only people who paid their taxes were permitted to travel to different regions of the Caliphate. In medieval" +
+                    "Europe, on the other hand, travel documents were issued by local authorities, and generally contained a list" +
+                    "of towns and cities which the document holder was permitted to enter or pass through. On the whole," +
+                    "documents were not required for travel to seaports, which were considered open trading points, but" +
+                    "documents were required to travel inland from seaports.\n" +
+                    "       King Henry V of England is credited with having invented the first true passport, as a way of helping" +
+                    "his subjects prove who they were in foreign lands. The earliest reference to these documents is found in a" +
+                    "15th-century Act of Parliament, while the term “passport” came into use about a century later. Nevertheless," +
+                    "passports were not generally required for international travel until the First World War. It was at this time" +
+                    "that passports as we would recognize them today began to be used."
         ),
         ArticleModel(
             id = 4,
-            name = "Vivamus",
+            name = "Olive Oil",
             answer = mapOf(
-                1 to "A",
-                2 to "B",
+                1 to "D",
+                2 to "D",
                 3 to "C",
-                4 to "D"
+                4 to "B"
+            ),
+            question= mapOf<Int, List<String>>(
+                1 to listOf<String>(
+                    "1. What is the passage mainly about?",
+                    "(A) The flavor of olive oil.",
+                    "(B) The trade of olive oil.",
+                    "(C) The promotion of olive oil.",
+                    "(D) The quality of olive oil."),
+                2 to listOf<String>(
+                    "2.  Which of the following statements is true about extra virgin olive oil?",
+                    "(A) It is free from any bitter flavor.",
+                    "(B) It is refined to remove its impurities.",
+                    "(C) It requires mixing of more than one kind of oil.",
+                    "(D) It has a lower acidity rate than virgin olive oil."),
+                3 to listOf<String>(
+                    "3. According to the passage, what is the best way to store olive oil?",
+                    "(A) In a plastic container in a damp cellar.",
+                    "(B) In a clear glass bottle near the kitchen stove.",
+                    "(C) In an airtight glass bottle in a kitchen cupboard.",
+                    "(D) In an airproof bottle next to a well-lighted window."),
+                4 to listOf<String>(
+                    "4. What is the IOC trying to do?",
+                    "(A) Train more qualified olive oil tasters.",
+                    "(B) Improve the ways of grading olive oil.",
+                    "(C) Look for new techniques to boost production.",
+                    "(D) Build better connections among industry members.")
             ),
             image = Uri.parse("https://www.google.com"),
-            content = "Vivamus faucibus tortor non nunc viverra tempor vitae id nibh. Praesent mattis id nibh vitae sodales. Suspendisse euismod hendrerit elit, quis vulputate sem imperdiet eget. Nam in maximus est. Etiam consectetur lorem et ligula euismod, in maximus eros pulvinar. Nulla mollis elementum consequat. Nulla luctus tristique ex ut blandit. Sed ut eros eleifend, molestie mi vitae, hendrerit velit. Nunc a vulputate turpis. Curabitur mattis ultrices sem, at laoreet leo efficitur et. Etiam eu velit magna. Proin interdum mi enim, eu hendrerit neque scelerisque eu. Cras molestie sodales eros in ultricies. Duis scelerisque malesuada nisl ullamcorper semper."
+            content = "     Probably the most widely used oil in cooking, olive oil is made by crushing olives with stone or steel" +
+                    "blades to release the oil. Extra virgin oil, the finest grade, is made from the first pressing of the olives and" +
+                    "has a very low acidity rate (under 1%). To be qualified as “extra virgin,” the oil must also pass both an" +
+                    "official test in a laboratory and a sensory evaluation by a trained tasting panel. It must be free from impurity," +
+                    "while exhibiting some fruitiness and creating a pleasant bitter flavor along with a peppery sensation in the" +
+                    "mouth. Second on the ranking is virgin olive oil. It is also a first pressing, but has a slightly higher acidity" +
+                    "level (under 2%). Lastly, pure olive oil is the cheapest olive oil. It is refined to remove its impurities and" +
+                    "blended to improve flavor, and is recommended for all-purpose cooking.\n" +
+                    "       Packaging and storage also have an impact on the quality of olive oil. Olive oil spoils quickly when" +
+                    "exposed to direct sunlight, so it should be stored in the dark at 16-18°C. Moisture and oxygen promote" +
+                    "oxidation and therefore limit its shelf life. Plastic containers usually do not provide adequate protection" +
+                    "from light, heat, or moisture; additionally, small particles in plastics can leak into the oil, which further" +
+                    "reduces its quality.\n" +
+                    "   Olive oil tasters have long adopted descriptive terms such as “pure” and “light” to evaluate the quality" +
+                    "of olive oil. Recently, however, the International Olive Council (IOC) is seeking input on test methods to" +
+                    "improve the transparency of the testing process and boost the accuracy of the results. A redefinition of the" +
+                    "term “olive oil” is also proposed to make a clear distinction between virgin olive oil and pure olive oil." +
+                    "Industry members of the IOC hope to promote the trade of olive oil by initiating these changes."
         )
     )
     private val historyData: List<HistoryDataModel> = listOf(
@@ -618,32 +804,38 @@ class FakeDatabase {
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "artwork",
+                    chinese = "藝術品",
                     positionForClickButton = Coordinate(150.0f, 150.5f)
                 ),
                 VocabularyForTheme(
                     id = 1,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "artwork",
+                    chinese = "藝術品",
                     positionForClickButton = Coordinate(120.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 2,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "floor lamp",
+                    chinese = "落地燈",
                     positionForClickButton = Coordinate(130.0f, 130.0f)
                 ),
                 VocabularyForTheme(
                     id = 3,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "sofa",
+                    chinese = "沙發",
                     positionForClickButton = Coordinate(100.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "potted houseplants",
+                    chinese = "室內盆栽植物",
+                    positionForClickButton = Coordinate(50.0f, 150.0f)
+                ),
+                VocabularyForTheme(
+                    id = 5,
+                    word = "rug",
+                    chinese = "小地毯",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
             ),
@@ -675,6 +867,12 @@ class FakeDatabase {
                     word = "lamp",
                     chinese = "檯燈",
                     positionForClickButton = Coordinate(100.0f, 150.0f)
+                ),
+                VocabularyForTheme(
+                    id = 4,
+                    word = "lamp",
+                    chinese = "檯燈",
+                    positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 4,
@@ -718,6 +916,12 @@ class FakeDatabase {
                     chinese = "檯燈",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
+                VocabularyForTheme(
+                    id = 4,
+                    word = "lamp",
+                    chinese = "檯燈",
+                    positionForClickButton = Coordinate(50.0f, 150.0f)
+                ),
         ),
         ),
         ThemeDataModel(
@@ -747,6 +951,12 @@ class FakeDatabase {
                     word = "lamp",
                     chinese = "檯燈",
                     positionForClickButton = Coordinate(100.0f, 150.0f)
+                ),
+                VocabularyForTheme(
+                    id = 4,
+                    word = "lamp",
+                    chinese = "檯燈",
+                    positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 4,
@@ -790,6 +1000,12 @@ class FakeDatabase {
                     chinese = "檯燈",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
+                VocabularyForTheme(
+                    id = 4,
+                    word = "lamp",
+                    chinese = "檯燈",
+                    positionForClickButton = Coordinate(50.0f, 150.0f)
+                ),
             )
         ),
     )
@@ -799,7 +1015,7 @@ class FakeDatabase {
             achievement = listOf(
                 Achievement(
                     id = 0,
-                    img = Uri.parse("https://www.google.com"),
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
                     description = "This is a description.",
                     obtained = false
                 ),
@@ -1007,6 +1223,12 @@ class FakeDatabase {
                 3 to "-1",
                 4 to "-1"
             ),
+            question = mapOf<Int, List<String>>(
+                1 to listOf<String>("-1", "-1", "-1", "-1", "-1"),
+                2 to listOf<String>("-1", "-1", "-1", "-1", "-1"),
+                3 to listOf<String>("-1", "-1", "-1", "-1", "-1"),
+                4 to listOf<String>("-1", "-1", "-1", "-1", "-1")
+            ),
             image = Uri.parse("null"),
             content = "Article not found"
         )
@@ -1069,7 +1291,8 @@ class FakeDatabase {
         )
     }
 
-    fun getAchievement(userid: Int): AchievementSetModel {
+    suspend fun getAchievement(userid: Int): AchievementSetModel {
+        delay(1000)
         return if (userid in 0 until 5) achievementSet[userid]
         else AchievementSetModel(
             id = -1,
@@ -1077,7 +1300,7 @@ class FakeDatabase {
                 Achievement(
                     id = 0,
                     img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    description = "Finish the game once successfully",
                     obtained = false
                 ),
                 Achievement(

@@ -61,6 +61,13 @@ class LocalDatabaseConverter {
     @TypeConverter
     fun byteArrayToMapOfIntAndString(byteArray: ByteArray): Map<Int, String> = byteArrayToTypeT(byteArray)
 
+    /** Map<Int, List<String>>*/
+    @TypeConverter
+    fun mapOfIntAndListOfStringToByteArray(map: Map<Int, List<String>>): ByteArray = typeTToByteArray(map)
+
+    @TypeConverter
+    fun byteArrayToMapOfIntAndListOfString(byteArray: ByteArray): Map<Int, List<String>> = byteArrayToTypeT(byteArray)
+
 //    @TypeConverter
 //    fun mapOfIntAndStringToString(map: Map<Int, String>): String {
 //        return map.toString()
