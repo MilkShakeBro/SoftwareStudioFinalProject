@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 interface Repository {
 
     // example
-    fun getArticleByIndex(index: Int): ArticleModel
+    suspend fun getArticleByIndex(index: Int): ArticleModel
 
     // Gamepage
     suspend fun getVocabularySetByIndex(index: Int): VocabularySetModel
@@ -18,13 +18,13 @@ interface Repository {
     suspend fun getHomePageInfo(userid: Int): HomePageInfoModel
 
     // Theme
-    fun getThemeData(index: Int): ThemeDataModel
+    suspend fun getThemeData(index: Int): ThemeDataModel
 
     // Profile
     fun getAchievement(userid: Int): AchievementSetModel
     fun getPersonalInfo(userid: Int): PersonalInfoModel
     suspend fun addAchievement(achievement: Achievement)
-    fun getAllAchievements(): Flow<List<Achievement>>
+    suspend fun getAllAchievements(): List<Achievement>
 
     // Preference
     fun getUserName(): Flow<String>

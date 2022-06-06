@@ -15,7 +15,6 @@ import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.os.postDelayed
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -24,8 +23,6 @@ import com.example.finalprojecttemplate.databinding.GamePageFragmentBinding
 import com.example.finalprojecttemplate.ui.homepage.DataFetchStatus
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CompletableJob
-import java.util.concurrent.TimeUnit
 
 @AndroidEntryPoint
 class GamePageFragment: Fragment()  {
@@ -194,7 +191,7 @@ class GamePageFragment: Fragment()  {
         findNavController().navigate(action)
     }
 
-    private fun showAndDisappearInMillisecond(view: View, millisecond: Long) {
+    private fun showAndDisappearInMillisecond(view: View) {
         fadeAwayObjectAnimator.end()
 
         view.visibility = View.VISIBLE
@@ -295,7 +292,7 @@ class GamePageFragment: Fragment()  {
 
                 if (secondLeft >= 2) {
                     countdownMessage.text = (secondLeft - 1).toString()
-                    showAndDisappearInMillisecond(countdownMessage, 1000)
+                    showAndDisappearInMillisecond(countdownMessage)
                     Log.d("GamePageFragment", "Second Left: ${countdownMessage.text}")
                     handler.postDelayed(this, 1000)
                 } else {
@@ -305,7 +302,7 @@ class GamePageFragment: Fragment()  {
                 }
             }
         }
-        showAndDisappearInMillisecond(countdownMessage, 1000)
+        showAndDisappearInMillisecond(countdownMessage)
         handler.postDelayed(loop, 1000)
     }
 

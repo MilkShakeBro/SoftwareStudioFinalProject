@@ -61,6 +61,11 @@ class HomePageFragment: Fragment()  {
             binding?.errorMessageTextView?.visibility = View.GONE
 
 
+//            testButton.setOnClickListener {
+////                viewModel.fetchArticle()
+//                viewModel.fetchVocabularySet()
+//            }
+
             /** The following operation is used to test LocalDatabase.kt
             forTestLocalDatabaseUseButton.setOnClickListener {
                 viewModel.addAchievement()
@@ -104,6 +109,10 @@ class HomePageFragment: Fragment()  {
                     }
                 }
             }
+
+//            vocabularySetModel.observe(viewLifecycleOwner) { newItem ->
+//                binding?.testContent?.text = newItem?.toString()
+//            }
 
             /** The following operations are used to test LocalDatabase.kt
             achievementsFlow.observe(viewLifecycleOwner) { newList ->

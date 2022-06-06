@@ -19,7 +19,7 @@ class ShowArticleViewModel @Inject constructor (
 
     private fun onFetchRandomArticle() {
         val randomInt = (0..4).random()
-        _displayedArticle.value = useCases.getArticleUseCase(randomInt)
+//        _displayedArticle.value = useCases.getArticleUseCase(randomInt)
     }
 
     fun onEvent(event: ShowArticleEvent) {

@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 class GetAllAchievementsUseCase(
     private val repository: Repository
 ) {
-    operator fun invoke() : Flow<List<Achievement>> {
+    suspend operator fun invoke() : List<Achievement> {
         return repository.getAllAchievements()
     }
 }

@@ -1,14 +1,16 @@
 package com.example.finalprojecttemplate.ui.homepage
 
+import android.util.Log
+import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.lifecycle.*
-import com.example.finalprojecttemplate.domain.models.Achievement
-import com.example.finalprojecttemplate.domain.models.HomePageInfo
-import com.example.finalprojecttemplate.domain.models.HomePageInfoModel
+import com.example.finalprojecttemplate.domain.models.*
 import com.example.finalprojecttemplate.domain.usecases.UseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlin.math.atan
 
 @HiltViewModel
 class HomePageViewModel @Inject constructor (
@@ -48,6 +50,39 @@ class HomePageViewModel @Inject constructor (
                 e.printStackTrace()
                 _status.value = DataFetchStatus.ERROR
             }
+        }
+    }
+
+    var articleModel = MutableLiveData<ArticleModel>()
+
+    fun fetchArticle() {
+        val randomId = (0..4).random()
+        Log.d("HomePageViewModel", "$randomId")
+
+        viewModelScope.launch {
+            articleModel.value = useCases.getArticleUseCase(randomId)
+        }
+    }
+
+    var vocabularySetModel = MutableLiveData<VocabularySetModel>()
+
+    fun fetchVocabularySet() {
+        val randomId = (0..4).random()
+        Log.d("HomePageViewModel", "$randomId")
+
+        viewModelScope.launch {
+            vocabularySetModel.value = useCases.getVocabularySet(randomId)
+        }
+    }
+
+    var themeDataModel = MutableLiveData<ThemeDataModel>()
+
+    fun fetchThemeData() {
+        val randomId = (0..4).random()
+        Log.d("HomePageViewModel", "$randomId")
+
+        viewModelScope.launch {
+            themeDataModel.value = useCases.getThemeData(randomId)
         }
     }
 

@@ -992,6 +992,9 @@ class FakeDatabase {
     )
 
     fun getArticleByIndex(index: Int): ArticleModel {
+
+        if ((0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
+
         return if (index in 0 until 5) articles[index]
         else ArticleModel(
             id = -1,
@@ -1007,8 +1010,10 @@ class FakeDatabase {
         )
     }
 
-    suspend fun getVocabularySetByIndex(index: Int): VocabularySetModel {
-        delay(1000)
+    fun getVocabularySetByIndex(index: Int): VocabularySetModel {
+//        delay(1000)
+        if ((0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
+
         return if (index in 0 until 5) vocabularySets[index]
         else VocabularySetModel(
             id = -1,
@@ -1030,7 +1035,9 @@ class FakeDatabase {
         )
     }
 
-    suspend fun getHomePageInfo(userid: Int): HomePageInfoModel {
+    fun getHomePageInfo(userid: Int): HomePageInfoModel {
+        if ((0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
+
         var articleInfo: MutableList<HomePageInfo> = mutableListOf()
         var vocabularySetInfo: MutableList<HomePageInfo> = mutableListOf()
         var themeInfo: MutableList<HomePageInfo> = mutableListOf()
@@ -1039,7 +1046,7 @@ class FakeDatabase {
         vocabularySets.forEach{ item->vocabularySetInfo.add(HomePageInfo(item.id, item.image, item.name)) }
         themeData.forEach{ item->themeInfo.add(HomePageInfo(item.id, item.image, "item.name???")) }
 
-        delay(1000)
+//        delay(1000)
 
         return if (userid in 0 until 5) HomePageInfoModel(articleInfo, vocabularySetInfo, themeInfo)
         else HomePageInfoModel(
@@ -1050,6 +1057,8 @@ class FakeDatabase {
     }
 
     fun getThemeData(index: Int): ThemeDataModel {
+        if ((0..1).random() == 1) throw Exception("There is an fake error occurs in the fake database.")
+
         return if (index in 0 until 5) themeData[index]
         else ThemeDataModel(
             id = -1,
