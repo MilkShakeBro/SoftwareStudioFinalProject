@@ -30,7 +30,7 @@ interface Repository {
     fun getUserName(): String
     fun getAmountOfVoc(): Int
     fun getIsDarkMode(): Boolean
-    suspend fun setUserName(newName: String)
-    suspend fun setAmountOfVoc(newAmount: Int)
-    suspend fun setIsDarkMode(darkMode: Boolean)
+    fun setUserName(newName: String)
+    fun setAmountOfVoc(newAmount: Int)
+    fun setIsDarkMode(darkMode: Boolean)
 }

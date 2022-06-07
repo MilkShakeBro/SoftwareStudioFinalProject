@@ -105,15 +105,15 @@ class RepositoryImpl(
         return userInfoDataStore.getIsDarkModeFromDataStoreStore()
     }
 
-    override suspend fun setUserName(newName: String) {
+    override fun setUserName(newName: String) {
         userInfoDataStore.saveUserNameToDataStore(newName)
     }
 
-    override suspend fun setAmountOfVoc(newAmount: Int) {
+    override fun setAmountOfVoc(newAmount: Int) {
         userInfoDataStore.saveAmountOfVocToDataStore(newAmount)
     }
 
-    override suspend fun setIsDarkMode(darkMode: Boolean) {
+    override fun setIsDarkMode(darkMode: Boolean) {
         userInfoDataStore.saveIsDarkModeToDataStoreStore(darkMode)
     }
 }

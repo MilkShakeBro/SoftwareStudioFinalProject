@@ -54,6 +54,14 @@ class HomePageViewModel @Inject constructor (
         }
     }
 
+//    fun setIsDarkMode(isDarkMode: Boolean) {
+//        useCases.setIsDarkModeUseCase(isDarkMode)
+//    }
+//
+//    fun getIsDarkMode() : Boolean{
+//        return useCases.getIsDarkMode()
+//    }
+
     /** The following functions and variables are used too test LocalDatabase.kt
     val achievementsFlow = useCases.getAllAchievementsUseCase().asLiveData()
 

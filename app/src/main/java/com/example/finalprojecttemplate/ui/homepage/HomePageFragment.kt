@@ -52,6 +52,8 @@ class HomePageFragment: Fragment()  {
 //        vocabularyAdapter.submitList(fakeDataSource.vocabulariesTestCases)
 //        themeAdapter.submitList(fakeDataSource.themeTestCases)
 
+//        Log.d("HomePage", "${viewModel.getIsDarkMode()}")
+
         binding?.apply {
             readingArticleRecyclerView.adapter = articleAdapter
             vocabulariesSetsListRecyclerView.adapter = vocabularyAdapter
@@ -61,6 +63,7 @@ class HomePageFragment: Fragment()  {
             binding?.loadingProgressBar?.visibility = View.VISIBLE
             binding?.errorMessageTextView?.visibility = View.GONE
             profileButton.setOnClickListener {
+//                viewModel.setIsDarkMode(false)
                 val action =
                     HomePageFragmentDirections.actionHomePageFragmentToProfilePageFragment()
                 findNavController().navigate(action)
