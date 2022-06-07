@@ -41,14 +41,13 @@
                     android:id="@+id/reading_article_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="8dp"
                     android:text="Reading Articles"
                     android:textAppearance="?attr/textAppearanceHeadline5"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="16dp"/>
+                    android:layout_marginTop="24dp"
+                    android:layout_marginHorizontal="16dp"/>
 <!--                    android:layout_marginTop="80dp"/>-->
 
 
@@ -69,13 +68,12 @@
                     android:id="@+id/vocabularies_sets_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="8dp"
                     android:text="Selecting Vocabularies Sets"
                     android:textStyle="bold"
                     android:textAppearance="?attr/textAppearanceHeadline5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/reading_article_recycler_view" />
+                    app:layout_constraintTop_toBottomOf="@id/reading_article_recycler_view"
+                    android:layout_marginHorizontal="16dp"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/vocabularies_sets_list_recycler_view"
@@ -93,13 +91,12 @@
                     android:id="@+id/vocabulary_theme_list_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="8dp"
                     android:text="Selecting Vocabularies Themes"
                     android:textStyle="bold"
                     android:textAppearance="?attr/textAppearanceHeadline5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/vocabularies_sets_list_recycler_view" />
+                    app:layout_constraintTop_toBottomOf="@id/vocabularies_sets_list_recycler_view"
+                    android:layout_marginHorizontal="16dp"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/theme_list_recycler_view"
@@ -113,13 +110,19 @@
                     android:layout_margin="0dp"
                     />
 
-                <Button
+                <ImageButton
                     android:id="@+id/profile_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Profile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     tools:layout_editor_absoluteX="301dp"
-                    tools:layout_editor_absoluteY="0dp" />
+                    tools:layout_editor_absoluteY="0dp"
+                    android:background="@drawable/ripple_ic_profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/reading_article_recycler_view"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginHorizontal="16dp" />
 
                 <!-- The following elements are used to test UserInfoDataStore.kt
                 <TextView

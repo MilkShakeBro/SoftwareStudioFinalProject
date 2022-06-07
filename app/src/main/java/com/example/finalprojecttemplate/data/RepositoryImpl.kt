@@ -93,31 +93,27 @@ class RepositoryImpl(
         return localDatabaseDao.getAchievements()
     }
 
-    override fun getUserName(): Flow<String> {
-        return userInfoDataStore.dataStoreUserNameFlow
+    override fun getUserName(): String {
+        return "userInfoDataStore.UserName"
     }
 
-    override fun getAmountOfVoc(): Flow<Int> {
-        return userInfoDataStore.dataStoreAmountOfVocFlow
+    override fun getAmountOfVoc(): Int {
+        return 0
     }
 
-    override fun getIsDarkMode(): Flow<Boolean> {
-        return userInfoDataStore.dataStoreIsDarkModeFlow
+    override fun getIsDarkMode(): Boolean {
+        return userInfoDataStore.getIsDarkModeFromDataStoreStore()
     }
 
-    override suspend fun setUserName(newName: String) {
+    override fun setUserName(newName: String) {
         userInfoDataStore.saveUserNameToDataStore(newName)
     }
 
-    override suspend fun setAmountOfVoc(newAmount: Int) {
+    override fun setAmountOfVoc(newAmount: Int) {
         userInfoDataStore.saveAmountOfVocToDataStore(newAmount)
     }
 
-    override suspend fun setIsDarkMode(darkMode: Boolean) {
+    override fun setIsDarkMode(darkMode: Boolean) {
         userInfoDataStore.saveIsDarkModeToDataStoreStore(darkMode)
-    }
-
-    override suspend fun increaseAmountOfVocBy(inc: Int) {
-        userInfoDataStore.increaseAmountOfVocByToDataStore(inc)
     }
 }

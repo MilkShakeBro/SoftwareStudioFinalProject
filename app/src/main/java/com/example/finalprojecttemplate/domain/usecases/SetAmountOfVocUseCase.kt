@@ -7,7 +7,7 @@ import kotlinx.coroutines.withContext
 class SetAmountOfVocUseCase(
     val repository: Repository
 ) {
-    suspend operator fun invoke(newAmount: Int) {
+    operator fun invoke(newAmount: Int) {
         repository.setAmountOfVoc(newAmount = newAmount)
     }
 }
