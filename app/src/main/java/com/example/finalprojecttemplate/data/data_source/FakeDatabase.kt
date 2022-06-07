@@ -801,7 +801,7 @@ class FakeDatabase {
     private val themeData: List<ThemeDataModel> = listOf(
         ThemeDataModel(
             id = 0,
-            image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/b/b1/Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio.png?20180723040820"),
+            image = Uri.parse("https://lh3.googleusercontent.com/aqsA6GdDcWXTx4FiVJbEeJLoooK2I0wfZBJg-kVx3Nq6RKwBVAZqAFVhEQkbXetpiALnsfXPOD_M64KLp-Ai=w1920-h865"),
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -843,168 +843,168 @@ class FakeDatabase {
         ),
         ThemeDataModel(
             id = 1,
-            image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
+            image = Uri.parse("https://lh4.googleusercontent.com/V5-0IspM95oxvrpSipt1kEuZ_1wM02umGiCDwigcriOorq_W1CS0CiZriLX1CWVbGnwtMmA3FqH0w1WZHE37=w1087-h865"),
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "wall shelf",
+                    chinese = "壁架",
                     positionForClickButton = Coordinate(150.0f, 150.5f)
                 ),
                 VocabularyForTheme(
                     id = 1,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "chalk",
+                    chinese = "粉筆",
                     positionForClickButton = Coordinate(120.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 2,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "blackboard",
+                    chinese = "黑板",
                     positionForClickButton = Coordinate(130.0f, 130.0f)
                 ),
                 VocabularyForTheme(
                     id = 3,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "bulletin board",
+                    chinese = "公告欄",
                     positionForClickButton = Coordinate(100.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "globe",
+                    chinese = "地球儀",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
                 VocabularyForTheme(
-                    id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    id = 5,
+                    word = "loudspeaker",
+                    chinese = "揚聲器",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
             )
         ),
         ThemeDataModel(
             id = 2,
-            image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
+            image = Uri.parse("https://lh5.googleusercontent.com/QoQuDjyTek088H8e9D79z6gf10b_Z51f0YUWwS9q-8fnY8u1D0oYr5uJT0RUn-aZ4FsIhfb1--OUC0BYf7lU=w1087-h865"),
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "deli section",
+                    chinese = "熟食區",
                     positionForClickButton = Coordinate(150.0f, 150.5f)
                 ),
                 VocabularyForTheme(
                     id = 1,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = " frozen food",
+                    chinese = "冷凍食品",
                     positionForClickButton = Coordinate(120.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 2,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "raw food",
+                    chinese = "生食",
                     positionForClickButton = Coordinate(130.0f, 130.0f)
                 ),
                 VocabularyForTheme(
                     id = 3,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "bar",
+                    chinese = "吧檯",
                     positionForClickButton = Coordinate(100.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "cash register",
+                    chinese = "收銀台",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
                 VocabularyForTheme(
-                    id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    id = 5,
+                    word = "trolley",
+                    chinese = "手推車",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
         ),
         ),
         ThemeDataModel(
             id = 3,
-            image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
+            image = Uri.parse("https://lh5.googleusercontent.com/H8L8p_4W07ejbgzzEY6RuUobVWuz2L-I1eY2OsFbFVS4TktAvqxQmbnhqQ-wHdg_WBOmzUWxfoCK-4kU5Gj5=w1087-h865"),
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "pendant light",
+                    chinese = "吊燈",
                     positionForClickButton = Coordinate(150.0f, 150.5f)
                 ),
                 VocabularyForTheme(
                     id = 1,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "First aid kit",
+                    chinese = "急救箱",
                     positionForClickButton = Coordinate(120.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 2,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "rolling cart",
+                    chinese = "滾動車",
                     positionForClickButton = Coordinate(130.0f, 130.0f)
                 ),
                 VocabularyForTheme(
                     id = 3,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "microscope",
+                    chinese = "顯微鏡",
                     positionForClickButton = Coordinate(100.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "X-ray photograph",
+                    chinese = "X光像片",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
                 VocabularyForTheme(
-                    id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    id = 5,
+                    word = "blood capsule",
+                    chinese = "血袋",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
             )
         ),
         ThemeDataModel(
             id = 4,
-            image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
+            image = Uri.parse("https://lh4.googleusercontent.com/h0R2ygprX1ZM6NkCujhm8AQF7xGrR6vPMyvk7ywW4ZJgAViwdtR-O1HqpznkuASw5QFRG9BTmdQvF2kCmWXx=w1087-h865"),
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "cupboard",
+                    chinese = "櫥櫃",
                     positionForClickButton = Coordinate(150.0f, 150.5f)
                 ),
                 VocabularyForTheme(
                     id = 1,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "chimney",
+                    chinese = "煙囪",
                     positionForClickButton = Coordinate(120.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 2,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "curtain",
+                    chinese = "窗簾",
                     positionForClickButton = Coordinate(130.0f, 130.0f)
                 ),
                 VocabularyForTheme(
                     id = 3,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "kitchen utensils",
+                    chinese = "廚具",
                     positionForClickButton = Coordinate(100.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "refrigerator",
+                    chinese = "冰箱",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
                 VocabularyForTheme(
-                    id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    id = 5,
+                    word = "oven",
+                    chinese = "烤箱",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
             )

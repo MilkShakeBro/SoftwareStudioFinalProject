@@ -48,9 +48,6 @@ class ArticlePageFragment: Fragment()  {
 
             showArticleViewModel.articleindex = arguments?.getInt("articleId") ?: 0
 
-            showArticleViewModel.articleindex = arguments?.getInt("articleId") ?: 0
-
-
             ArticleContent.text = ""
             QuestionOne.text = ""
             QuestionTwo.text = ""

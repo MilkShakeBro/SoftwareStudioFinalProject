@@ -18,6 +18,7 @@ class ShowThemeViewModel @Inject constructor (
     private val useCases: UseCases
 ): ViewModel() {
 
+    var themeindex = 0
     private val _displayedTheme = MutableLiveData<ThemeDataModel>()
     val displayTheme : LiveData<ThemeDataModel>
         get() = _displayedTheme
@@ -25,7 +26,7 @@ class ShowThemeViewModel @Inject constructor (
 
     fun onEvent() {
         viewModelScope.launch{
-            _displayedTheme.value = useCases.getThemeData(0)
+            _displayedTheme.value = useCases.getThemeData(themeindex)
         }
     }
 }
