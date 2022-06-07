@@ -1,6 +1,7 @@
 package com.example.finalprojecttemplate.data.data_source
 
 import android.net.Uri
+import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.domain.models.*
 import kotlinx.coroutines.delay
 import java.lang.Thread.sleep
@@ -1015,177 +1016,220 @@ class FakeDatabase {
             achievement = listOf(
                 Achievement(
                     id = 0,
+                    img = Uri.parse("https://www.google.com"),
+                    description = "A",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 1,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject"+ R.drawable.achievement2),
+                    description = "B",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 2,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement3.png"),
+                    description = "C",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 3,
                     img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "This is a description.",
+                    description = "D",
                     obtained = false
-                ),
-                Achievement(
-                    id = 1,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 2,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = false
-                ),
-                Achievement(
-                    id = 3,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
                 ),
                 Achievement(
                     id = 4,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = false
-                )
-            ),
-        ),
-        AchievementSetModel(
-            id = 1,
-            achievement = listOf(
-                Achievement(
-                    id = 0,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "E",
                     obtained = false
                 ),
                 Achievement(
-                    id = 1,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 2,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 5,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "F",
                     obtained = false
                 ),
                 Achievement(
-                    id = 3,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 4,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = false
-                )
-            ),
-        ),
-        AchievementSetModel(
-            id = 2,
-            achievement = listOf(
-                Achievement(
-                    id = 0,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 6,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "G",
                     obtained = false
                 ),
                 Achievement(
-                    id = 1,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 2,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 7,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "H",
                     obtained = false
                 ),
                 Achievement(
-                    id = 3,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 4,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = false
-                )
-            ),
-        ),
-        AchievementSetModel(
-            id = 3,
-            achievement = listOf(
-                Achievement(
-                    id = 0,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 8,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "I",
                     obtained = false
                 ),
                 Achievement(
-                    id = 1,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 2,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 9,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "J",
                     obtained = false
                 ),
                 Achievement(
-                    id = 3,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 4,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = false
-                )
-            ),
-        ),
-        AchievementSetModel(
-            id = 4,
-            achievement = listOf(
-                Achievement(
-                    id = 0,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 10,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "K",
                     obtained = false
                 ),
                 Achievement(
-                    id = 1,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 2,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 11,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "L",
                     obtained = false
                 ),
                 Achievement(
-                    id = 3,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
+                    id = 12,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "M",
+                    obtained = false
                 ),
                 Achievement(
-                    id = 4,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 13,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "N",
                     obtained = false
-                )
-            ),
-        ),
+                ),
+                Achievement(
+                    id = 14,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "O",
+                    obtained = false
+                ),Achievement(
+                    id = 15,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "P",
+                    obtained = false
+                ),
+            )
+        )
     )
+//    private val achievementSet: List<AchievementSetModel> = listOf(
+//        AchievementSetModel(
+//            id = 0,
+//            achievement = listOf(
+//                Achievement(
+//                    id = 0,
+//                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+//                    description = "A",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 1,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "B",
+//                    obtained = true
+//                ),
+//                Achievement(
+//                    id = 2,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "C",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 3,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "D",
+//                    obtained = true
+//                )
+//            ),
+//        ),
+//        AchievementSetModel(
+//            id = 1,
+//            achievement = listOf(
+//                Achievement(
+//                    id = 0,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 1,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = true
+//                ),
+//                Achievement(
+//                    id = 2,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 3,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = true
+//                )
+//            ),
+//        ),
+//        AchievementSetModel(
+//            id = 2,
+//            achievement = listOf(
+//                Achievement(
+//                    id = 0,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 1,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = true
+//                ),
+//                Achievement(
+//                    id = 2,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 3,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = true
+//                )
+//            ),
+//        ),
+//        AchievementSetModel(
+//            id = 3,
+//            achievement = listOf(
+//                Achievement(
+//                    id = 0,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 1,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = true
+//                ),
+//                Achievement(
+//                    id = 2,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 3,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = true
+//                )
+//            ),
+//        ),
+//    )
     private val personalInfo: List<PersonalInfoModel> = listOf(
         PersonalInfoModel(
             id = 0,
@@ -1325,6 +1369,71 @@ class FakeDatabase {
                     id = 4,
                     img = Uri.parse("https://www.google.com"),
                     description = "This is a description.",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 5,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "F",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 6,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "G",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 7,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "H",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 8,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "I",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 9,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "J",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 10,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "K",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 11,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "L",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 12,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "M",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 13,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "N",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 14,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "O",
+                    obtained = false
+                ),Achievement(
+                    id = 15,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "P",
                     obtained = false
                 )
             ),
