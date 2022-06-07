@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 class GetUserName (
     val repository: Repository
 ) {
-    operator fun invoke(): Flow<String> {
+    operator fun invoke(): String {
         return repository.getUserName()
     }
 }

@@ -12,7 +12,7 @@ class FakeDatabase {
         VocabularySetModel(
             id = 0,
             name = "裝飾",
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmo271tueBdfBOHtj5mNlzaQwguPDpTNqW3g&usqp=CAU"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
@@ -103,7 +103,7 @@ class FakeDatabase {
         VocabularySetModel(
             id = 1,
             name = "烹飪",
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://live.staticflickr.com/593/32545146336_3a198e4cf8_b.jpg"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
@@ -194,7 +194,7 @@ class FakeDatabase {
         VocabularySetModel(
             id = 2,
             name = "農牧",
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Agriculture_in_Vietnam_with_farmers.jpg/1200px-Agriculture_in_Vietnam_with_farmers.jpg?20110212003114"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
@@ -285,7 +285,7 @@ class FakeDatabase {
         VocabularySetModel(
             id = 3,
             name = "運動",
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://borgenproject.org/wp-content/uploads/Sports-Programs.jpg"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
@@ -376,7 +376,7 @@ class FakeDatabase {
         VocabularySetModel(
             id = 4,
             name = "生病",
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://cdn.pixabay.com/photo/2020/02/29/13/42/sick-4890118_1280.jpg"),
             vocabularySet = listOf(
                 Vocabulary(
                     id = 0,
@@ -501,7 +501,7 @@ class FakeDatabase {
                     "(C) Scientists are testing if the GABA theory works on mice as it does on zebrafish.",
                     "(D) Understanding regeneration in zebrafish may allow humans to regrow their organs.")
             ),
-            image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/330px-Image_created_with_a_mobile_phone.png"),
+            image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/6/6b/Zebrafish_%2826436913602%29.jpg"),
             content = "     Zebrafish, named for their characteristic stripes, have been a popular test subject for researchers. Only " +
                     "a few centimeters in length, the fish breed easily in captivity, grow quickly, and their transparent body " +
                     "makes it easy to study their organs. Above all, they possess some amazing “self-healing” power. When part " +
@@ -565,7 +565,7 @@ class FakeDatabase {
                     "(C) c, d, e, f ",
                     "(D) a, d, e, f ")
             ),
-            image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/330px-Image_created_with_a_mobile_phone.png"),
+            image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/e/e8/Yellow_hard_hat.jpg"),
             content = "     A hard hat is a helmet used mostly at worksites to protect the head from injuries due to falling objects." +
                     "Since its introduction in the early 20th century, the headgear has saved countless lives and is considered the" +
                     "number one safety tool for construction workers.\n" +
@@ -623,7 +623,7 @@ class FakeDatabase {
                     "(C) It may replace feed for livestock.",
                     "(D) It can increase global food production.")
             ),
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Cactus_%282019%29_20.jpg/1200px-Cactus_%282019%29_20.jpg?20190630100103"),
             content = "     The prickly pear cactus is such a powerful symbol in Mexico that it occupies a prime spot on Mexico’s" +
                     "national flag. The plant was considered sacred by the ancient Aztecs, and modern-day Mexicans eat it," +
                     "drink it, and even use it in medicines and shampoos. Now scientists have come up with a new use for the" +
@@ -680,7 +680,7 @@ class FakeDatabase {
                     "(C) A proof of identity.",
                     "(D) A list of seaports.")
             ),
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://live.staticflickr.com/1793/43966642372_98a76cef32_b.jpg"),
             content = "     The concept of a travel document, which shows a person is under a ruler’s protection while in a foreign" +
                     "land, has probably existed since rulers and states were first invented. But the earliest mention of an object" +
                     "which we might recognize as a passport appeared in about 450 B.C. The Hebrew Bible states that Nehemiah," +
@@ -734,7 +734,7 @@ class FakeDatabase {
                     "(C) Look for new techniques to boost production.",
                     "(D) Build better connections among industry members.")
             ),
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://cdn.pixabay.com/photo/2018/04/17/06/51/olive-oil-3326703_960_720.jpg"),
             content = "     Probably the most widely used oil in cooking, olive oil is made by crushing olives with stone or steel" +
                     "blades to release the oil. Extra virgin oil, the finest grade, is made from the first pressing of the olives and" +
                     "has a very low acidity rate (under 1%). To be qualified as “extra virgin,” the oil must also pass both an" +
@@ -800,7 +800,7 @@ class FakeDatabase {
     private val themeData: List<ThemeDataModel> = listOf(
         ThemeDataModel(
             id = 0,
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/b/b1/Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio.png?20180723040820"),
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -842,7 +842,7 @@ class FakeDatabase {
         ),
         ThemeDataModel(
             id = 1,
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -884,7 +884,7 @@ class FakeDatabase {
         ),
         ThemeDataModel(
             id = 2,
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -926,7 +926,7 @@ class FakeDatabase {
         ),
         ThemeDataModel(
             id = 3,
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -968,7 +968,7 @@ class FakeDatabase {
         ),
         ThemeDataModel(
             id = 4,
-            image = Uri.parse("https://www.google.com"),
+            image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
