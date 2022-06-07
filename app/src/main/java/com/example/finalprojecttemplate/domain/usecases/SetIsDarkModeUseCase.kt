@@ -5,7 +5,7 @@ import com.example.finalprojecttemplate.domain.repository.Repository
 class SetIsDarkModeUseCase(
     val repository: Repository
 ) {
-    suspend operator fun invoke(isDarkMode: Boolean) {
+    operator fun invoke(isDarkMode: Boolean) {
         repository.setIsDarkMode(darkMode = isDarkMode)
     }
 }
