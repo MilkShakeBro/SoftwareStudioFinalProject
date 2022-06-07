@@ -22,7 +22,6 @@ class SettingPageFragment: Fragment()  {
 
     private var binding: SettingFragmentBinding? = null
     private val showDarkModeViewModel: ShowDarkModeViewModel by viewModels()
-    private var D : Boolean? = null
 
 
     override fun onCreateView(
@@ -41,7 +40,6 @@ class SettingPageFragment: Fragment()  {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.apply {
-            Log.d("AAA",showDarkModeViewModel.darkMode().toString())
             if(showDarkModeViewModel.darkMode()==true){
                 DarkTheme.setChecked(false)
             }
@@ -51,12 +49,10 @@ class SettingPageFragment: Fragment()  {
             DarkTheme.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
                 if(isChecked){
                     showDarkModeViewModel.setdarkMode(false)
-                    Log.d("AAAAA",DarkTheme.isChecked.toString())
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 }
                 else{
                     showDarkModeViewModel.setdarkMode(true)
-                    Log.d("AAAAAA",DarkTheme.isChecked.toString())
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 }
             })
