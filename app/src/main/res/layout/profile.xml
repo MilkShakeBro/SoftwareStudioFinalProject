@@ -102,8 +102,7 @@
                     android:layout_width="63dp"
                     android:layout_height="72dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement1" />
+                    android:background="@android:color/transparent" />
 
                 <ImageButton
                     android:id="@+id/achievement_button2"
@@ -111,8 +110,7 @@
                     android:layout_height="72dp"
                     android:layout_marginStart="20dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement2" />
+                    android:background="@android:color/transparent" />
 
                 <ImageButton
                     android:id="@+id/achievement_button3"
@@ -120,8 +118,7 @@
                     android:layout_height="72dp"
                     android:layout_marginStart="20dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement3"/>
+                    android:background="@android:color/transparent" />
 
                 <ImageButton
                     android:id="@+id/achievement_button4"
@@ -129,8 +126,7 @@
                     android:layout_height="72dp"
                     android:layout_marginStart="20dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement4" />
+                    android:background="@android:color/transparent" />
             </LinearLayout>
 
             <LinearLayout
@@ -147,8 +143,7 @@
                     android:layout_width="63dp"
                     android:layout_height="72dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement5" />
+                    android:background="@android:color/transparent" />
 
                 <ImageButton
                     android:id="@+id/achievement_button6"
@@ -156,8 +151,7 @@
                     android:layout_height="72dp"
                     android:layout_marginStart="20dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement6" />
+                    android:background="@android:color/transparent" />
 
                 <ImageButton
                     android:id="@+id/achievement_button7"
@@ -165,8 +159,7 @@
                     android:layout_height="72dp"
                     android:layout_marginStart="20dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement7" />
+                    android:background="@android:color/transparent" />
 
                 <ImageButton
                     android:id="@+id/achievement_button8"
@@ -174,8 +167,7 @@
                     android:layout_height="72dp"
                     android:layout_marginStart="20dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement8" />
+                    android:background="@android:color/transparent" />
             </LinearLayout>
 
             <LinearLayout
@@ -193,8 +185,7 @@
                     android:layout_height="55dp"
                     android:layout_marginTop="10dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement9" />
+                    android:background="@android:color/transparent" />
 
                 <ImageButton
                     android:id="@+id/achievement_button10"
@@ -202,8 +193,7 @@
                     android:layout_height="65dp"
                     android:layout_marginStart="20dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement10" />
+                    android:background="@android:color/transparent" />
 
                 <ImageButton
                     android:id="@+id/achievement_button11"
@@ -211,8 +201,7 @@
                     android:layout_height="65dp"
                     android:layout_marginStart="20dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement11"/>
+                    android:background="@android:color/transparent"/>
 
                 <ImageButton
                     android:id="@+id/achievement_button12"
@@ -220,8 +209,7 @@
                     android:layout_height="65dp"
                     android:layout_marginStart="20dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement12" />
+                    android:background="@android:color/transparent" />
             </LinearLayout>
 
             <LinearLayout
@@ -239,8 +227,7 @@
                     android:layout_width="63dp"
                     android:layout_height="72dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement13" />
+                    android:background="@android:color/transparent" />
 
                 <ImageButton
                     android:id="@+id/achievement_button14"
@@ -248,8 +235,7 @@
                     android:layout_height="72dp"
                     android:layout_marginStart="20dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement14" />
+                    android:background="@android:color/transparent" />
 
                 <ImageButton
                     android:id="@+id/achievement_button15"
@@ -257,8 +243,7 @@
                     android:layout_height="72dp"
                     android:layout_marginStart="20dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement15" />
+                    android:background="@android:color/transparent" />
 
                 <ImageButton
                     android:id="@+id/achievement_button16"
@@ -266,8 +251,7 @@
                     android:layout_height="72dp"
                     android:layout_marginStart="20dp"
                     android:scaleType="centerInside"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/achievement16" />
+                    android:background="@android:color/transparent" />
             </LinearLayout>
         </LinearLayout>
 

@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.finalprojecttemplate.domain.models.AchievementSetModel
 import com.example.finalprojecttemplate.domain.models.ArticleModel
+import com.example.finalprojecttemplate.domain.models.PersonalInfoModel
 import com.example.finalprojecttemplate.domain.usecases.UseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -16,6 +17,10 @@ class ShowAchievementViewModel @Inject constructor (
 ): ViewModel() {
 
     private var index = 0
+    private var personal_index = 0
+    private val _displayPersonalInfo = MutableLiveData<PersonalInfoModel>()
+    val diaplayPersonalInfo : LiveData<PersonalInfoModel>
+        get() = _displayPersonalInfo
     private val _displayedAchievement = MutableLiveData<AchievementSetModel>()
     val displayedAchievement : LiveData<AchievementSetModel>
         get() = _displayedAchievement
@@ -23,6 +28,7 @@ class ShowAchievementViewModel @Inject constructor (
     fun onEvent() {
         viewModelScope.launch {
             _displayedAchievement.value = useCases.getAchievement(index)
+            _displayPersonalInfo.value = useCases.getPersonalInfo(personal_index)
         }
     }
 }

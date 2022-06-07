@@ -1016,97 +1016,97 @@ class FakeDatabase {
             achievement = listOf(
                 Achievement(
                     id = 0,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "A",
+                    img = Uri.parse("https://lh3.googleusercontent.com/1pnWGlZesMwbjfiKoE2obKGeTTgq8ooUJ-3R38nFfDVxusfnb-VFqGyH6Awd1p3icPclwnwd7FVyJP2k1tfC=w2480-h1684"),
+                    description = "Finish the game once successfully",
                     obtained = false
                 ),
                 Achievement(
                     id = 1,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject"+ R.drawable.achievement2),
-                    description = "B",
+                    img = Uri.parse("https://lh3.googleusercontent.com/rr0cgE17RqgM94ZI5JNf4jwD00ZCBb-T0OQlvxjYNOhjszmpOMI58pXApoW5lQJ-BDUKRCMtuUaTf3Tu7kpz=w1978-h1684"),
+                    description = "Finish 3 games",
                     obtained = false
                 ),
                 Achievement(
                     id = 2,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement3.png"),
-                    description = "C",
+                    img = Uri.parse("https://lh5.googleusercontent.com/Ie_dfKYcubpEEOF2ny4QnQVSGWaVYNOi9dtviSPQ9PNkDbh2zmeC4Ukmy7RgJtQHE4_4PhLEmymU7vnaRtk3=w1776-h1684"),
+                    description = "Finish 5 games",
                     obtained = false
                 ),
                 Achievement(
                     id = 3,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "D",
+                    img = Uri.parse("https://lh6.googleusercontent.com/pmuzN-wFouxvKeYceMKNMdgFwAMvk2WzxCp3RJJFnu0nE97XegzQ9TV0SK2qzpo0VsfhQDFjOWnqYqyh7_ki=w1776-h1684"),
+                    description = "Finish 10 games",
                     obtained = false
                 ),
                 Achievement(
                     id = 4,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "E",
+                    img = Uri.parse("https://lh5.googleusercontent.com/QneIzY6vfQbhBjkLQTicXNF8j87NtWCmF9ZL5_I0wLeS37YApjWKgbA3i3PuJp6LQCB3cXPkY5jEfU753351=w1776-h1684"),
+                    description = "Finish reading 3 articles",
                     obtained = false
                 ),
                 Achievement(
                     id = 5,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "F",
+                    img = Uri.parse("https://lh6.googleusercontent.com/MNUKuEX1edcpRIC8_H15IM4_Cm_eJHZRDQuQEIrsnma29pGEzXKbCJLt8jh4gc_BQUsvR33XwLbQ2fu6SGqo=w1776-h1684"),
+                    description = "Finish reading 5 articles",
                     obtained = false
                 ),
                 Achievement(
                     id = 6,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "G",
+                    img = Uri.parse("https://lh6.googleusercontent.com/ATM0O9tDMjrVzBamY_CwmcXbgK2Qe3gJM3ObkqIqqvFK4fKzlv8JHsJ24z2PjitcaLZNi4Cnz12_rGE7z7zr=w1776-h1684"),
+                    description = "Finish reading 10 articles",
                     obtained = false
                 ),
                 Achievement(
                     id = 7,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "H",
+                    img = Uri.parse("https://lh4.googleusercontent.com/Tux5SwkjxgAL0iL4mXd-6wQwg9RoiutiCDWlz7qqYyS7naCJHuPPvg2JAW7EghJjCv3lBOPJeh00qib0h8Ij=w1776-h1684"),
+                    description = "Finish reading 20 articles",
                     obtained = false
                 ),
                 Achievement(
                     id = 8,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "I",
+                    img = Uri.parse("https://lh5.googleusercontent.com/pvq9AF5fkaYnqKLLR8Qbnfcp4AKoou5LuellHnRK_pdC9dy7MnIghFtE6B6dBti0Oc7SHFs2Vb7LrcwcqTGt=w1776-h1684-rw"),
+                    description = "Rank 1 of the game",
                     obtained = false
                 ),
                 Achievement(
                     id = 9,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "J",
+                    img = Uri.parse("https://lh4.googleusercontent.com/VAq9XtruDBKSAwAeCbZRLGPl9ENKRFaJC26ihYfPUIBbhZT6XI4ZK_X9OCy9BjFgIERypypvAn2EBUhUCebT=w1776-h1684-rw"),
+                    description = "Finish one Theme Learning",
                     obtained = false
                 ),
                 Achievement(
                     id = 10,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "K",
+                    img = Uri.parse("https://lh4.googleusercontent.com/b5j6a8CdBhLJPI7yILr81stHD99K_619sJO9ZBJulO6pZLgdIEfYGp4IR8FmzgXIz-_O_HPBStcJcQPsRwxF=w1776-h1684"),
+                    description = "Finish 3 Theme Learning",
                     obtained = false
                 ),
                 Achievement(
                     id = 11,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "L",
+                    img = Uri.parse("https://lh5.googleusercontent.com/4oqWnG8brZzcBEoeeJJ-Y7k8RkSk_9699UNi94qzmNG98W_5NTeTNCJH4s4O1_-1K5Lr5fZLTtm-LuufFGBf=w1776-h1684"),
+                    description = "Spending one hour on flashcard",
                     obtained = false
                 ),
                 Achievement(
                     id = 12,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "M",
+                    img = Uri.parse("https://lh3.googleusercontent.com/-xkegJH-sauqO9NhSdhUydZkFSzp9snDs_JyUaj4_eAVGTg-bgFXZ9h_IIVnTKZRZ0yhO8gPNcEZDXQrDZ5O=w1776-h1684"),
+                    description = "Spending 10 hours on flashcard",
                     obtained = false
                 ),
                 Achievement(
                     id = 13,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "N",
+                    img = Uri.parse("https://lh5.googleusercontent.com/iXAdb96KpaU6BHtJLUjZAciYKIxcZi0Y-wPbzPBSf3GYzPLkdV8uyBDBTueEPD0_B4YeM95T5EkhGdOKrrkQ=w1776-h1684"),
+                    description = "Log in for 5 consecutive days",
                     obtained = false
                 ),
                 Achievement(
                     id = 14,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "O",
+                    img = Uri.parse("https://lh4.googleusercontent.com/EwzYJiCbQz18_OEoqnQVFHycobsoKPDOJ-1K-tq-tjWWQ-RdxXiGoV3F1CNCk3ltaaSSNmPhSJg-Iy9DZQk8=w1776-h1684"),
+                    description = "Log in for 10 consecutive days",
                     obtained = false
                 ),Achievement(
                     id = 15,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "P",
+                    img = Uri.parse("https://lh6.googleusercontent.com/VukT1_0N8ZUj1PoFpEXRCfiTRTizekL-X7pFVTXMPS4AxSzyUNrwi1PK3ReRXhKY7dG-tJLbFw4CPQcOw8Mw=w1776-h1684"),
+                    description = "Log in for 30 consecutive days",
                     obtained = false
                 ),
             )
@@ -1336,7 +1336,7 @@ class FakeDatabase {
     }
 
     suspend fun getAchievement(userid: Int): AchievementSetModel {
-        delay(1000)
+        delay(100)
         return if (userid in 0 until 5) achievementSet[userid]
         else AchievementSetModel(
             id = -1,
