@@ -16,7 +16,6 @@
             android:layout_width="330dp"
             android:layout_height="330dp"
             android:background="@drawable/card"
-            android:backgroundTint="@color/flashcard_background"
             android:orientation="vertical"
             android:padding="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -41,8 +40,8 @@
                 android:layout_gravity="fill"
                 android:gravity="center"
                 android:text="Content"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textColor="@color/black"
+                android:textSize="40sp" />
         </FrameLayout>
 
         <FrameLayout
@@ -51,7 +50,6 @@
             android:layout_height="330dp"
             android:alpha="0"
             android:background="@drawable/card"
-            android:backgroundTint="@color/flashcard_background"
             android:gravity="center"
             android:padding="16dp"
 
@@ -66,8 +64,8 @@
                 android:layout_height="300dp"
                 android:text="Content"
                 android:gravity="center"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textColor="@color/black"
+                android:textSize="40sp" />
 
         </FrameLayout>
 
