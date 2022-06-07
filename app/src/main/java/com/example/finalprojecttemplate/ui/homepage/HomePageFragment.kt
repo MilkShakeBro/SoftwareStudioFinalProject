@@ -1,6 +1,7 @@
 package com.example.finalprojecttemplate.ui.homepage
 
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.finalprojecttemplate.databinding.HomePageFragmentBinding
-import com.example.finalprojecttemplate.domain.models.showInString
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -60,11 +60,11 @@ class HomePageFragment: Fragment()  {
             binding?.loadingAndErrorLayout?.visibility = View.VISIBLE
             binding?.loadingProgressBar?.visibility = View.VISIBLE
             binding?.errorMessageTextView?.visibility = View.GONE
-            profileButton.setOnClickListener{
-                val action = HomePageFragmentDirections.actionHomePageFragmentToProfilePageFragment()
+            profileButton.setOnClickListener {
+                val action =
+                    HomePageFragmentDirections.actionHomePageFragmentToProfilePageFragment()
                 findNavController().navigate(action)
             }
-
 
 //            testButton.setOnClickListener {
 ////                viewModel.fetchArticle()

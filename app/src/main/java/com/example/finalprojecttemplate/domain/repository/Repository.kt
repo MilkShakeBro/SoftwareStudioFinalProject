@@ -27,11 +27,10 @@ interface Repository {
     suspend fun getAllAchievements(): List<Achievement>
 
     // Preference
-    fun getUserName(): Flow<String>
-    fun getAmountOfVoc(): Flow<Int>
-    fun getIsDarkMode(): Flow<Boolean>
+    fun getUserName(): String
+    fun getAmountOfVoc(): Int
+    fun getIsDarkMode(): Boolean
     suspend fun setUserName(newName: String)
     suspend fun setAmountOfVoc(newAmount: Int)
     suspend fun setIsDarkMode(darkMode: Boolean)
-    suspend fun increaseAmountOfVocBy(inc: Int)
 }

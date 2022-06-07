@@ -3,10 +3,7 @@ package com.example.finalprojecttemplate.di
 import android.app.Application
 import androidx.room.Room
 import com.example.finalprojecttemplate.data.RepositoryImpl
-import com.example.finalprojecttemplate.data.data_source.FakeDatabase
-import com.example.finalprojecttemplate.data.data_source.LocalDatabase
-import com.example.finalprojecttemplate.data.data_source.LocalDatabaseDao
-import com.example.finalprojecttemplate.data.data_source.UserInfoDataStore
+import com.example.finalprojecttemplate.data.data_source.*
 import com.example.finalprojecttemplate.domain.repository.Repository
 import com.example.finalprojecttemplate.domain.usecases.*
 import dagger.Module
