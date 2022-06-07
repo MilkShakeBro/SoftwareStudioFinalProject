@@ -19,7 +19,6 @@
             android:paddingEnd="30dp"
             android:text="Dark Theme"
             android:textSize="25sp"
-            android:checked="false"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
