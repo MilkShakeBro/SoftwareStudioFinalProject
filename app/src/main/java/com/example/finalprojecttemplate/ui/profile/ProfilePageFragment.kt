@@ -16,6 +16,7 @@ import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.databinding.ProfileBinding
 import com.example.finalprojecttemplate.databinding.AchievementPopupBinding
 import com.example.finalprojecttemplate.domain.models.AchievementSetModel
+import com.example.finalprojecttemplate.domain.utils.bindImage
 import com.example.finalprojecttemplate.ui.article.ShowArticleViewModel
 import com.example.finalprojecttemplate.ui.homepage.HomePageFragmentDirections
 import com.example.finalprojecttemplate.ui.setting.SettingPageFragmentDirections
@@ -51,110 +52,92 @@ class ProfilePageFragment: Fragment()  {
                 findNavController().navigate(action)
             }
             achievementButton1.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(0)?.img)
+                initializeAchievementPopupWindow(0)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(0)?.description
             }
             achievementButton2.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(1)?.img)
+                initializeAchievementPopupWindow(1)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(1)?.description
             }
             achievementButton3.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(2)?.img)
+                initializeAchievementPopupWindow(2)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(2)?.description
             }
             achievementButton4.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(3)?.img)
+                initializeAchievementPopupWindow(3)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(3)?.description
             }
             achievementButton5.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(4)?.img)
+                initializeAchievementPopupWindow(4)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(4)?.description
             }
             achievementButton6.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(5)?.img)
+                initializeAchievementPopupWindow(5)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(5)?.description
             }
             achievementButton7.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(6)?.img)
+                initializeAchievementPopupWindow(6)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(6)?.description
             }
             achievementButton8.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(7)?.img)
+                initializeAchievementPopupWindow(7)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(7)?.description
             }
             achievementButton9.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(8)?.img)
+                initializeAchievementPopupWindow(8)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(8)?.description
             }
             achievementButton10.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(9)?.img)
+                initializeAchievementPopupWindow(9)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(9)?.description
             }
             achievementButton11.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(10)?.img)
+                initializeAchievementPopupWindow(10)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(10)?.description
             }
             achievementButton12.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(11)?.img)
+                initializeAchievementPopupWindow(11)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(11)?.description
             }
             achievementButton13.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(12)?.img)
+                initializeAchievementPopupWindow(12)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(12)?.description
             }
             achievementButton14.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(13)?.img)
+                initializeAchievementPopupWindow(13)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(13)?.description
             }
             achievementButton15.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(14)?.img)
+                initializeAchievementPopupWindow(14)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(14)?.description
             }
             achievementButton16.setOnClickListener {
-                initializeAchievementPopupWindow()
-                achievementPopupBinding?.pic?.setImageURI(achievementdata?.achievement?.get(15)?.img)
+                initializeAchievementPopupWindow(15)
                 achievementPopupBinding?.descrip?.text = achievementdata?.achievement?.get(15)?.description
             }
         }
         showAchievementViewModel.displayedAchievement.observe(viewLifecycleOwner){ newachievement->
             achievementdata = newachievement
-            Log.d("AAAA",newachievement.achievement[0].img.toString())
-            Log.d("AAA",newachievement.achievement[1].img.toString())
-            binding?.achievementButton1?.setImageURI(newachievement.achievement[0].img)
-            binding?.achievementButton2?.setImageURI(newachievement.achievement[1].img)
-            binding?.achievementButton3?.setImageURI(newachievement.achievement[2].img)
-            binding?.achievementButton4?.setImageURI(newachievement.achievement[3].img)
-            binding?.achievementButton5?.setImageURI(newachievement.achievement[4].img)
-            binding?.achievementButton6?.setImageURI(newachievement.achievement[5].img)
-            binding?.achievementButton7?.setImageURI(newachievement.achievement[6].img)
-            binding?.achievementButton8?.setImageURI(newachievement.achievement[7].img)
-            binding?.achievementButton9?.setImageURI(newachievement.achievement[8].img)
-            binding?.achievementButton10?.setImageURI(newachievement.achievement[9].img)
-            binding?.achievementButton11?.setImageURI(newachievement.achievement[10].img)
-            binding?.achievementButton12?.setImageURI(newachievement.achievement[11].img)
-            binding?.achievementButton13?.setImageURI(newachievement.achievement[12].img)
-            binding?.achievementButton14?.setImageURI(newachievement.achievement[13].img)
-            binding?.achievementButton15?.setImageURI(newachievement.achievement[14].img)
-            binding?.achievementButton16?.setImageURI(newachievement.achievement[15].img)
+            bindImage(achievement_button1,newachievement.achievement[0].img)
+            bindImage(achievement_button2,newachievement.achievement[1].img)
+            bindImage(achievement_button3,newachievement.achievement[2].img)
+            bindImage(achievement_button4,newachievement.achievement[3].img)
+            bindImage(achievement_button5,newachievement.achievement[4].img)
+            bindImage(achievement_button6,newachievement.achievement[5].img)
+            bindImage(achievement_button7,newachievement.achievement[6].img)
+            bindImage(achievement_button8,newachievement.achievement[7].img)
+            bindImage(achievement_button9,newachievement.achievement[8].img)
+            bindImage(achievement_button10,newachievement.achievement[9].img)
+            bindImage(achievement_button11,newachievement.achievement[10].img)
+            bindImage(achievement_button12,newachievement.achievement[11].img)
+            bindImage(achievement_button13,newachievement.achievement[12].img)
+            bindImage(achievement_button14,newachievement.achievement[13].img)
+            bindImage(achievement_button15,newachievement.achievement[14].img)
+            bindImage(achievement_button16,newachievement.achievement[15].img)
         }
     }
 
-    private fun initializeAchievementPopupWindow() {
+    private fun initializeAchievementPopupWindow(index: Int) {
         achievementPopupBinding = AchievementPopupBinding.inflate(layoutInflater, null, false)
         achievementpopup = PopupWindow(view, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, true)
         achievementpopup?.apply {
@@ -163,6 +146,7 @@ class ProfilePageFragment: Fragment()  {
             showAtLocation(view, Gravity.CENTER, 0, 0)
             achievementPopupBinding?.apply {
 //                screenshotImage.setImageBitmap(viewModel.resultBitmap)
+                bindImage(pic,achievementdata?.achievement?.get(index)?.img)
                 close.setOnClickListener {
                     achievementpopup?.dismiss()
                 }
