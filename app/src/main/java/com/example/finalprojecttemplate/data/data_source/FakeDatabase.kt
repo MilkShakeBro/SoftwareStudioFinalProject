@@ -801,6 +801,7 @@ class FakeDatabase {
         ThemeDataModel(
             id = 0,
             image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/b/b1/Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio.png?20180723040820"),
+            name = "living room",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -843,6 +844,7 @@ class FakeDatabase {
         ThemeDataModel(
             id = 1,
             image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
+            name = "classroom",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -885,6 +887,7 @@ class FakeDatabase {
         ThemeDataModel(
             id = 2,
             image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
+            name = "grocery store",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -927,6 +930,7 @@ class FakeDatabase {
         ThemeDataModel(
             id = 3,
             image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
+            name = "hospital",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -969,6 +973,7 @@ class FakeDatabase {
         ThemeDataModel(
             id = 4,
             image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
+            name = "kitchen",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -1268,7 +1273,7 @@ class FakeDatabase {
 
         articles.forEach{ item->articleInfo.add(HomePageInfo(item.id, item.image, item.name)) }
         vocabularySets.forEach{ item->vocabularySetInfo.add(HomePageInfo(item.id, item.image, item.name)) }
-        themeData.forEach{ item->themeInfo.add(HomePageInfo(item.id, item.image, "item.name???")) }
+        themeData.forEach{ item->themeInfo.add(HomePageInfo(item.id, item.image, item.name)) }
 
 //        delay(1000)
 
@@ -1287,6 +1292,7 @@ class FakeDatabase {
         else ThemeDataModel(
             id = -1,
             image = Uri.parse("null"),
+            name = "(no name)",
             flashcard = listOf(),
         )
     }
