@@ -14,12 +14,15 @@ data class ThemeDataModel(
     @ColumnInfo
     val image: Uri,
     @ColumnInfo
+    val name: String,
+    @ColumnInfo
     val flashcard: List<VocabularyForTheme>
 ) {
     companion object {
         fun emptyThemeDataModel() = ThemeDataModel(
             id = -1,
             image = "".toUri(),
+            name = "",
             flashcard = listOf()
         )
     }

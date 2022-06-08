@@ -801,7 +801,8 @@ class FakeDatabase {
     private val themeData: List<ThemeDataModel> = listOf(
         ThemeDataModel(
             id = 0,
-            image = Uri.parse("https://lh3.googleusercontent.com/aqsA6GdDcWXTx4FiVJbEeJLoooK2I0wfZBJg-kVx3Nq6RKwBVAZqAFVhEQkbXetpiALnsfXPOD_M64KLp-Ai=w1920-h865"),
+            image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=966KfGdnSp%40living_room.jpg"),
+            name = "living room",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -843,7 +844,8 @@ class FakeDatabase {
         ),
         ThemeDataModel(
             id = 1,
-            image = Uri.parse("https://lh4.googleusercontent.com/V5-0IspM95oxvrpSipt1kEuZ_1wM02umGiCDwigcriOorq_W1CS0CiZriLX1CWVbGnwtMmA3FqH0w1WZHE37=w1087-h865"),
+            image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=YSNN1OWWQo%40classroom.jpg"),
+            name = "classroom",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -885,7 +887,8 @@ class FakeDatabase {
         ),
         ThemeDataModel(
             id = 2,
-            image = Uri.parse("https://lh5.googleusercontent.com/QoQuDjyTek088H8e9D79z6gf10b_Z51f0YUWwS9q-8fnY8u1D0oYr5uJT0RUn-aZ4FsIhfb1--OUC0BYf7lU=w1087-h865"),
+            image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=f516o7o231%40grocery_store.jpg"),
+            name = "grocery store",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -927,7 +930,8 @@ class FakeDatabase {
         ),
         ThemeDataModel(
             id = 3,
-            image = Uri.parse("https://lh5.googleusercontent.com/H8L8p_4W07ejbgzzEY6RuUobVWuz2L-I1eY2OsFbFVS4TktAvqxQmbnhqQ-wHdg_WBOmzUWxfoCK-4kU5Gj5=w1087-h865"),
+            image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=KPBnvfyT8W%40hospital.jpg"),
+            name = "hospital",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -969,7 +973,8 @@ class FakeDatabase {
         ),
         ThemeDataModel(
             id = 4,
-            image = Uri.parse("https://lh4.googleusercontent.com/h0R2ygprX1ZM6NkCujhm8AQF7xGrR6vPMyvk7ywW4ZJgAViwdtR-O1HqpznkuASw5QFRG9BTmdQvF2kCmWXx=w1087-h865"),
+            image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=8F83HRS41v%40kitchen.jpg"),
+            name = "kitchen",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
@@ -1312,7 +1317,7 @@ class FakeDatabase {
 
         articles.forEach{ item->articleInfo.add(HomePageInfo(item.id, item.image, item.name)) }
         vocabularySets.forEach{ item->vocabularySetInfo.add(HomePageInfo(item.id, item.image, item.name)) }
-        themeData.forEach{ item->themeInfo.add(HomePageInfo(item.id, item.image, "item.name???")) }
+        themeData.forEach{ item->themeInfo.add(HomePageInfo(item.id, item.image, item.name)) }
 
 //        delay(1000)
 
@@ -1331,6 +1336,7 @@ class FakeDatabase {
         else ThemeDataModel(
             id = -1,
             image = Uri.parse("null"),
+            name = "(no name)",
             flashcard = listOf(),
         )
     }
