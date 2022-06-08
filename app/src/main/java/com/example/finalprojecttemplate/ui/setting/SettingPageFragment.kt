@@ -40,6 +40,7 @@ class SettingPageFragment: Fragment()  {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.apply {
+            Log.d("AAA",showDarkModeViewModel.darkMode().toString())
             if(showDarkModeViewModel.darkMode()==true){
                 DarkTheme.setChecked(false)
             }
