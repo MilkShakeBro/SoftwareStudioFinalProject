@@ -16,12 +16,15 @@ data class ThemeDataModel(
     @ColumnInfo
     val name: String,
     @ColumnInfo
+    val heightWidthRatio: Float,
+    @ColumnInfo
     val flashcard: List<VocabularyForTheme>
 ) {
     companion object {
         fun emptyThemeDataModel() = ThemeDataModel(
             id = -1,
             image = "".toUri(),
+            heightWidthRatio = 375f/563f,
             name = "",
             flashcard = listOf()
         )
