@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HOUR"
-            android:textColor="@color/black"
+            style="@style/ProfileTheme"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="@id/timer"
             app:layout_constraintBottom_toTopOf="@id/timer">
@@ -30,9 +30,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MINUTE"
-            android:textColor="@color/black"
             android:textSize="13sp"
             android:paddingLeft="33dp"
+            style="@style/ProfileTheme"
             app:layout_constraintStart_toEndOf="@id/hour"
             app:layout_constraintBottom_toTopOf="@id/timer">
         </TextView>
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SECOND"
-            android:textColor="@color/black"
+            style="@style/ProfileTheme"
             android:textSize="13sp"
             app:layout_constraintEnd_toEndOf="@id/timer"
             app:layout_constraintBottom_toTopOf="@id/timer">

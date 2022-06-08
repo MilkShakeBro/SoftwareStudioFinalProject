@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.finalprojecttemplate.databinding.ThemeFragmentBinding
 import com.example.finalprojecttemplate.domain.models.ThemeDataModel
+import com.example.finalprojecttemplate.domain.utils.bindImage
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.theme_fragment.*
 
 @AndroidEntryPoint
 class ThemePageFragment: Fragment()  {
@@ -32,6 +34,9 @@ class ThemePageFragment: Fragment()  {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.apply {
+
+            showThemeViewModel.themeindex = arguments?.getInt("themeId") ?: 0
+
             word.text = "Let’s try to click on something!"
             chinese.text=""
             showThemeViewModel.onEvent()
@@ -63,6 +68,8 @@ class ThemePageFragment: Fragment()  {
         }
         showThemeViewModel.displayTheme.observe(viewLifecycleOwner) { newTheme ->
             themeData = newTheme
+            bindImage(theme_image, newTheme.image)
+  //          theme_image.setImageURI(newTheme.image)
 //            binding?.word?.text = newTheme.flashcard
 //            binding?.chinese?.text = newTheme.flashcard
         }

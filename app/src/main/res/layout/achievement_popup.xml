@@ -20,36 +20,47 @@ xmlns:tools="http://schemas.android.com/tools">
 
     <RelativeLayout
         android:id="@+id/Achievement_block"
-        android:layout_width="350dp"
+        android:layout_width="360dp"
         android:layout_height="200dp"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="250dp"
         android:background="@drawable/achievement_popup_block"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
-            android:layout_width="105dp"
-            android:layout_height="120dp"
+            android:id="@+id/block"
+            android:layout_width="120dp"
+            android:layout_height="135dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/achievement_popup_block" />
 
         <ImageView
+            android:id="@+id/pic"
             android:layout_width="105dp"
             android:layout_height="120dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/achievement1"/>
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="47dp"
+            android:scaleType="centerInside"
+            android:background="@color/transparent"
+            android:src="@drawable/achievement1" />
 
         <View
             android:layout_width="5dp"
             android:layout_height="160dp"
-            android:layout_marginStart="130dp"
+            android:layout_marginStart="135dp"
             android:layout_marginTop="20dp"
             android:background="@color/black" />
 
         <TextView
+            android:id="@+id/descrip"
+            android:text="Play 1 game"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"
             android:layout_width="190dp"
             android:layout_height="160dp"
             android:layout_marginStart="145dp"

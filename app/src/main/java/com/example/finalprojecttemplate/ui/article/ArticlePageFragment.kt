@@ -45,6 +45,7 @@ class ArticlePageFragment: Fragment()  {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
+
             showArticleViewModel.articleindex = arguments?.getInt("articleId") ?: 0
 
             ArticleContent.text = ""

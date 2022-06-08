@@ -1,6 +1,7 @@
 package com.example.finalprojecttemplate.data.data_source
 
 import android.net.Uri
+import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.domain.models.*
 import kotlinx.coroutines.delay
 import java.lang.Thread.sleep
@@ -800,7 +801,7 @@ class FakeDatabase {
     private val themeData: List<ThemeDataModel> = listOf(
         ThemeDataModel(
             id = 0,
-            image = Uri.parse("https://upload.wikimedia.org/wikipedia/commons/b/b1/Living_Room_3D_Render_with_Interior_Design_by_NONAGON_studio.png?20180723040820"),
+            image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=966KfGdnSp%40living_room.jpg"),
             name = "living room",
             flashcard = listOf(
                 VocabularyForTheme(
@@ -843,172 +844,172 @@ class FakeDatabase {
         ),
         ThemeDataModel(
             id = 1,
-            image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
+            image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=YSNN1OWWQo%40classroom.jpg"),
             name = "classroom",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "wall shelf",
+                    chinese = "壁架",
                     positionForClickButton = Coordinate(150.0f, 150.5f)
                 ),
                 VocabularyForTheme(
                     id = 1,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "chalk",
+                    chinese = "粉筆",
                     positionForClickButton = Coordinate(120.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 2,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "blackboard",
+                    chinese = "黑板",
                     positionForClickButton = Coordinate(130.0f, 130.0f)
                 ),
                 VocabularyForTheme(
                     id = 3,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "bulletin board",
+                    chinese = "公告欄",
                     positionForClickButton = Coordinate(100.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "globe",
+                    chinese = "地球儀",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
                 VocabularyForTheme(
-                    id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    id = 5,
+                    word = "loudspeaker",
+                    chinese = "揚聲器",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
             )
         ),
         ThemeDataModel(
             id = 2,
-            image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
+            image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=f516o7o231%40grocery_store.jpg"),
             name = "grocery store",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "deli section",
+                    chinese = "熟食區",
                     positionForClickButton = Coordinate(150.0f, 150.5f)
                 ),
                 VocabularyForTheme(
                     id = 1,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = " frozen food",
+                    chinese = "冷凍食品",
                     positionForClickButton = Coordinate(120.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 2,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "raw food",
+                    chinese = "生食",
                     positionForClickButton = Coordinate(130.0f, 130.0f)
                 ),
                 VocabularyForTheme(
                     id = 3,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "bar",
+                    chinese = "吧檯",
                     positionForClickButton = Coordinate(100.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "cash register",
+                    chinese = "收銀台",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
                 VocabularyForTheme(
-                    id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    id = 5,
+                    word = "trolley",
+                    chinese = "手推車",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
         ),
         ),
         ThemeDataModel(
             id = 3,
-            image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
+            image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=KPBnvfyT8W%40hospital.jpg"),
             name = "hospital",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "pendant light",
+                    chinese = "吊燈",
                     positionForClickButton = Coordinate(150.0f, 150.5f)
                 ),
                 VocabularyForTheme(
                     id = 1,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "First aid kit",
+                    chinese = "急救箱",
                     positionForClickButton = Coordinate(120.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 2,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "rolling cart",
+                    chinese = "滾動車",
                     positionForClickButton = Coordinate(130.0f, 130.0f)
                 ),
                 VocabularyForTheme(
                     id = 3,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "microscope",
+                    chinese = "顯微鏡",
                     positionForClickButton = Coordinate(100.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "X-ray photograph",
+                    chinese = "X光像片",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
                 VocabularyForTheme(
-                    id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    id = 5,
+                    word = "blood capsule",
+                    chinese = "血袋",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
             )
         ),
         ThemeDataModel(
             id = 4,
-            image = Uri.parse("https://images.rawpixel.com/image_250/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJuaWdodF90YWJsZV9sYW1wX2xpZ2h0LWltYWdlLWt5YmQ0czVsLmpwZw.jpg"),
+            image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=8F83HRS41v%40kitchen.jpg"),
             name = "kitchen",
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "cupboard",
+                    chinese = "櫥櫃",
                     positionForClickButton = Coordinate(150.0f, 150.5f)
                 ),
                 VocabularyForTheme(
                     id = 1,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "chimney",
+                    chinese = "煙囪",
                     positionForClickButton = Coordinate(120.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 2,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "curtain",
+                    chinese = "窗簾",
                     positionForClickButton = Coordinate(130.0f, 130.0f)
                 ),
                 VocabularyForTheme(
                     id = 3,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "kitchen utensils",
+                    chinese = "廚具",
                     positionForClickButton = Coordinate(100.0f, 150.0f)
                 ),
                 VocabularyForTheme(
                     id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    word = "refrigerator",
+                    chinese = "冰箱",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
                 VocabularyForTheme(
-                    id = 4,
-                    word = "lamp",
-                    chinese = "檯燈",
+                    id = 5,
+                    word = "oven",
+                    chinese = "烤箱",
                     positionForClickButton = Coordinate(50.0f, 150.0f)
                 ),
             )
@@ -1020,177 +1021,220 @@ class FakeDatabase {
             achievement = listOf(
                 Achievement(
                     id = 0,
-                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
-                    description = "This is a description.",
+                    img = Uri.parse("https://lh3.googleusercontent.com/1pnWGlZesMwbjfiKoE2obKGeTTgq8ooUJ-3R38nFfDVxusfnb-VFqGyH6Awd1p3icPclwnwd7FVyJP2k1tfC=w2480-h1684"),
+                    description = "Finish the game once successfully",
                     obtained = false
                 ),
                 Achievement(
                     id = 1,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
+                    img = Uri.parse("https://lh3.googleusercontent.com/rr0cgE17RqgM94ZI5JNf4jwD00ZCBb-T0OQlvxjYNOhjszmpOMI58pXApoW5lQJ-BDUKRCMtuUaTf3Tu7kpz=w1978-h1684"),
+                    description = "Finish 3 games",
+                    obtained = false
                 ),
                 Achievement(
                     id = 2,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    img = Uri.parse("https://lh5.googleusercontent.com/Ie_dfKYcubpEEOF2ny4QnQVSGWaVYNOi9dtviSPQ9PNkDbh2zmeC4Ukmy7RgJtQHE4_4PhLEmymU7vnaRtk3=w1776-h1684"),
+                    description = "Finish 5 games",
                     obtained = false
                 ),
                 Achievement(
                     id = 3,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
+                    img = Uri.parse("https://lh6.googleusercontent.com/pmuzN-wFouxvKeYceMKNMdgFwAMvk2WzxCp3RJJFnu0nE97XegzQ9TV0SK2qzpo0VsfhQDFjOWnqYqyh7_ki=w1776-h1684"),
+                    description = "Finish 10 games",
+                    obtained = false
                 ),
                 Achievement(
                     id = 4,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = false
-                )
-            ),
-        ),
-        AchievementSetModel(
-            id = 1,
-            achievement = listOf(
-                Achievement(
-                    id = 0,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    img = Uri.parse("https://lh5.googleusercontent.com/QneIzY6vfQbhBjkLQTicXNF8j87NtWCmF9ZL5_I0wLeS37YApjWKgbA3i3PuJp6LQCB3cXPkY5jEfU753351=w1776-h1684"),
+                    description = "Finish reading 3 articles",
                     obtained = false
                 ),
                 Achievement(
-                    id = 1,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 2,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 5,
+                    img = Uri.parse("https://lh6.googleusercontent.com/MNUKuEX1edcpRIC8_H15IM4_Cm_eJHZRDQuQEIrsnma29pGEzXKbCJLt8jh4gc_BQUsvR33XwLbQ2fu6SGqo=w1776-h1684"),
+                    description = "Finish reading 5 articles",
                     obtained = false
                 ),
                 Achievement(
-                    id = 3,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 4,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = false
-                )
-            ),
-        ),
-        AchievementSetModel(
-            id = 2,
-            achievement = listOf(
-                Achievement(
-                    id = 0,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 6,
+                    img = Uri.parse("https://lh6.googleusercontent.com/ATM0O9tDMjrVzBamY_CwmcXbgK2Qe3gJM3ObkqIqqvFK4fKzlv8JHsJ24z2PjitcaLZNi4Cnz12_rGE7z7zr=w1776-h1684"),
+                    description = "Finish reading 10 articles",
                     obtained = false
                 ),
                 Achievement(
-                    id = 1,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 2,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 7,
+                    img = Uri.parse("https://lh4.googleusercontent.com/Tux5SwkjxgAL0iL4mXd-6wQwg9RoiutiCDWlz7qqYyS7naCJHuPPvg2JAW7EghJjCv3lBOPJeh00qib0h8Ij=w1776-h1684"),
+                    description = "Finish reading 20 articles",
                     obtained = false
                 ),
                 Achievement(
-                    id = 3,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 4,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = false
-                )
-            ),
-        ),
-        AchievementSetModel(
-            id = 3,
-            achievement = listOf(
-                Achievement(
-                    id = 0,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 8,
+                    img = Uri.parse("https://lh5.googleusercontent.com/pvq9AF5fkaYnqKLLR8Qbnfcp4AKoou5LuellHnRK_pdC9dy7MnIghFtE6B6dBti0Oc7SHFs2Vb7LrcwcqTGt=w1776-h1684-rw"),
+                    description = "Rank 1 of the game",
                     obtained = false
                 ),
                 Achievement(
-                    id = 1,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 2,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 9,
+                    img = Uri.parse("https://lh4.googleusercontent.com/VAq9XtruDBKSAwAeCbZRLGPl9ENKRFaJC26ihYfPUIBbhZT6XI4ZK_X9OCy9BjFgIERypypvAn2EBUhUCebT=w1776-h1684-rw"),
+                    description = "Finish one Theme Learning",
                     obtained = false
                 ),
                 Achievement(
-                    id = 3,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 4,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = false
-                )
-            ),
-        ),
-        AchievementSetModel(
-            id = 4,
-            achievement = listOf(
-                Achievement(
-                    id = 0,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 10,
+                    img = Uri.parse("https://lh4.googleusercontent.com/b5j6a8CdBhLJPI7yILr81stHD99K_619sJO9ZBJulO6pZLgdIEfYGp4IR8FmzgXIz-_O_HPBStcJcQPsRwxF=w1776-h1684"),
+                    description = "Finish 3 Theme Learning",
                     obtained = false
                 ),
                 Achievement(
-                    id = 1,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
-                ),
-                Achievement(
-                    id = 2,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 11,
+                    img = Uri.parse("https://lh5.googleusercontent.com/4oqWnG8brZzcBEoeeJJ-Y7k8RkSk_9699UNi94qzmNG98W_5NTeTNCJH4s4O1_-1K5Lr5fZLTtm-LuufFGBf=w1776-h1684"),
+                    description = "Spending one hour on flashcard",
                     obtained = false
                 ),
                 Achievement(
-                    id = 3,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
-                    obtained = true
+                    id = 12,
+                    img = Uri.parse("https://lh3.googleusercontent.com/-xkegJH-sauqO9NhSdhUydZkFSzp9snDs_JyUaj4_eAVGTg-bgFXZ9h_IIVnTKZRZ0yhO8gPNcEZDXQrDZ5O=w1776-h1684"),
+                    description = "Spending 10 hours on flashcard",
+                    obtained = false
                 ),
                 Achievement(
-                    id = 4,
-                    img = Uri.parse("https://www.google.com"),
-                    description = "This is a description.",
+                    id = 13,
+                    img = Uri.parse("https://lh5.googleusercontent.com/iXAdb96KpaU6BHtJLUjZAciYKIxcZi0Y-wPbzPBSf3GYzPLkdV8uyBDBTueEPD0_B4YeM95T5EkhGdOKrrkQ=w1776-h1684"),
+                    description = "Log in for 5 consecutive days",
                     obtained = false
-                )
-            ),
-        ),
+                ),
+                Achievement(
+                    id = 14,
+                    img = Uri.parse("https://lh4.googleusercontent.com/EwzYJiCbQz18_OEoqnQVFHycobsoKPDOJ-1K-tq-tjWWQ-RdxXiGoV3F1CNCk3ltaaSSNmPhSJg-Iy9DZQk8=w1776-h1684"),
+                    description = "Log in for 10 consecutive days",
+                    obtained = false
+                ),Achievement(
+                    id = 15,
+                    img = Uri.parse("https://lh6.googleusercontent.com/VukT1_0N8ZUj1PoFpEXRCfiTRTizekL-X7pFVTXMPS4AxSzyUNrwi1PK3ReRXhKY7dG-tJLbFw4CPQcOw8Mw=w1776-h1684"),
+                    description = "Log in for 30 consecutive days",
+                    obtained = false
+                ),
+            )
+        )
     )
+//    private val achievementSet: List<AchievementSetModel> = listOf(
+//        AchievementSetModel(
+//            id = 0,
+//            achievement = listOf(
+//                Achievement(
+//                    id = 0,
+//                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+//                    description = "A",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 1,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "B",
+//                    obtained = true
+//                ),
+//                Achievement(
+//                    id = 2,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "C",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 3,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "D",
+//                    obtained = true
+//                )
+//            ),
+//        ),
+//        AchievementSetModel(
+//            id = 1,
+//            achievement = listOf(
+//                Achievement(
+//                    id = 0,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 1,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = true
+//                ),
+//                Achievement(
+//                    id = 2,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 3,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = true
+//                )
+//            ),
+//        ),
+//        AchievementSetModel(
+//            id = 2,
+//            achievement = listOf(
+//                Achievement(
+//                    id = 0,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 1,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = true
+//                ),
+//                Achievement(
+//                    id = 2,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 3,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = true
+//                )
+//            ),
+//        ),
+//        AchievementSetModel(
+//            id = 3,
+//            achievement = listOf(
+//                Achievement(
+//                    id = 0,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 1,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = true
+//                ),
+//                Achievement(
+//                    id = 2,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = false
+//                ),
+//                Achievement(
+//                    id = 3,
+//                    img = Uri.parse("https://www.google.com"),
+//                    description = "This is a description.",
+//                    obtained = true
+//                )
+//            ),
+//        ),
+//    )
     private val personalInfo: List<PersonalInfoModel> = listOf(
         PersonalInfoModel(
             id = 0,
@@ -1298,7 +1342,7 @@ class FakeDatabase {
     }
 
     suspend fun getAchievement(userid: Int): AchievementSetModel {
-        delay(1000)
+        delay(100)
         return if (userid in 0 until 5) achievementSet[userid]
         else AchievementSetModel(
             id = -1,
@@ -1331,6 +1375,71 @@ class FakeDatabase {
                     id = 4,
                     img = Uri.parse("https://www.google.com"),
                     description = "This is a description.",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 5,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "F",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 6,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "G",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 7,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "H",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 8,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "I",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 9,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "J",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 10,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "K",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 11,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "L",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 12,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "M",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 13,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "N",
+                    obtained = false
+                ),
+                Achievement(
+                    id = 14,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "O",
+                    obtained = false
+                ),Achievement(
+                    id = 15,
+                    img = Uri.parse("android.resource://SoftwareStudioFinalProject/drawable/achievement1.png"),
+                    description = "P",
                     obtained = false
                 )
             ),

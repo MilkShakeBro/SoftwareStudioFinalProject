@@ -20,7 +20,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:text="@string/Article"
-                android:textColor="@color/black"
+                style="@style/ProfileTheme"
                 android:textSize="18sp"
                 android:lineSpacingMultiplier="1.5"
                 app:layout_constraintBottom_toBottomOf="parent"
