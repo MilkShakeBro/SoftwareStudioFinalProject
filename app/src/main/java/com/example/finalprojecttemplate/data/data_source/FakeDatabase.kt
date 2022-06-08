@@ -803,42 +803,43 @@ class FakeDatabase {
             id = 0,
             image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=966KfGdnSp%40living_room.jpg"),
             name = "living room",
+            heightWidthRatio=375f/563f,
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
                     word = "artwork",
                     chinese = "藝術品",
-                    positionForClickButton = Coordinate(150.0f, 150.5f)
+                    positionForClickButton = Coordinate(0.24774f, 0.38f)
                 ),
                 VocabularyForTheme(
                     id = 1,
                     word = "artwork",
                     chinese = "藝術品",
-                    positionForClickButton = Coordinate(120.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.65271f, 0.38f)
                 ),
                 VocabularyForTheme(
                     id = 2,
                     word = "floor lamp",
                     chinese = "落地燈",
-                    positionForClickButton = Coordinate(130.0f, 130.0f)
+                    positionForClickButton = Coordinate(0.10564f, 0.80133f)
                 ),
                 VocabularyForTheme(
                     id = 3,
                     word = "sofa",
                     chinese = "沙發",
-                    positionForClickButton = Coordinate(100.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.43181f, 0.66333f)
                 ),
                 VocabularyForTheme(
                     id = 4,
                     word = "potted houseplants",
                     chinese = "室內盆栽植物",
-                    positionForClickButton = Coordinate(50.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.78593f, 0.75333f)
                 ),
                 VocabularyForTheme(
                     id = 5,
                     word = "rug",
                     chinese = "小地毯",
-                    positionForClickButton = Coordinate(50.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.44845f, 0.883333f)
                 ),
             ),
         ),
@@ -846,42 +847,43 @@ class FakeDatabase {
             id = 1,
             image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=YSNN1OWWQo%40classroom.jpg"),
             name = "classroom",
+            heightWidthRatio = 490f/735f,
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
                     word = "wall shelf",
                     chinese = "壁架",
-                    positionForClickButton = Coordinate(150.0f, 150.5f)
+                    positionForClickButton = Coordinate(0.2081f, 0.40428f)
                 ),
                 VocabularyForTheme(
                     id = 1,
                     word = "chalk",
                     chinese = "粉筆",
-                    positionForClickButton = Coordinate(120.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.36265f, 0.48408f)
                 ),
                 VocabularyForTheme(
                     id = 2,
                     word = "blackboard",
                     chinese = "黑板",
-                    positionForClickButton = Coordinate(130.0f, 130.0f)
+                    positionForClickButton = Coordinate(0.45061f, 0.32714f)
                 ),
                 VocabularyForTheme(
                     id = 3,
                     word = "bulletin board",
                     chinese = "公告欄",
-                    positionForClickButton = Coordinate(100.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.64428f, 0.42898f)
                 ),
                 VocabularyForTheme(
                     id = 4,
                     word = "globe",
                     chinese = "地球儀",
-                    positionForClickButton = Coordinate(50.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.83068f, 0.39224f)
                 ),
                 VocabularyForTheme(
                     id = 5,
                     word = "loudspeaker",
                     chinese = "揚聲器",
-                    positionForClickButton = Coordinate(50.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.71952f, 0.21470f)
                 ),
             )
         ),
@@ -889,42 +891,43 @@ class FakeDatabase {
             id = 2,
             image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=f516o7o231%40grocery_store.jpg"),
             name = "grocery store",
+            heightWidthRatio = 375f/563f,
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
                     word = "deli section",
                     chinese = "熟食區",
-                    positionForClickButton = Coordinate(150.0f, 150.5f)
+                    positionForClickButton = Coordinate(0.14742f, 0.47f)
                 ),
                 VocabularyForTheme(
                     id = 1,
                     word = " frozen food",
                     chinese = "冷凍食品",
-                    positionForClickButton = Coordinate(120.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.56838f, 0.21333f)
                 ),
                 VocabularyForTheme(
                     id = 2,
                     word = "raw food",
                     chinese = "生食",
-                    positionForClickButton = Coordinate(130.0f, 130.0f)
+                    positionForClickButton = Coordinate(0.53838f, 0.78f)
                 ),
                 VocabularyForTheme(
                     id = 3,
                     word = "bar",
                     chinese = "吧檯",
-                    positionForClickButton = Coordinate(100.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.02552f, 0.73333f)
                 ),
                 VocabularyForTheme(
                     id = 4,
                     word = "cash register",
                     chinese = "收銀台",
-                    positionForClickButton = Coordinate(50.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.17762f, 0.82667f)
                 ),
                 VocabularyForTheme(
                     id = 5,
                     word = "trolley",
                     chinese = "手推車",
-                    positionForClickButton = Coordinate(50.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.72824f, 0.92f)
                 ),
         ),
         ),
@@ -932,42 +935,43 @@ class FakeDatabase {
             id = 3,
             image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=KPBnvfyT8W%40hospital.jpg"),
             name = "hospital",
+            heightWidthRatio = 286f/563f,
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
                     word = "pendant light",
                     chinese = "吊燈",
-                    positionForClickButton = Coordinate(150.0f, 150.5f)
+                    positionForClickButton = Coordinate(0.14631f, 0.11189f)
                 ),
                 VocabularyForTheme(
                     id = 1,
                     word = "First aid kit",
                     chinese = "急救箱",
-                    positionForClickButton = Coordinate(120.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.28551f, 0.63287f)
                 ),
                 VocabularyForTheme(
                     id = 2,
                     word = "rolling cart",
                     chinese = "滾動車",
-                    positionForClickButton = Coordinate(130.0f, 130.0f)
+                    positionForClickButton = Coordinate(0.28366f, 0.83315f)
                 ),
                 VocabularyForTheme(
                     id = 3,
                     word = "microscope",
                     chinese = "顯微鏡",
-                    positionForClickButton = Coordinate(100.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.38439f, 0.23179f)
                 ),
                 VocabularyForTheme(
                     id = 4,
                     word = "X-ray photograph",
                     chinese = "X光像片",
-                    positionForClickButton = Coordinate(50.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.67673f, 0.44056f)
                 ),
                 VocabularyForTheme(
                     id = 5,
                     word = "blood capsule",
                     chinese = "血袋",
-                    positionForClickButton = Coordinate(50.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.82165f, 0.29168f)
                 ),
             )
         ),
@@ -975,42 +979,43 @@ class FakeDatabase {
             id = 4,
             image = Uri.parse("https://ap3.ragic.com/sims/file.jsp?a=stevenxie723&f=8F83HRS41v%40kitchen.jpg"),
             name = "kitchen",
+            heightWidthRatio = 375f/563f,
             flashcard = listOf(
                 VocabularyForTheme(
                     id = 0,
                     word = "cupboard",
                     chinese = "櫥櫃",
-                    positionForClickButton = Coordinate(150.0f, 150.5f)
+                    positionForClickButton = Coordinate(0.06171f, 0.112f)
                 ),
                 VocabularyForTheme(
                     id = 1,
                     word = "chimney",
                     chinese = "煙囪",
-                    positionForClickButton = Coordinate(120.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.33057f, 0.08f)
                 ),
                 VocabularyForTheme(
                     id = 2,
                     word = "curtain",
                     chinese = "窗簾",
-                    positionForClickButton = Coordinate(130.0f, 130.0f)
+                    positionForClickButton = Coordinate(0.53286f, 0.06933f)
                 ),
                 VocabularyForTheme(
                     id = 3,
                     word = "kitchen utensils",
                     chinese = "廚具",
-                    positionForClickButton = Coordinate(100.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.21623f, 0.23133f)
                 ),
                 VocabularyForTheme(
                     id = 4,
                     word = "refrigerator",
                     chinese = "冰箱",
-                    positionForClickButton = Coordinate(50.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.0644f, 0.46667f)
                 ),
                 VocabularyForTheme(
                     id = 5,
                     word = "oven",
                     chinese = "烤箱",
-                    positionForClickButton = Coordinate(50.0f, 150.0f)
+                    positionForClickButton = Coordinate(0.33393f, 0.75467f)
                 ),
             )
         ),
@@ -1337,6 +1342,7 @@ class FakeDatabase {
             id = -1,
             image = Uri.parse("null"),
             name = "(no name)",
+            heightWidthRatio = 375f/563f,
             flashcard = listOf(),
         )
     }

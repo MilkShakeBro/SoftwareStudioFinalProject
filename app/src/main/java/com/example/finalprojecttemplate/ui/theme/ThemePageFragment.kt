@@ -1,10 +1,14 @@
 package com.example.finalprojecttemplate.ui.theme
 
 import android.content.res.Resources
+import android.graphics.Point
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.graphics.plus
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.finalprojecttemplate.databinding.ThemeFragmentBinding
@@ -33,6 +37,7 @@ class ThemePageFragment: Fragment()  {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding?.apply {
 
             showThemeViewModel.themeindex = arguments?.getInt("themeId") ?: 0
@@ -69,9 +74,55 @@ class ThemePageFragment: Fragment()  {
         showThemeViewModel.displayTheme.observe(viewLifecycleOwner) { newTheme ->
             themeData = newTheme
             bindImage(theme_image, newTheme.image)
-  //          theme_image.setImageURI(newTheme.image)
-//            binding?.word?.text = newTheme.flashcard
-//            binding?.chinese?.text = newTheme.flashcard
+            binding?.themeImage?.post{setViewPosition(click1, newTheme.flashcard[0].positionForClickButton.x, newTheme.flashcard[0].positionForClickButton.y, newTheme.heightWidthRatio)}
+            binding?.themeImage?.post{setViewPosition(click2, newTheme.flashcard[1].positionForClickButton.x, newTheme.flashcard[1].positionForClickButton.y, newTheme.heightWidthRatio)}
+            binding?.themeImage?.post{setViewPosition(click3, newTheme.flashcard[2].positionForClickButton.x, newTheme.flashcard[2].positionForClickButton.y, newTheme.heightWidthRatio)}
+            binding?.themeImage?.post{setViewPosition(click4, newTheme.flashcard[3].positionForClickButton.x, newTheme.flashcard[3].positionForClickButton.y, newTheme.heightWidthRatio)}
+            binding?.themeImage?.post{setViewPosition(click5, newTheme.flashcard[4].positionForClickButton.x, newTheme.flashcard[4].positionForClickButton.y, newTheme.heightWidthRatio)}
+            binding?.themeImage?.post{setViewPosition(click6, newTheme.flashcard[5].positionForClickButton.x, newTheme.flashcard[5].positionForClickButton.y, newTheme.heightWidthRatio)}
+        }
+
+
+
+    }
+
+    private fun setViewPosition(
+        targetView: View,
+        xInPictureRatio: Float,
+        yInPictureRatio: Float,
+        heightWidthRatio: Float
+    ) {
+        binding?.apply {
+            val buttonPos = computeButtonPosition(theme_image, xInPictureRatio, yInPictureRatio, heightWidthRatio)
+
+            val layoutParamsButton = ConstraintLayout.LayoutParams(targetView.width, targetView.height)
+            layoutParamsButton.topToTop = constraintLayout.id
+            layoutParamsButton.startToStart = constraintLayout.id
+            layoutParamsButton.marginStart = buttonPos.x
+            layoutParamsButton.topMargin = buttonPos.y
+
+            targetView.layoutParams = layoutParamsButton
         }
     }
+
+    private fun computeButtonPosition(
+        imageView: ImageView,
+        xInPictureRatio: Float,
+        yInPictureRatio: Float,
+        heightWidthRatio: Float
+    ) : Point {
+
+        val viewWidth = imageView.width
+        val viewHeight = (viewWidth * heightWidthRatio).toInt()
+
+        val buttonPosInPicture = Point(
+            (xInPictureRatio * viewWidth).toInt(),
+            (yInPictureRatio * viewHeight).toInt()
+        )
+
+        val imageViewBiasY : Int = (imageView.height - viewHeight) / 2
+
+        return buttonPosInPicture + Point(0, imageViewBiasY)
+    }
+
 }
