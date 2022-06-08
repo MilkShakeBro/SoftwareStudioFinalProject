@@ -19,8 +19,8 @@ class ShowDarkModeViewModel @Inject constructor (
 
 //    val Dark:Boolean
 //        get() = useCases.getIsDarkMode()
-    fun setdarkMode(){
-
+    fun setdarkMode(ischeck: Boolean){
+        useCases.setIsDarkModeUseCase(ischeck)
     }
     fun darkMode():Boolean{
         return useCases.getIsDarkMode()
