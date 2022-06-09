@@ -553,7 +553,7 @@ class FakeDatabase {
                     "(C) c → b → a → d",
                     "(D) d → c → b → a"),
                 3 to listOf<String>(
-                    "3. According to the passage, which of the following statements is true about the hard hat?\n",
+                    "3. According to the passage, which of the following statements is true about the hard hat?",
                     "(A) Global sales have doubled every ten years.",
                     "(B) The inspiration came from the inventor’s wartime experience.",
                     "(C) It was standard equipment for construction workers in the 1920s.",
