@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.apollographql.apollo3.ApolloClient
+import com.example.finalprojecttemplate.ArticlesQuery
 import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.databinding.ArticleBinding
 import com.example.finalprojecttemplate.databinding.ArticlePageBinding
@@ -19,6 +21,8 @@ import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.article_page.view.*
 import kotlinx.android.synthetic.main.game_tutorial_fragment.*
 import kotlinx.android.synthetic.main.result_page_screenshot_layout.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 @AndroidEntryPoint
 class ArticlePageFragment: Fragment()  {

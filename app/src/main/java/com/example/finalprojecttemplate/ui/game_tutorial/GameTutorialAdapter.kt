@@ -16,6 +16,7 @@ class GameTutorialAdapter(
     private val vocabularyId: Int
     ): PagerAdapter() {
 
+    var index = 0
     override fun getCount(): Int {
         return 5
     }
@@ -87,6 +88,7 @@ class GameTutorialAdapter(
                     val action = GameTutorialFragmentDirections.actionGameTutorialFragmentToGamePageFragment(
                         vocabularySetId = vocabularyId
                     )
+                    val action = GameTutorialFragmentDirections.actionGameTutorialFragmentToGamePageFragment(index)
                     view.findNavController().navigate(action)
                 }
             }

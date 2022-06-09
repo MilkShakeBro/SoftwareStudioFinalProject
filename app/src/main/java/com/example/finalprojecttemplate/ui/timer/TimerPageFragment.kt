@@ -51,6 +51,7 @@ class TimerPageFragment: Fragment() {
                 val action = TimerPageFragmentDirections.actionTimerPageFragmentToGamePageFragment(
                     vocabularySetId = id
                 )
+                val action = TimerPageFragmentDirections.actionTimerPageFragmentToGamePageFragment(id)
                 findNavController().navigate(action)
             }
 

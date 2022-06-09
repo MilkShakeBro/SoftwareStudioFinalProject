@@ -1,6 +1,7 @@
 package com.example.finalprojecttemplate.ui.game_tutorial
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ import androidx.navigation.fragment.navArgs
 import androidx.viewpager.widget.ViewPager
 import com.example.finalprojecttemplate.databinding.GameTutorialFragmentBinding
 import com.example.finalprojecttemplate.databinding.GameTutorialSlideFragmentBinding
+import com.example.finalprojecttemplate.ui.flashcard.FlashcardPageFragmentArgs
 import com.example.finalprojecttemplate.ui.flashcard.FlashcardPageFragmentDirections
 import kotlinx.android.synthetic.main.game_tutorial_fragment.*
 
@@ -19,6 +21,7 @@ class GameTutorialFragment: Fragment()  {
 
     private var binding: GameTutorialSlideFragmentBinding? = null
     private var gameTutorialAdapter: GameTutorialAdapter? = null
+    private val args: GameTutorialFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,6 +40,9 @@ class GameTutorialFragment: Fragment()  {
 
         gameTutorialAdapter = GameTutorialAdapter(this.context, args.vocabularySetId)
 
+        Log.d("args", args.toString())
+        gameTutorialAdapter = GameTutorialAdapter(this.context)
+        gameTutorialAdapter!!.index =  arguments?.getInt("vocabularySetId") ?:0
         binding?.apply {
             viewpager.adapter = gameTutorialAdapter
         }

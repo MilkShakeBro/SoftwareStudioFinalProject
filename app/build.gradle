@@ -6,6 +6,7 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
     id 'dagger.hilt.android.plugin'
     id 'kotlin-android-extensions'
+    id 'com.apollographql.apollo3' version '3.3.0'
 }
 
 android {
@@ -19,6 +20,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+//        multiDexEnabled true
     }
 
     buildTypes {
@@ -83,4 +86,14 @@ dependencies {
     implementation "androidx.room:room-ktx:$room_version"
 
     implementation 'androidx.appcompat:appcompat-resources:1.4.1'
+
+    // Apollo
+    implementation 'com.apollographql.apollo3:apollo-runtime:3.3.0'
+//
+//    // MultiDex
+//    implementation 'com.android.support:multidex:1.0.3'
+}
+
+apollo {
+    packageName = 'com.example.finalprojecttemplate'
 }

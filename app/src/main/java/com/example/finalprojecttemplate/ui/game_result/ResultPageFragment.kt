@@ -124,6 +124,7 @@ class ResultPageFragment: Fragment()  {
         val action = ResultPageFragmentDirections.actionResultPageFragmentToGamePageFragment(
             vocabularySetId = args.vocabularySetId
         )
+        val action = ResultPageFragmentDirections.actionResultPageFragmentToGamePageFragment(vocabularySetId = arguments?.getInt("vocabularySetId") ?:0)
         findNavController().navigate(action)
     }
 
