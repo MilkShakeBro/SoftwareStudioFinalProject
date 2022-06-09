@@ -18,6 +18,13 @@ class HomePageViewModel @Inject constructor (
     private val useCases: UseCases
 ): ViewModel() {
 
+    fun setdarkMode(ischeck: Boolean){
+        useCases.setIsDarkModeUseCase(ischeck)
+    }
+    fun darkMode():Boolean{
+        return useCases.getIsDarkMode()
+    }
+
     private val _homePageInfo = MutableLiveData<HomePageInfoModel>()
     val homePageInfo: LiveData<HomePageInfoModel>
         get() = _homePageInfo
