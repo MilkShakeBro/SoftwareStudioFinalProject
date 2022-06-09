@@ -27,6 +27,9 @@
         <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/layout/theme_fragment.xml" value="0.24320652173913043" />
         <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/layout/timer_fragment.xml" value="0.24320652173913043" />
         <entry key="..\:/Users/Admin/Desktop/SS-FinalProj/SoftwareStudioFinalProject/app/src/main/res/xml/provider_paths.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject-1/app/src/main/res/drawable/card.xml" value="0.259" />
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject-1/app/src/main/res/layout/flashcard_fragment.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject-1/app/src/main/res/layout/flashcard_page_fragment.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2185" />
         <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/drawable/card.xml" value="0.219" />
         <entry key="..\:/Users/chris/Desktop/SoftwareStudioFinalProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2185" />
@@ -75,6 +78,9 @@
         <entry key="app/src/main/res/drawable/tetris_background_gradient.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/thumb.xml" value="0.100067138671875" />
         <entry key="app/src/main/res/drawable/track.xml" value="0.1043975830078125" />
+        <entry key="app/src/main/res/font/arial.xml" value="0.1361111111111111" />
+        <entry key="app/src/main/res/font/timenewromanbold.xml" value="0.1361111111111111" />
+        <entry key="app/src/main/res/font/timesnewroman.xml" value="0.1361111111111111" />
         <entry key="app/src/main/res/layout/achievement_popup.xml" value="0.16326141357421875" />
         <entry key="app/src/main/res/layout/achievement_popup_template.xml" value="0.1" />
         <entry key="app/src/main/res/layout/acievement_popup.xml" value="0.1" />
@@ -87,17 +93,20 @@
         <entry key="app/src/main/res/layout/flashcard_fragment.xml" value="0.20244565217391305" />
         <entry key="app/src/main/res/layout/flashcard_page_fragment.xml" value="0.15653495440729484" />
         <entry key="app/src/main/res/layout/game_page_fragment.xml" value="0.28570556640625" />
+        <entry key="app/src/main/res/layout/game_tutorial_fragment.xml" value="0.15172239108409322" />
+        <entry key="app/src/main/res/layout/game_tutorial_slide_fragment.xml" value="0.15172239108409322" />
         <entry key="app/src/main/res/layout/home_page_fragment.xml" value="0.168414306640625" />
         <entry key="app/src/main/res/layout/home_page_item_layout.xml" value="0.2898550724637681" />
-        <entry key="app/src/main/res/layout/profile.xml" value="0.15653495440729484" />
+        <entry key="app/src/main/res/layout/profile.xml" value="0.165" />
         <entry key="app/src/main/res/layout/result_page_fragment.xml" value="0.2898550724637681" />
         <entry key="app/src/main/res/layout/result_page_screenshot_layout.xml" value="0.2898550724637681" />
         <entry key="app/src/main/res/layout/screenshot_popup_window_layout.xml" value="0.10225283857704937" />
         <entry key="app/src/main/res/layout/setting.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/setting_fragment.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/setting_fragment.xml" value="0.165" />
         <entry key="app/src/main/res/layout/template_layout.xml" value="0.10457516339869281" />
-        <entry key="app/src/main/res/layout/theme_fragment.xml" value="0.3203125" />
+        <entry key="app/src/main/res/layout/theme_fragment.xml" value="0.2976878612716763" />
         <entry key="app/src/main/res/layout/timer_fragment.xml" value="0.20697463768115942" />
+        <entry key="app/src/main/res/layout/vocabulary_card.xml" value="0.15172239108409322" />
       </map>
     </option>
   </component>

@@ -21,9 +21,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/poohpoohman1"
+            app:layout_constraintBottom_toTopOf="@+id/pooh_pooh_man_background"
             tools:text="00:00:00" />
-
+            app:layout_constraintBottom_toTopOf="@+id/poohpoohman1"
+            tools:text="00:00:00"
+            android:fontFamily="@font/arial1"/>
         <Button
             android:id="@+id/SkipToGame"
             android:layout_width="wrap_content"
@@ -36,20 +38,31 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="2dp" />
+            tools:layout_editor_absoluteY="2dp"
+            android:fontFamily="@font/arial1"/>
 
         <ImageView
-            android:id="@+id/poohpoohman1"
+            android:id="@+id/pooh_pooh_man_background"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:layout_marginTop="8dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="4dp"
             app:layout_constraintBottom_toTopOf="@+id/flashcard_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/countdown_timer"
-            app:srcCompat="@drawable/poopooman" />
+            app:srcCompat="@drawable/bg" />
+
+        <ImageView
+            android:id="@+id/poohpoohman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/poopooman"
+            app:layout_constraintStart_toStartOf="@id/pooh_pooh_man_background"
+            app:layout_constraintEnd_toEndOf="@id/pooh_pooh_man_background"
+            app:layout_constraintTop_toBottomOf="@+id/countdown_timer" />
 
         <com.example.finalprojecttemplate.ui.flashcard.FlashcardViewPager
             android:id="@+id/flashcard"
@@ -59,7 +72,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/poohpoohman1"
+            app:layout_constraintTop_toBottomOf="@id/pooh_pooh_man_background"
             app:layout_constraintVertical_bias="0.0">
             <include layout="@layout/card_front" />
         </com.example.finalprojecttemplate.ui.flashcard.FlashcardViewPager>

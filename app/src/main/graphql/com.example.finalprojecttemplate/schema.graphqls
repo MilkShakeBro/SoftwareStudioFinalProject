@@ -1,0 +1,242 @@
+type AchievementSet implements Timestamps {
+    id: ID!
+    name: String!
+    image: String!
+    description: String!
+    obtained: Boolean!
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+input AchievementSetCreateInput {
+    name: String!
+    image: String!
+    description: String!
+    obtained: Boolean!
+}
+
+input AchievementSetUpdateInput {
+    name: String!
+    image: String!
+    description: String!
+    obtained: Boolean!
+}
+
+type Article implements Timestamps {
+    id: ID!
+    name: String!
+    image: String!
+    answers: [ArticleAnswer]!
+    questions: [ArticleQuestion]!
+    content: String!
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+type ArticleAnswer {
+    id: ID!
+    answer_id: ID!
+    answer_string: String!
+}
+
+type ArticleQuestion {
+    id: ID!
+    question_id: ID!
+    question_string: [String]!
+}
+
+input ArticleCreateInput {
+    name: String!
+    image: String!
+    answer: [ArticleAnswerInput]!
+    question: [ArticleQuestionInput]!
+    content: String!
+}
+
+input ArticleUpdateInput {
+    name: String!
+    image: String!
+    answer: [ArticleAnswerInput]!
+    question: [ArticleQuestionInput]!
+    content: String!
+}
+
+input ArticleAnswerInput {
+    id: ID!
+    answer: String!
+}
+
+input ArticleQuestionInput {
+    id: ID!
+    questions: [String]!
+}
+
+type HomePage implements Timestamps {
+    id: ID!
+    articleInfos: [HomePageInfo]!
+    vocabularySetInfos: [HomePageInfo]!
+    themeInfos: [HomePageInfo]!
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+type HomePageInfo {
+    id: ID!
+    image: String!
+    name: String!
+}
+
+input HomePageInfoCreateInput {
+    articleInfo: [HomePageInfoInput]!
+    vocabularySetInfo: [HomePageInfoInput]!
+    themeInfo: [HomePageInfoInput]!
+}
+
+input HomePageInfoUpdateInput {
+    articleInfo: [HomePageInfoInput]!
+    vocabularySetInfo: [HomePageInfoInput]!
+    themeInfo: [HomePageInfoInput]!
+}
+
+input HomePageInfoInput {
+    image: String!
+    name: String!
+}
+
+scalar Date
+
+type Query {
+    version: String!
+    articles: [Article]
+    article(id: Int!): Article
+    vocabularySets: [VocabularySet]
+    vocabularySet(id: Int!): VocabularySet
+    achievementSets: [AchievementSet]
+    achievementSet(id: Int!): AchievementSet
+    themes: [Theme]
+    theme(id: Int!): Theme
+    homePageInfos: [HomePage]
+    homePageInfo(id: String!): HomePage
+    personalInfos: [Person]
+    personalInfo(id: Int!): Person
+}
+
+type Mutation {
+    createArticle(article: ArticleCreateInput): Article!
+    updateArticle(name: String!, update_content: ArticleUpdateInput): Article!
+    deleteArticle(name: String!): [Article]
+    createVocabularySet(vocabularySet: VocabularySetCreateInput): VocabularySet!
+    updateVocabularySet(name: String!, update_content: VocabularySetUpdateInput): VocabularySet!
+    deleteVocabularySet(name: String!): [VocabularySet]
+    createAchievementSet(achievement: AchievementSetCreateInput): AchievementSet!
+    updateAchievementSet(name: String!, update_content: AchievementSetUpdateInput): AchievementSet!
+    deleteAchievementSet(name: String!): [AchievementSet]
+    createTheme(theme: ThemeCreateInput): Theme!
+    updateTheme(name: String!, update_content: ThemeUpdateInput): Theme!
+    deleteTheme(name: String!): [Theme]
+    createHomePageInfo(homePageInfo: HomePageInfoCreateInput): [HomePage]!
+    updateHomePageInfo(name: String!, update_content: HomePageInfoUpdateInput): HomePageInfo!
+    deleteHomePageInfo(name: String!): [HomePageInfo]
+    createPersonInfo(personInfo: PersonInfoCreateInput): Person!
+    updatePersonInfo(name: String!, update_content: PersonInfoUpdateInput): Person!
+    deletePersonInfo(name: String!): [Person]
+}
+
+type Person implements Timestamps {
+    id: ID!
+    name: String!
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+input PersonInfoCreateInput {
+    name: String!
+}
+
+input PersonInfoUpdateInput {
+    name: String!
+}
+
+type Theme implements Timestamps {
+    id: ID!
+    name: String!
+    image: String!
+    flashcards: [Flashcard]!
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+type Flashcard {
+    id: ID!
+    word: String!
+    chinese: String!
+    coordinate: Coordinate!
+}
+
+type Coordinate {
+    id: ID!
+    x: Float!
+    y: Float!
+}
+
+input ThemeCreateInput {
+    name: String!
+    image: String!
+    flashcards: [FlashcardInput]!
+}
+
+input ThemeUpdateInput {
+    image: String!
+    flashcards: [FlashcardInput]!
+}
+
+input FlashcardInput {
+    word: String!
+    chinese: String!
+    coordinate: CoordinateInput!
+}
+
+input CoordinateInput {
+    x: Float!
+    y: Float!
+}
+
+interface Timestamps {
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+type VocabularySet implements Timestamps {
+    id: ID!
+    name: String!
+    image: String!
+    vocabularies: [Vocabulary]!
+    createdAt: Date!
+    updatedAt: Date!
+}
+
+type Vocabulary {
+    id: ID!
+    word: String!
+    chinese: String!
+    breakpoint: Int!
+}
+
+input VocabularySetCreateInput {
+    name: String!
+    image: String!
+    vocabularySet: [VocabularyInput]!
+}
+
+input VocabularySetUpdateInput {
+    name: String!
+    image: String!
+    vocabularySet: [VocabularyInput]!
+}
+
+input VocabularyInput {
+    id: ID!
+    word: String!
+    chinese: String!
+    breakpoint: Int!
+}

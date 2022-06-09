@@ -1,0 +1,20 @@
+query ArticlesQuery {
+  articles {
+    id
+    name
+    image
+    answers {
+      id
+      answer_id
+      answer_string
+    }
+    questions {
+      id
+      question_id
+      question_string
+    }
+    content
+    createdAt
+    updatedAt
+  }
+}

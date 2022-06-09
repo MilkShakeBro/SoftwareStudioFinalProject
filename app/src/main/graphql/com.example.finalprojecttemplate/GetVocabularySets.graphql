@@ -1,0 +1,15 @@
+query VocabularySetsQuery {
+    vocabularySets {
+        id
+        name
+        image
+        vocabularies {
+            id
+            word
+            chinese
+            breakpoint
+        }
+        createdAt
+        updatedAt
+    }
+}

@@ -110,85 +110,85 @@ class FakeDatabase {
                     id = 0,
                     word = "broil",
                     chinese = "vt.（直接在熱源上）烤",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 1,
                     word = "roast",
                     chinese = "vt./vi. 烘，烤",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 2,
                     word = "grill",
                     chinese = "vt.（用烤架）烤（食物）",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 3,
                     word = "simmer",
                     chinese = "vt./vi. 用小火煮",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 4,
                     word = "stew",
                     chinese = "vt. 燉",
-                    breakpoint = 6
+                    breakpoint = 1
                 ),
                 Vocabulary(
                     id = 5,
                     word = "grind",
                     chinese = "vt./vi. 研磨，磨碎",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 6,
                     word = "mill",
                     chinese = "vt. 碾碎",
-                    breakpoint = 6
+                    breakpoint = 1
                 ),
                 Vocabulary(
                     id = 7,
                     word = "mash",
                     chinese = "vt. 搗碎",
-                    breakpoint = 6
+                    breakpoint = 1
                 ),
                 Vocabulary(
                     id = 8,
                     word = "whisk",
                     chinese = "vt. 攪拌",
-                    breakpoint = 6
+                    breakpoint = 1
                 ),
                 Vocabulary(
                     id = 9,
                     word = "scramble",
                     chinese = "vt. 炒蛋",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 10,
                     word = "marinate",
                     chinese = "vt. 醃漬(用油、香料、酒)",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 11,
                     word = "pickle",
                     chinese = "vt. 醃漬(用鹽巴、醋)",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 12,
                     word = "ferment",
                     chinese = "vt./vi. 發酵",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 13,
                     word = "braise",
                     chinese = "vt. 燉",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
             ),
         ),
@@ -207,79 +207,79 @@ class FakeDatabase {
                     id = 1,
                     word = "rural",
                     chinese = "adj. 鄉村的",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 2,
                     word = "peasant",
                     chinese = "n.[C]（較為貧窮的）農夫，佃農",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 3,
                     word = "plow",
                     chinese = "n.[C] 犁",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 4,
                     word = "barn",
                     chinese = "n.[C] 穀倉",
-                    breakpoint = 6
+                    breakpoint = 1
                 ),
                 Vocabulary(
                     id = 5,
                     word = "greenhouse",
                     chinese = "n.[C] 溫室",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 6,
                     word = "organic",
                     chinese = "adj. 有機的",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 7,
                     word = "fertilizer",
                     chinese = "n.[C] 肥料",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 8,
                     word = "barren",
                     chinese = "adj. 荒蕪的",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 9,
                     word = "pesticide",
                     chinese = "n.[C] 殺蟲劑",
-                    breakpoint = 6
+                    breakpoint = 4
                 ),
                 Vocabulary(
                     id = 10,
                     word = "harvest",
                     chinese = "n.[C] 收成",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 11,
                     word = "ranch",
                     chinese = "n.[C] 大農場，大牧場",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 12,
                     word = "dairy",
                     chinese = "n.[U] 酪農",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 13,
                     word = "shepherd",
                     chinese = "n.[C] 牧羊人",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
             ),
         ),
@@ -298,79 +298,79 @@ class FakeDatabase {
                     id = 1,
                     word = "hike",
                     chinese = "n./vi. 健行",
-                    breakpoint = 6
+                    breakpoint = 1
                 ),
                 Vocabulary(
                     id = 2,
                     word = "dive",
                     chinese = "vi. 跳水，潛水",
-                    breakpoint = 6
+                    breakpoint = 1
                 ),
                 Vocabulary(
                     id = 3,
                     word = "surf",
                     chinese = "vi. 衝浪",
-                    breakpoint = 6
+                    breakpoint = 1
                 ),
                 Vocabulary(
                     id = 4,
                     word = "marathon",
                     chinese = "n.[C] 馬拉松",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 5,
                     word = "relay",
                     chinese = "n.[C] 接力賽",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 6,
                     word = "yoga",
                     chinese = "n.[U] 瑜珈",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 7,
                     word = "boxing",
                     chinese = "n.[U] 拳擊",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 8,
                     word = "wrestle",
                     chinese = "vi. 摔角，角力",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 9,
                     word = "stunt",
                     chinese = "n.[C] 特技",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 10,
                     word = "football",
                     chinese = "n.[U] 美式足球",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 11,
                     word = "hockey",
                     chinese = "n.[U] 曲棍球",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 12,
                     word = "volleyball",
                     chinese = "n.[U] 排球",
-                    breakpoint = 6
+                    breakpoint = 4
                 ),
                 Vocabulary(
                     id = 13,
                     word = "ballet",
                     chinese = "n.[U] 籃球",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
             ),
         ),
@@ -383,55 +383,55 @@ class FakeDatabase {
                     id = 0,
                     word = "stroke",
                     chinese = "n.[C] 中風",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 1,
                     word = "tumor",
                     chinese = "n.[C] 腫瘤",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 2,
                     word = "measles",
                     chinese = "n.[pl] 麻疹",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 3,
                     word = "asthma",
                     chinese = "n.[U] 氣喘",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 4,
                     word = "allergy",
                     chinese = "n.[C] 過敏",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 5,
                     word = "malaria",
                     chinese = "n.[U] 瘧疾",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 6,
                     word = "trauma",
                     chinese = "n.[U/C] 心理創傷",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 7,
                     word = "paralyze",
                     chinese = "vt. 使癱瘓",
-                    breakpoint = 6
+                    breakpoint = 3
                 ),
                 Vocabulary(
                     id = 8,
                     word = "irritation",
                     chinese = "n.[U] 發炎",
-                    breakpoint = 6
+                    breakpoint = 4
                 ),
                 Vocabulary(
                     id = 9,
@@ -443,25 +443,25 @@ class FakeDatabase {
                     id = 10,
                     word = "disorder",
                     chinese = "n.[U] (身體功能）失調",
-                    breakpoint = 6
+                    breakpoint = 4
                 ),
                 Vocabulary(
                     id = 11,
                     word = "upset",
                     chinese = "adj. 腸胃不適的",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 12,
                     word = "shortsighted",
                     chinese = "adj. 近視的",
-                    breakpoint = 6
+                    breakpoint = 2
                 ),
                 Vocabulary(
                     id = 13,
                     word = "Diarrhea",
                     chinese = "n. 腹瀉",
-                    breakpoint = 6
+                    breakpoint = 1
                 ),
             ),
         ),
