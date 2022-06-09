@@ -13,6 +13,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.finalprojecttemplate.domain.utils.FileHandler
 import com.example.finalprojecttemplate.databinding.ResultPageFragmentBinding
 import com.example.finalprojecttemplate.databinding.ResultPageScreenshotLayoutBinding
@@ -26,6 +27,8 @@ class ResultPageFragment: Fragment()  {
     private var popUpWindowBinding: ScreenshotPopupWindowLayoutBinding? = null
 
     private var popUpWindow: PopupWindow? = null
+
+    private val args : ResultPageFragmentArgs by navArgs()
 
     private val viewModel: ResultPageViewModel by viewModels()
 
@@ -118,6 +121,9 @@ class ResultPageFragment: Fragment()  {
 
     private fun navigateBackToGamePage() {
         // TODO: Add the direction from result page to game page
+        val action = ResultPageFragmentDirections.actionResultPageFragmentToGamePageFragment(
+            vocabularySetId = args.vocabularySetId
+        )
         val action = ResultPageFragmentDirections.actionResultPageFragmentToGamePageFragment(vocabularySetId = arguments?.getInt("vocabularySetId") ?:0)
         findNavController().navigate(action)
     }
