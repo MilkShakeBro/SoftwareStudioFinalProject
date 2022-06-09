@@ -1,0 +1,8 @@
+query PersonalInfosQuery {
+    personalInfos {
+        id
+        name
+        createdAt
+        updatedAt
+    }
+}

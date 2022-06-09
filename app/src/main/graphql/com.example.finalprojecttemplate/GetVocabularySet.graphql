@@ -1,0 +1,15 @@
+query VocabularySetQuery($vocabularySetId: Int!) {
+    vocabularySet(id: $vocabularySetId) {
+        id
+        name
+        image
+        vocabularies {
+            id
+            word
+            chinese
+            breakpoint
+        }
+        createdAt
+        updatedAt
+    }
+}

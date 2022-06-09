@@ -1,7 +1,11 @@
 package com.example.finalprojecttemplate.data
 
 import android.util.Log
+import androidx.core.net.toUri
 import androidx.lifecycle.asLiveData
+import com.apollographql.apollo3.ApolloClient
+import com.example.finalprojecttemplate.ArticlesQuery
+import com.example.finalprojecttemplate.VocabularySetQuery
 import com.example.finalprojecttemplate.data.data_source.FakeDatabase
 import com.example.finalprojecttemplate.data.data_source.LocalDatabaseDao
 import com.example.finalprojecttemplate.data.data_source.UserInfoDataStore
@@ -17,6 +21,41 @@ class RepositoryImpl(
     private val userInfoDataStore: UserInfoDataStore,
     private val localDatabaseDao: LocalDatabaseDao
 ): Repository {
+
+//    private suspend fun getVocabularySet(id: Int) {
+//        try {
+//            withContext(Dispatchers.IO) {
+//                val apolloClient = ApolloClient.Builder()
+//                    .serverUrl("http://10.0.2.2:3000/graphql")
+//                    .build()
+//                // Execute your query. This will suspend until the response is received.
+//                val response = apolloClient.query(VocabularySetQuery(id)).execute()
+//                val vocabularySet: MutableList<Vocabulary> = mutableListOf()
+//
+//                for (i in 0..13) {
+//                    vocabularySet.add(
+//                        Vocabulary(
+//                            id = response.data?.vocabularySet?.vocabularies?.get(i)!!.id.toInt(),
+//                            word = response.data?.vocabularySet?.vocabularies?.get(i)!!.word,
+//                            chinese = response.data?.vocabularySet?.vocabularies?.get(i)!!.chinese,
+//                            breakpoint = response.data?.vocabularySet?.vocabularies?.get(i)!!.breakpoint
+//                        )
+//                    )
+//                }
+//
+//                VocabularySetModel(
+//                    id = response.data?.vocabularySet?.id!!.toInt(),
+//                    name = response.data?.vocabularySet!!.name,
+//                    image = response.data?.vocabularySet!!.image.toUri(),
+//                    vocabularySet = vocabularySet
+//                )
+//
+//                return@withContext response.data.toString()
+//            }.toString()
+//        } catch(e: Exception) {
+//            System.out.println("Error " + e.message);
+//        }
+//    }
 
     override suspend fun getArticleByIndex(index: Int): ArticleModel {
 //        return fakeDatabase.getArticleByIndex(index)
@@ -34,9 +73,37 @@ class RepositoryImpl(
     override suspend fun getVocabularySetByIndex(index: Int): VocabularySetModel {
 //        return fakeDatabase.getVocabularySetByIndex(index)
         return try {
-            val dataFromRemote = fakeDatabase.getVocabularySetByIndex(index)
-            localDatabaseDao.insert(dataFromRemote)
-            dataFromRemote
+            val dataFromServer: VocabularySetModel
+            withContext(Dispatchers.IO) {
+                val apolloClient = ApolloClient.Builder()
+                    .serverUrl("http://10.0.2.2:3000/graphql")
+                    .build()
+                // Execute your query. This will suspend until the response is received.
+                val response = apolloClient.query(VocabularySetQuery(index)).execute()
+                val vocabularySet: MutableList<Vocabulary> = mutableListOf()
+
+                for (i in 0..13) {
+                    vocabularySet.add(
+                        Vocabulary(
+                            id = response.data?.vocabularySet?.vocabularies?.get(i)!!.id.toInt(),
+                            word = response.data?.vocabularySet?.vocabularies?.get(i)!!.word,
+                            chinese = response.data?.vocabularySet?.vocabularies?.get(i)!!.chinese,
+                            breakpoint = response.data?.vocabularySet?.vocabularies?.get(i)!!.breakpoint
+                        )
+                    )
+                }
+                dataFromServer = VocabularySetModel(
+                    id = response.data?.vocabularySet?.id!!.toInt(),
+                    name = response.data?.vocabularySet!!.name,
+                    image = response.data?.vocabularySet!!.image.toUri(),
+                    vocabularySet = vocabularySet
+                )
+            }
+
+            dataFromServer
+//            val dataFromRemote = fakeDatabase.getVocabularySetByIndex(index)
+//            localDatabaseDao.insert(dataFromRemote)
+//            dataFromRemote
         } catch (e: Exception) {
 //            e.printStackTrace()
             Log.d("RepositoryImpl", "Error occurs")

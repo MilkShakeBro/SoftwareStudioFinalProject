@@ -1,0 +1,11 @@
+query AchievementsQuery {
+    achievementSets {
+        id
+        name
+        image
+        description
+        obtained
+        createdAt
+        updatedAt
+    }
+}

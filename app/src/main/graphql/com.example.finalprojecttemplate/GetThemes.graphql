@@ -1,0 +1,19 @@
+query ThemesQuery {
+  themes {
+      id
+      name
+      image
+      flashcards {
+        id
+        word
+        chinese
+        coordinate {
+          id
+          x
+          y
+        }
+      }
+      createdAt
+      updatedAt
+    }
+}

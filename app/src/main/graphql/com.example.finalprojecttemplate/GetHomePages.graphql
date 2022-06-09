@@ -1,0 +1,22 @@
+query HomePageQuery {
+    homePageInfos {
+        id
+        articleInfos {
+            id
+            image
+            name
+        }
+        vocabularySetInfos {
+            id
+            image
+            name
+        }
+        themeInfos {
+            id
+            image
+            name
+        }
+        createdAt
+        updatedAt
+    }
+}
