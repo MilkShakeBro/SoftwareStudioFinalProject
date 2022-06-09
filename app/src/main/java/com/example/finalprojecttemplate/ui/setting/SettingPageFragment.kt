@@ -1,6 +1,7 @@
 package com.example.finalprojecttemplate.ui.setting
 
 import android.content.SharedPreferences
+import android.graphics.Typeface
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -40,10 +41,15 @@ class SettingPageFragment: Fragment()  {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.apply {
+//            val typeface = Typeface.createFromAsset(assets,"arial.ttf")
+//            DarkTheme.setTypeface(typeface)
+            Log.d("AAA",showDarkModeViewModel.darkMode().toString())
             if(showDarkModeViewModel.darkMode()==true){
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 DarkTheme.setChecked(false)
             }
             else{
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 DarkTheme.setChecked(true)
             }
             DarkTheme.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
