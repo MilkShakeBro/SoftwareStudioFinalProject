@@ -78,12 +78,12 @@ class FlashcardPageFragment: Fragment()  {
         val min = arguments?.getInt("Minute") ?:0
         val sec = arguments?.getInt("Second") ?:0
         val time: Long = ((hour.times(3600) + min*60 + sec).times(1000)).toLong() ?: 0
-        countdown(time)
+        countdown(time, time)
         binding?.apply {
 
             // click skip buttom to go to game tutorial
             SkipToGame.setOnClickListener{
-                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment()
+                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment(vocabularySetId = arguments?.getInt("vocabularySetId") ?:0)
                 findNavController().navigate(action)
             }
 //            button1.setOnClickListener {
@@ -100,8 +100,9 @@ class FlashcardPageFragment: Fragment()  {
 //            fragmentDescription.text = "This is FlashcardPageFragment"
         }
     }
-    private fun countdown(Time: Long){
+    private fun countdown(Time: Long, Total: Long){
         val countDownTimerTextView = binding?.countdownTimer
+        val model = binding?.poohpoohman
         object : CountDownTimer(Time, 1000) {
             override fun onTick(Time: Long) {
                 val secondsUntilFinished: Long = Time / 1000
@@ -110,13 +111,13 @@ class FlashcardPageFragment: Fragment()  {
                 val minutes = minutesUntilFinished % 60
                 val hoursUntilFinished : Long = minutesUntilFinished / 60
                 val hours = hoursUntilFinished % 60
-
+                model?.y = model?.y!! + 1/*(1/Total) * 2000*/
                 countDownTimerTextView?.text = String.format("%02d:%02d:%02d", hours, minutes, seconds)
             }
 
             override fun onFinish() {
                 countDownTimerTextView?.text = "00:00:00"
-                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment()
+                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment(vocabularySetId = arguments?.getInt("vocabularySetId") ?:0)
                     findNavController().navigate(action)
             }
         }.start()

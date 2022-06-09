@@ -36,6 +36,7 @@
             style="@style/ProfileTheme"
             app:layout_constraintStart_toEndOf="@id/profile_image"
             app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/arial1"
              />
 
         <ImageButton
@@ -59,7 +60,8 @@
             android:textStyle="bold"
             style="@style/ProfileTheme"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/profile_image" />
+            app:layout_constraintTop_toBottomOf="@id/profile_image"
+            android:fontFamily="@font/arial1"/>
 
         <TextView
             android:id="@+id/Achievement"
@@ -73,7 +75,7 @@
             style="@style/ProfileTheme"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/progressBar"
-
+            android:fontFamily="@font/arial1"
             />
 
 
@@ -292,7 +294,8 @@
             android:textStyle="bold"
             style="@style/ProfileTheme"
             app:layout_constraintStart_toEndOf="@id/progressBar"
-            app:layout_constraintTop_toBottomOf="@id/Vocabularies" />
+            app:layout_constraintTop_toBottomOf="@id/Vocabularies"
+            android:fontFamily="@font/arial1"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

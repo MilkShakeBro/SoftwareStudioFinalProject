@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         ActivityCompat.requestPermissions(this, arrayOf(
             android.Manifest.permission.WRITE_EXTERNAL_STORAGE), 0)
+
     }
 
     override fun onSupportNavigateUp(): Boolean {

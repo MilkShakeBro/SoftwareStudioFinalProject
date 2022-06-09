@@ -17,5 +17,6 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         style="@style/Base.TextAppearance.AppCompat.Display1"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:fontFamily="@font/arial1"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

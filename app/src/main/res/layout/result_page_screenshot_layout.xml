@@ -149,7 +149,8 @@
             android:text="CHAMPION"
             android:textColor="@color/game_score_text_gold"
             android:textSize="96px"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/arial1"/>
 
         <TextView
             android:id="@+id/player_name"
@@ -159,7 +160,8 @@
             android:gravity="center"
             android:text="Chris Chen"
             android:textColor="@color/game_score_text_gold"
-            android:textSize="96px" />
+            android:textSize="96px"
+            android:fontFamily="@font/arial1"/>
 
         <TextView
             android:id="@+id/score_title"
@@ -170,7 +172,8 @@
             android:text="SCORE"
             android:textColor="@color/game_score_text_gold"
             android:textSize="72px"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/arial1"/>
 
         <TextView
             android:id="@+id/score"
@@ -181,7 +184,8 @@
             android:text="726"
             android:textColor="@color/game_score_text_gold"
             android:textSize="264px"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/arial1"/>
 
         <TextView
             android:id="@+id/tag_text"
@@ -193,7 +197,8 @@
             android:text="#King of monograms #King of speed #King of vocabularies #Game2Mem #Defeat all the players"
             android:textColor="@color/game_score_tag_gold"
             android:textSize="42px"
-            android:textStyle="normal" />
+            android:textStyle="normal"
+            />
 
         <ImageView
             android:id="@+id/trademark_image"

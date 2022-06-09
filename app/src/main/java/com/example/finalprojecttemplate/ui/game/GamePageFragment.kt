@@ -18,8 +18,10 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.finalprojecttemplate.R
 import com.example.finalprojecttemplate.databinding.GamePageFragmentBinding
+import com.example.finalprojecttemplate.ui.game_tutorial.GameTutorialFragmentArgs
 import com.example.finalprojecttemplate.ui.homepage.DataFetchStatus
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
@@ -47,6 +49,7 @@ class GamePageFragment: Fragment()  {
     private lateinit var moveUpObjectAnimator: AnimatorSet
 
     private var theta = 0f
+    private val args: GamePageFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -64,7 +67,7 @@ class GamePageFragment: Fragment()  {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        Log.d("args", args.toString())
         gradientDrawable = ResourcesCompat.getDrawable(
             resources,
             R.drawable.tetris_background_gradient, null) as GradientDrawable
