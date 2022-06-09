@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavArgs
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.viewpager.widget.ViewPager
 import com.example.finalprojecttemplate.databinding.GameTutorialFragmentBinding
 import com.example.finalprojecttemplate.databinding.GameTutorialSlideFragmentBinding
@@ -31,7 +33,9 @@ class GameTutorialFragment: Fragment()  {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        gameTutorialAdapter = GameTutorialAdapter(this.context)
+        val args: GameTutorialFragmentArgs by navArgs()
+
+        gameTutorialAdapter = GameTutorialAdapter(this.context, args.vocabularySetId)
 
         binding?.apply {
             viewpager.adapter = gameTutorialAdapter

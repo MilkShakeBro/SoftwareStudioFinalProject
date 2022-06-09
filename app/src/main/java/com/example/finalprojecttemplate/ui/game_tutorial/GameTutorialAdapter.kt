@@ -13,6 +13,7 @@ import com.example.finalprojecttemplate.R
 
 class GameTutorialAdapter(
     private val ctx: Context?,
+    private val vocabularyId: Int
     ): PagerAdapter() {
 
     override fun getCount(): Int {
@@ -83,7 +84,9 @@ class GameTutorialAdapter(
                 explanation.text = "Earn the score as high as possible."
                 enterButton.visibility = View.VISIBLE
                 enterButton.setOnClickListener { view ->
-                    val action = GameTutorialFragmentDirections.actionGameTutorialFragmentToGamePageFragment()
+                    val action = GameTutorialFragmentDirections.actionGameTutorialFragmentToGamePageFragment(
+                        vocabularySetId = vocabularyId
+                    )
                     view.findNavController().navigate(action)
                 }
             }
