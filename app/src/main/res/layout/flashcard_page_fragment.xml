@@ -22,7 +22,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/poohpoohman1"
-            tools:text="00:00:00" />
+            tools:text="00:00:00"
+            android:fontFamily="@font/arial1"/>
 
         <Button
             android:id="@+id/SkipToGame"
@@ -36,7 +37,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="2dp" />
+            tools:layout_editor_absoluteY="2dp"
+            android:fontFamily="@font/arial1"/>
 
         <ImageView
             android:id="@+id/poohpoohman1"

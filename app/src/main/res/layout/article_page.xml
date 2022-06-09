@@ -28,7 +28,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                android:fontFamily="@font/timesnewromanbold1"/>
 
             <TextView
                 android:id="@+id/Question_one"
@@ -43,7 +44,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/Article_content"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                android:fontFamily="@font/arial1"/>
             <TextView
                 android:id="@+id/correct_one"
                 android:layout_width="wrap_content"
@@ -55,7 +57,8 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintTop_toBottomOf="@id/Question_one"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/arial1"/>
 
             <RadioGroup
                 android:id="@+id/Answer_one_group"
@@ -68,7 +71,8 @@
                 android:orientation="vertical"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Question_one">
+                app:layout_constraintTop_toBottomOf="@id/Question_one"
+                android:fontFamily="@font/arial1">
 
                 <RadioButton
                     android:id="@+id/Answer_one_A"
@@ -76,7 +80,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_one_A" />
+                    android:text="@string/answer_one_A"
+                    android:fontFamily="@font/arial1"/>
 
                 <RadioButton
                     android:id="@+id/Answer_one_B"
@@ -84,7 +89,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_one_B" />
+                    android:text="@string/answer_one_B"
+                    android:fontFamily="@font/arial1"/>
 
                 <RadioButton
                     android:id="@+id/Answer_one_C"
@@ -92,7 +98,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_one_C" />
+                    android:text="@string/answer_one_C"
+                    android:fontFamily="@font/arial1"/>
 
                 <RadioButton
                     android:id="@+id/Answer_one_D"
@@ -100,7 +107,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_one_D" />
+                    android:text="@string/answer_one_D"
+                    android:fontFamily="@font/arial1"/>
             </RadioGroup>
 
             <TextView
@@ -116,7 +124,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/Answer_one_group"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                android:fontFamily="@font/arial1"/>
             <TextView
                 android:id="@+id/correct_two"
                 android:layout_width="wrap_content"
@@ -128,7 +137,8 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintTop_toBottomOf="@id/Question_two"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/arial1"/>
 
             <RadioGroup
                 android:id="@+id/Answer_two_group"
@@ -141,7 +151,8 @@
                 android:orientation="vertical"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Question_two">
+                app:layout_constraintTop_toBottomOf="@id/Question_two"
+                android:fontFamily="@font/arial1">
 
                 <RadioButton
                     android:id="@+id/Answer_two_A"
@@ -149,7 +160,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_two_A" />
+                    android:text="@string/answer_two_A"
+                    android:fontFamily="@font/arial1"/>
 
                 <RadioButton
                     android:id="@+id/Answer_two_B"
@@ -157,7 +169,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_two_B" />
+                    android:text="@string/answer_two_B"
+                    android:fontFamily="@font/arial1"/>
 
                 <RadioButton
                     android:id="@+id/Answer_two_C"
@@ -165,7 +178,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_two_C" />
+                    android:text="@string/answer_two_C"
+                    android:fontFamily="@font/arial1"/>
 
                 <RadioButton
                     android:id="@+id/Answer_two_D"
@@ -173,7 +187,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_two_D" />
+                    android:text="@string/answer_two_D"
+                    android:fontFamily="@font/arial1"/>
             </RadioGroup>
 
             <TextView
@@ -189,7 +204,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/Answer_two_group"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                android:fontFamily="@font/arial1"/>
             <TextView
                 android:id="@+id/correct_three"
                 android:layout_width="wrap_content"
@@ -201,7 +217,8 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintTop_toBottomOf="@id/Question_three"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/arial1"/>
 
             <RadioGroup
                 android:id="@+id/Answer_three_group"
@@ -214,7 +231,8 @@
                 android:orientation="vertical"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Question_three">
+                app:layout_constraintTop_toBottomOf="@id/Question_three"
+                android:fontFamily="@font/arial1">
 
                 <RadioButton
                     android:id="@+id/Answer_three_A"
@@ -222,7 +240,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_three_A" />
+                    android:text="@string/answer_three_A"
+                    android:fontFamily="@font/arial1"/>
 
                 <RadioButton
                     android:id="@+id/Answer_three_B"
@@ -230,7 +249,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_three_B" />
+                    android:text="@string/answer_three_B"
+                    android:fontFamily="@font/arial1"/>
 
                 <RadioButton
                     android:id="@+id/Answer_three_C"
@@ -238,7 +258,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_three_C" />
+                    android:text="@string/answer_three_C"
+                    android:fontFamily="@font/arial1"/>
 
                 <RadioButton
                     android:id="@+id/Answer_three_D"
@@ -246,7 +267,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_three_D" />
+                    android:text="@string/answer_three_D"
+                    android:fontFamily="@font/arial1"/>
             </RadioGroup>
 
             <TextView
@@ -262,7 +284,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/Answer_three_group"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                android:fontFamily="@font/arial1"/>
             <TextView
                 android:id="@+id/correct_four"
                 android:layout_width="wrap_content"
@@ -274,7 +297,8 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintTop_toBottomOf="@id/Question_four"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/arial1"/>
             <RadioGroup
                 android:id="@+id/Answer_four_group"
                 android:layout_width="match_parent"
@@ -286,7 +310,8 @@
                 android:orientation="vertical"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/Question_four">
+                app:layout_constraintTop_toBottomOf="@id/Question_four"
+                android:fontFamily="@font/arial1">
 
                 <RadioButton
                     android:id="@+id/Answer_four_A"
@@ -294,7 +319,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_four_A" />
+                    android:text="@string/answer_four_A"
+                    android:fontFamily="@font/arial1"/>
 
                 <RadioButton
                     android:id="@+id/Answer_four_B"
@@ -302,7 +328,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_four_B" />
+                    android:text="@string/answer_four_B"
+                    android:fontFamily="@font/arial1"/>
 
                 <RadioButton
                     android:id="@+id/Answer_four_C"
@@ -310,7 +337,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_four_C" />
+                    android:text="@string/answer_four_C"
+                    android:fontFamily="@font/arial1"/>
 
                 <RadioButton
                     android:id="@+id/Answer_four_D"
@@ -318,7 +346,8 @@
                     android:layout_height="wrap_content"
                     style="@style/ProfileTheme"
                     android:textSize="16sp"
-                    android:text="@string/answer_four_D" />
+                    android:text="@string/answer_four_D"
+                    android:fontFamily="@font/arial1"/>
             </RadioGroup>
 
             <TextView
@@ -332,7 +361,8 @@
                 android:layout_marginStart="150dp"
                 android:layout_marginTop="20dp"
                 app:layout_constraintTop_toBottomOf="@id/Answer_four_group"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/arial1"/>
             <TextView
                 android:id="@+id/Result"
                 android:layout_width="wrap_content"
@@ -344,7 +374,8 @@
                 android:layout_marginStart="220dp"
                 android:layout_marginTop="15dp"
                 app:layout_constraintTop_toBottomOf="@id/Answer_four_group"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/arial1"/>
 
             <Button
                 android:id="@+id/button"
@@ -358,7 +389,8 @@
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Answer_four_group" />
+                app:layout_constraintTop_toBottomOf="@+id/Answer_four_group"
+                android:fontFamily="@font/arial1"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

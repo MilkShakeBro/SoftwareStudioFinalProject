@@ -19,7 +19,8 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Article ID: 1"
             android:textAppearance="?attr/textAppearanceHeadline4"
-            android:layout_margin="16dp"/>
+            android:layout_margin="16dp"
+            android:fontFamily="@font/arial1"/>
 
         <TextView
             android:id="@+id/article_content"
@@ -30,7 +31,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:textAppearance="?attr/textAppearanceHeadline5"
-            android:layout_margin="16dp" />
+            android:layout_margin="16dp"
+            android:fontFamily="@font/arial1"/>
 
         <Button
             android:id="@+id/randon_fetch_button"
