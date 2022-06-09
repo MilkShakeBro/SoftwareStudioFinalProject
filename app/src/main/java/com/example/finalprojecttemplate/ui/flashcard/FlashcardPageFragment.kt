@@ -86,7 +86,6 @@ class FlashcardPageFragment: Fragment()  {
                 val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment(
                     vocabularySetId = args.vocabularySetId
                 )
-                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment(vocabularySetId = arguments?.getInt("vocabularySetId") ?:0)
                 findNavController().navigate(action)
             }
 //            button1.setOnClickListener {
@@ -123,7 +122,6 @@ class FlashcardPageFragment: Fragment()  {
                 val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment(
                     vocabularySetId = args.vocabularySetId
                 )
-                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment(vocabularySetId = arguments?.getInt("vocabularySetId") ?:0)
                     findNavController().navigate(action)
             }
         }.start()

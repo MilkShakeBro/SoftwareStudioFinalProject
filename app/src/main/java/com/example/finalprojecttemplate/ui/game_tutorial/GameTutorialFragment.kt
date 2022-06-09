@@ -41,7 +41,6 @@ class GameTutorialFragment: Fragment()  {
         gameTutorialAdapter = GameTutorialAdapter(this.context, args.vocabularySetId)
 
         Log.d("args", args.toString())
-        gameTutorialAdapter = GameTutorialAdapter(this.context)
         gameTutorialAdapter!!.index =  arguments?.getInt("vocabularySetId") ?:0
         binding?.apply {
             viewpager.adapter = gameTutorialAdapter

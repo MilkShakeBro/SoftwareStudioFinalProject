@@ -88,7 +88,6 @@ class GameTutorialAdapter(
                     val action = GameTutorialFragmentDirections.actionGameTutorialFragmentToGamePageFragment(
                         vocabularySetId = vocabularyId
                     )
-                    val action = GameTutorialFragmentDirections.actionGameTutorialFragmentToGamePageFragment(index)
                     view.findNavController().navigate(action)
                 }
             }
