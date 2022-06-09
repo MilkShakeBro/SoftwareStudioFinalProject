@@ -15,6 +15,7 @@ class GameTutorialAdapter(
     private val ctx: Context?,
     ): PagerAdapter() {
 
+    var index = 0
     override fun getCount(): Int {
         return 5
     }
@@ -83,7 +84,7 @@ class GameTutorialAdapter(
                 explanation.text = "Earn the score as high as possible."
                 enterButton.visibility = View.VISIBLE
                 enterButton.setOnClickListener { view ->
-                    val action = GameTutorialFragmentDirections.actionGameTutorialFragmentToGamePageFragment()
+                    val action = GameTutorialFragmentDirections.actionGameTutorialFragmentToGamePageFragment(index)
                     view.findNavController().navigate(action)
                 }
             }
