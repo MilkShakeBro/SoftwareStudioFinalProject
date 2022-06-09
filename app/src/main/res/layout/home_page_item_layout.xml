@@ -29,7 +29,8 @@
             android:textAlignment="viewStart"
             tool:text="Art Museum"
             android:textStyle="bold"
-            android:layout_margin="4dp"/>
+            android:layout_margin="4dp"
+            android:fontFamily="@font/arial1"/>
 
     </LinearLayout>
 

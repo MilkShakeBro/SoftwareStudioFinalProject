@@ -21,7 +21,8 @@
             android:textSize="25sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/arial1"/>
 
         <View
             android:id="@+id/line1"
@@ -45,7 +46,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/line1"
-            />
+            android:fontFamily="@font/arial1"/>
 
         <View
             android:id="@+id/line2"
@@ -68,7 +69,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/line2"
-            />
+            android:fontFamily="@font/arial1"/>
 
         <View
             android:id="@+id/line3"
@@ -91,7 +92,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/line3"
-            />
+            android:fontFamily="@font/arial1"/>
 
         <View
             android:id="@+id/line4"
@@ -113,7 +114,8 @@
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/line4" />
+            app:layout_constraintTop_toBottomOf="@id/line4"
+            android:fontFamily="@font/arial1"/>
 
         <View
             android:id="@+id/line5"
@@ -135,7 +137,8 @@
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/line5" />
+            app:layout_constraintTop_toBottomOf="@id/line5"
+            android:fontFamily="@font/arial1"/>
 
         <View
             android:id="@+id/line6"
@@ -157,7 +160,8 @@
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/line6"/>
+            app:layout_constraintTop_toBottomOf="@id/line6"
+            android:fontFamily="@font/arial1"/>
 
         <View
             android:id="@+id/line7"
