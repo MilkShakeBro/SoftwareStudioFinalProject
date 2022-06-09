@@ -29,7 +29,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                android:fontFamily="@font/timesnewromanbold1"/>
+                android:fontFamily="@font/timesnewroman1"/>
 
             <TextView
                 android:id="@+id/Question_one"
