@@ -118,7 +118,7 @@ class ResultPageFragment: Fragment()  {
 
     private fun navigateBackToGamePage() {
         // TODO: Add the direction from result page to game page
-        val action = ResultPageFragmentDirections.actionResultPageFragmentToGamePageFragment()
+        val action = ResultPageFragmentDirections.actionResultPageFragmentToGamePageFragment(vocabularySetId = arguments?.getInt("vocabularySetId") ?:0)
         findNavController().navigate(action)
     }
 
