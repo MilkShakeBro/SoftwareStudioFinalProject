@@ -83,6 +83,9 @@ class FlashcardPageFragment: Fragment()  {
 
             // click skip buttom to go to game tutorial
             SkipToGame.setOnClickListener{
+                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment(
+                    vocabularySetId = args.vocabularySetId
+                )
                 val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment(vocabularySetId = arguments?.getInt("vocabularySetId") ?:0)
                 findNavController().navigate(action)
             }
@@ -117,6 +120,9 @@ class FlashcardPageFragment: Fragment()  {
 
             override fun onFinish() {
                 countDownTimerTextView?.text = "00:00:00"
+                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment(
+                    vocabularySetId = args.vocabularySetId
+                )
                 val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment(vocabularySetId = arguments?.getInt("vocabularySetId") ?:0)
                     findNavController().navigate(action)
             }

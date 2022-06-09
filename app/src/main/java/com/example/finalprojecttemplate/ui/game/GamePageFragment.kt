@@ -51,6 +51,8 @@ class GamePageFragment: Fragment()  {
     private var theta = 0f
     private val args: GamePageFragmentArgs by navArgs()
 
+    private val gamePageNavArgs : GamePageFragmentArgs by navArgs()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -102,7 +104,7 @@ class GamePageFragment: Fragment()  {
 
             startGameLoop()
 
-            tetrisGameViewModel.submitWordsToTetrisState()
+            tetrisGameViewModel.submitWordsToTetrisState(gamePageNavArgs.vocabularySetId)
 
 //            handler = Handler(Looper.getMainLooper())
 //            loop = object: Runnable {
@@ -183,7 +185,8 @@ class GamePageFragment: Fragment()  {
     fun goToResultPage() {
         // TODO: add argument to result page in nav graph
         val action = GamePageFragmentDirections.actionGamePageFragmentToResultPageFragment(
-            score = tetrisGameViewModel.tetrisState.score.value!!
+            score = tetrisGameViewModel.tetrisState.score.value!!,
+            vocabularySetId = gamePageNavArgs.vocabularySetId
         )
 //        val action = GamePageFragmentDirections.actionGamePageFragmentToResultPageFragment()
         findNavController().navigate(action)

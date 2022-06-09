@@ -71,11 +71,11 @@ class TetrisGameViewModel @Inject constructor(
 //        }
 //    }
 
-    fun submitWordsToTetrisState() {
+    fun submitWordsToTetrisState(vocabularyId: Int) {
         viewModelScope.launch {
             try {
                 _status.value = DataFetchStatus.LOADING
-                tetrisVocabularySet = useCases.getVocabularySet(0)
+                tetrisVocabularySet = useCases.getVocabularySet(vocabularyId)
 
                 val vocabularyArray = tetrisVocabularySet!!.vocabularySet.map {
                     it.toTetrisVocabulary()

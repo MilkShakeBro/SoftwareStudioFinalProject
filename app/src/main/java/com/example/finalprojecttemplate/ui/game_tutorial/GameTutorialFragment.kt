@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavArgs
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.viewpager.widget.ViewPager
@@ -34,6 +35,11 @@ class GameTutorialFragment: Fragment()  {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val args: GameTutorialFragmentArgs by navArgs()
+
+        gameTutorialAdapter = GameTutorialAdapter(this.context, args.vocabularySetId)
+
         Log.d("args", args.toString())
         gameTutorialAdapter = GameTutorialAdapter(this.context)
         gameTutorialAdapter!!.index =  arguments?.getInt("vocabularySetId") ?:0

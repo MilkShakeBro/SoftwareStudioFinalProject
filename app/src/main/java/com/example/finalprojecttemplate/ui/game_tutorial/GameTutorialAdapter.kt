@@ -13,6 +13,7 @@ import com.example.finalprojecttemplate.R
 
 class GameTutorialAdapter(
     private val ctx: Context?,
+    private val vocabularyId: Int
     ): PagerAdapter() {
 
     var index = 0
@@ -84,6 +85,9 @@ class GameTutorialAdapter(
                 explanation.text = "Earn the score as high as possible."
                 enterButton.visibility = View.VISIBLE
                 enterButton.setOnClickListener { view ->
+                    val action = GameTutorialFragmentDirections.actionGameTutorialFragmentToGamePageFragment(
+                        vocabularySetId = vocabularyId
+                    )
                     val action = GameTutorialFragmentDirections.actionGameTutorialFragmentToGamePageFragment(index)
                     view.findNavController().navigate(action)
                 }
