@@ -10,6 +10,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import android.view.animation.RotateAnimation
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
@@ -25,6 +27,9 @@ import kotlin.properties.Delegates
 
 @AndroidEntryPoint
 class FlashcardPageFragment: Fragment()  {
+
+    private lateinit var animatorSetOpenLeft: AnimatorSet
+    private lateinit var animatorSetOpenRight: AnimatorSet
 
     private val viewModel: FlashcardPageViewModel by viewModels()
     private var binding: FlashcardPageFragmentBinding? = null
@@ -78,7 +83,7 @@ class FlashcardPageFragment: Fragment()  {
         val min = arguments?.getInt("Minute") ?:0
         val sec = arguments?.getInt("Second") ?:0
         val time: Long = ((hour.times(3600) + min*60 + sec).times(1000)).toLong() ?: 0
-        countdown(time, time)
+        val total: Float = time.toFloat()
         binding?.apply {
 
             // click skip buttom to go to game tutorial
@@ -87,6 +92,11 @@ class FlashcardPageFragment: Fragment()  {
                     vocabularySetId = args.vocabularySetId
                 )
                 findNavController().navigate(action)
+            }
+//            animatorSetOpenLeft = AnimatorInflater.loadAnimator(context, R.animator.rotate_cloclkwise) as AnimatorSet
+//            animatorSetOpenRight = AnimatorInflater.loadAnimator(context, R.animator.rotate_counterclockwise) as AnimatorSet
+            poohpoohman.post{
+                countdown(time, total, poohpoohman.y)
             }
 //            button1.setOnClickListener {
 //                val action = FlashcardPageFragmentDirections.actionFlashcardPageFragmentToGameTutorialFragment()
@@ -102,10 +112,15 @@ class FlashcardPageFragment: Fragment()  {
 //            fragmentDescription.text = "This is FlashcardPageFragment"
         }
     }
-    private fun countdown(Time: Long, Total: Long){
+    private fun countdown(Time: Long, Total: Float, Y_init: Float){
         val countDownTimerTextView = binding?.countdownTimer
         val model = binding?.poohpoohman
+        val leftDoor = binding?.leftDoor
+        val rightDoor = binding?.rightDoor
+        val openLeft = AnimationUtils.loadAnimation(context, R.animator.rotate_cloclkwise)
+        val openRight = AnimationUtils.loadAnimation(context, R.animator.rotate_counterclockwise)
         object : CountDownTimer(Time, 1000) {
+            var cnt = 0.0
             override fun onTick(Time: Long) {
                 val secondsUntilFinished: Long = Time / 1000
                 val seconds = secondsUntilFinished % 60
@@ -113,7 +128,28 @@ class FlashcardPageFragment: Fragment()  {
                 val minutes = minutesUntilFinished % 60
                 val hoursUntilFinished : Long = minutesUntilFinished / 60
                 val hours = hoursUntilFinished % 60
-                model?.y = model?.y!! + 1/*(1/Total) * 2000*/
+                if(Time in 0..10000){
+                    cnt += 6.5
+                    model?.y = Y_init + cnt.toFloat()
+//                    leftDoor?.startAnimation(openLeft)
+//                    rightDoor?.startAnimation(openRight)
+//                    leftDoor?.animate()?.apply {
+//                        duration = 1000
+//                        rotationX(10F)
+//                    }?.start()
+//                    rightDoor?.animate()?.apply {
+//                        duration = 1000
+//                        rotationX(10F)
+//                    }?.start()
+//                    animatorSetOpenLeft.setTarget(binding?.leftDoor)
+//                    animatorSetOpenRight.setTarget(binding?.rightDoor)
+//                    animatorSetOpenLeft.start()
+//                    animatorSetOpenRight.start()
+                }
+                if(seconds.toInt() == 10){
+                    startoopendoor()
+                }
+//                model?.y = Y_init + (Time.toFloat() / Total) * 60
                 countDownTimerTextView?.text = String.format("%02d:%02d:%02d", hours, minutes, seconds)
             }
 
@@ -125,5 +161,13 @@ class FlashcardPageFragment: Fragment()  {
                     findNavController().navigate(action)
             }
         }.start()
+    }
+    fun startoopendoor(){
+        val leftDoor = binding?.leftDoor
+        val rightDoor = binding?.rightDoor
+        val openLeft = AnimationUtils.loadAnimation(context, R.animator.rotate_cloclkwise)
+        val openRight = AnimationUtils.loadAnimation(context, R.animator.rotate_counterclockwise)
+        leftDoor?.startAnimation(openLeft)
+        rightDoor?.startAnimation(openRight)
     }
 }

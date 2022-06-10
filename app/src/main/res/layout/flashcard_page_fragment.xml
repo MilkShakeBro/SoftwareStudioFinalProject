@@ -41,17 +41,18 @@
             tools:layout_editor_absoluteY="2dp"
             android:fontFamily="@font/arial1"/>
 
+
         <ImageView
             android:id="@+id/pooh_pooh_man_background"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_marginTop="4dp"
-            app:layout_constraintBottom_toTopOf="@+id/flashcard_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/countdown_timer"
+            app:layout_constraintBottom_toTopOf="@id/pooh"
             app:srcCompat="@drawable/bg" />
 
         <ImageView
@@ -62,8 +63,36 @@
             android:src="@drawable/poopooman"
             app:layout_constraintStart_toStartOf="@id/pooh_pooh_man_background"
             app:layout_constraintEnd_toEndOf="@id/pooh_pooh_man_background"
-            app:layout_constraintTop_toBottomOf="@+id/countdown_timer" />
-
+            app:layout_constraintTop_toBottomOf="@+id/countdown_timer"
+            app:layout_constraintBottom_toTopOf="@id/pooh"/>
+        <ImageView
+        android:id="@+id/left_door"
+        android:layout_width="60dp"
+        android:layout_height="2dp"
+        android:layout_marginLeft="4dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="@id/pooh_pooh_man_background"
+        app:layout_constraintBottom_toBottomOf="@id/pooh_pooh_man_background"
+        />
+        <ImageView
+            android:id="@+id/right_door"
+            android:layout_width="60dp"
+            android:layout_height="2dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/pooh_pooh_man_background"
+            app:layout_constraintBottom_toBottomOf="@id/pooh_pooh_man_background"
+            />
+        <ImageView
+            android:id="@+id/pooh"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/poop"
+            android:drawableTop="@drawable/poopooman"
+            app:layout_constraintTop_toBottomOf="@id/pooh_pooh_man_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/flashcard"/>
         <com.example.finalprojecttemplate.ui.flashcard.FlashcardViewPager
             android:id="@+id/flashcard"
             android:layout_width="match_parent"
@@ -72,7 +101,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/pooh_pooh_man_background"
+            app:layout_constraintTop_toBottomOf="@id/pooh"
             app:layout_constraintVertical_bias="0.0">
             <include layout="@layout/card_front" />
         </com.example.finalprojecttemplate.ui.flashcard.FlashcardViewPager>
