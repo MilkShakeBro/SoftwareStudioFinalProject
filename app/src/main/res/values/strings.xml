@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FinalProjectTemplate</string>
+    <string name="app_name">GameToMem</string>
     <string name="C_front">word</string>
     <string name="C_back">definition</string>
     <string name="skip">skip</string>
